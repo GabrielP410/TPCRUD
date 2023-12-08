@@ -44,3 +44,43 @@
     visibility: visible;
 }
 }
+
+.iconos{
+    cursor: pointer;
+    font-size: 0.99rem;
+    margin-left: 1rem;
+}
+
+.bi:hover{
+    color: #fcb631;
+}
+
+@media (max-width: 768px){
+    .iconos{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+}
+
+.buscador{
+    position: absolute;
+    top: 115%;
+    right: 13%;
+    background: #fff;
+    width: 17rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.buscador input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.1rem;
+    color: #000;
+    padding: 1rem;
+    text-transform: none;
+}
