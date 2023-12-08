@@ -1,0 +1,26 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.img404 {
+    object-fit:cover;  
+    width: 100%;
+    height: auto; 
+
+}
+
+#p404 {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  
+#botonInicio {
+    text-align: center;
+    font-size: 1.8em;
+  }
