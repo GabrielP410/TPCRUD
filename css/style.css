@@ -103,5 +103,13 @@ display: flex;
  }
  .listaimagenesdeproductosadmin{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+
+ }
+ .cardproductoadmin{
+   width: 40%;
+   height: auto;
+   margin: 3%;
  }
