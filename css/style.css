@@ -1,0 +1,91 @@
+.cardfotodeperfiladmin{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.textonegritachico{
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0%;   
+}
+.textonegritacentradomediano{
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0%; 
+    text-align: center;
+    margin-right: 5%;
+}
+.textogrischico{
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgb(163, 163, 163);
+}
+.imagendeladmin{
+    width: 80%;
+    display: flex;
+    padding: right 10%;}
+
+ .imagenbotonagregarproducto{
+   
+    width: 35%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+ }   
+
+ .contendordelbotonagregarproducto{
+    width: 50%; 
+    padding-right: 5%;
+}
+
+ .botonagregarproducto{
+    
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    background-color: #FFDEB1;
+    height: 60px;
+   
+
+
+ }
+
+ .textoblancomediano{
+font-size: 70%;
+font-family: 'roboto',sans-serif;
+font-weight: 800;
+color: white;
+margin: 0;
+
+ }
+
+ .cuadrobusqueda{
+    border-radius: 10px;
+    height: 30px;
+   
+    
+ }
+ .cuadrobusqueda::placeholder{
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: rgba(148, 148, 148, 0.388);
+    padding-left: 5%;
+ }
+
+ .listadeproductosadmin{
+list-style: none;
+ }
+ .listadebusqueda{
+    list-style-type: none;
+    padding-left: 0%;
+ }
