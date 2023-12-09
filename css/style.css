@@ -7,13 +7,13 @@
     margin-left: 5%;
 }
 
-.textonegritachico{
+.textonegritachicoadmin{
     font-size: small;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     margin-bottom: 0%;   
 }
-.textonegritacentradomediano{
+.textonegritacentradomedianoadmin{
     font-size: x-large;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -21,7 +21,7 @@
     text-align: center;
     margin-right: 5%;
 }
-.textogrischico{
+.textogrischicoadmin{
     font-size: small;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -32,14 +32,14 @@
     display: flex;
     padding: right 10%;}
 
- .imagenbotonagregarproducto{
+ .imagenbotonagregarproductoadmin{
    width: 30%;
    margin: 0%;
   
     
  }   
 
- .contendordelbotonagregarproducto{
+ .contendordelbotonagregarproductoadmin{
     width: 100%; 
     height: auto;
     display: flex;
@@ -48,7 +48,7 @@
     padding-right: 5%;
 }
 
- .botonagregarproducto{
+ .botonagregarproductoadmin{
     
     border-radius: 15px;
     display: flex;
@@ -64,7 +64,7 @@
 
  }
 
- .textoblancomediano{
+ .textoblancomedianoadmin{
 font-size: 70%;
 font-family: 'roboto',sans-serif;
 font-weight: 800;
@@ -74,24 +74,34 @@ padding: 0;
 
  }
 
- .cuadrobusqueda{
+ .cuadrobusquedaadmin{
     border-radius: 10px;
     height: 30px;
-   
+    width: 50%;
+    text-align: start;
+    padding-bottom: 0.5%;  
     
  }
- .cuadrobusqueda::placeholder{
+ .cuadrobusquedaadmin::placeholder{
     font-size: small;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: rgba(148, 148, 148, 0.388);
-    padding-left: 5%;
+    padding-left: 1%;
+    
+    
  }
 
  .listadeproductosadmin{
 list-style: none;
+display: flex;
+
  }
- .listadebusqueda{
+ .listadebusquedaadmin{
     list-style-type: none;
     padding-left: 0%;
+ }
+ .listaimagenesdeproductosadmin{
+   display: flex;
+   flex-direction: column;
  }
