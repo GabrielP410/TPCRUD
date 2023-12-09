@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+
+/*login*/
+/*Selector por id*/
+#fondoLoguin {
+  background-image: url("../img/img-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ff4010;
+  filter: grayscale(40%);
+}
+#loginBox {
+  margin-top: 5%;
+  background: #e2e9b8;
+  filter: opacity(90%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  padding: 60px 30px;
+  border-radius: 5%;
+}
+#loginBox #loginBoxAvatar {
+  border-radius: 50%;
+  position: absolute;
+  top: -250px;
+  left: calc(50% - 250px);
+}
+#loginBox-h {
+  margin-top: 10%;
+  padding: 0%;
+}
+.btn-primary {
+  border: none;
+  outline: none;
+  background-color: #ff4010;
+  color: #e2e9b8;
+}
+#loginBox a {
+    text-decoration: none;
+
+    color: #fcb631;
+    line-height: 30px;
+  }
+#loginBox a:hover {
+    color: #ff4010;
+}
