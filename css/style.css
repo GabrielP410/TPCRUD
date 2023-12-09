@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .imgProductos {
@@ -8,7 +9,17 @@
     object-fit: contain;    
 }
 .imgUser {
-    height: 100px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logoMP, .logoAndreani{
+    height: 60px;
+    object-fit: contain;
+}
+
+.logoSinLetra {
+    height: 60px;
     object-fit: contain;
 }
 
