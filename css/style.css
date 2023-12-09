@@ -2,6 +2,62 @@
   margin: 0;
   padding: 0;
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+/*login*/
+/*Selector por id*/
+#fondoLogin {
+  background-image: url("../img/img-login.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ff4010;
+  filter: grayscale(40%);
+}
+#loginBox {
+    background: #e2e9b8;
+    filter: opacity(90%);
+    top: 450px;
+    left: 50%;
+    position:relative;
+    padding: 60px 30px;
+    border-radius: 5%;
+    width: 300px;
+    height: 560px;
+}
+#loginBox #loginBoxAvatar {
+  border-radius: 50%;
+  position: absolute;
+  top: -250px;
+  left: calc(50% - 250px);
+}
+#loginBox-h {
+  margin-top: 10%;
+  padding: 0%;
+}
+.btn-primary {
+  border: none;
+  outline: none;
+  background-color: #ff4010;
+  color: #e2e9b8;
+}
+#loginBox a {
+  text-decoration: none;
+
+  color: #fcb631;
+  line-height: 30px;
+}
+#loginBox a:hover {
+  color: #ff4010;
+}
+/*fin login*/
 /* clases del navbar */
 .navbar-brand {
   font-weight: 500;
@@ -10,12 +66,12 @@
   transition: 0.3s color;
 }
 
-.navbar-togger {
+.navbar-toggler {
   border: none;
   font-size: 1.25rem;
 }
 
-.navbar-togger:focus,
+.navbar-toggler:focus,
 .btn-close:focus {
   box-shadow: none;
   outline: none;
@@ -91,64 +147,8 @@
   padding: 1rem;
   text-transform: none;
 }
-
-/* clases del footer */
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex-grow: 1;
-}
-
-/*login*/
-/*Selector por id*/
-#fondoLoguin {
-  background-image: url("../img/img-login.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #ff4010;
-  filter: grayscale(40%);
-}
-#loginBox {
-  margin-top: 5%;
-  background: #e2e9b8;
-  filter: opacity(90%);
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  padding: 60px 30px;
-  border-radius: 5%;
-}
-#loginBox #loginBoxAvatar {
-  border-radius: 50%;
-  position: absolute;
-  top: -250px;
-  left: calc(50% - 250px);
-}
-#loginBox-h {
-  margin-top: 10%;
-  padding: 0%;
-}
-.btn-primary {
-  border: none;
-  outline: none;
-  background-color: #ff4010;
-  color: #e2e9b8;
-}
-#loginBox a {
-    text-decoration: none;
-
-    color: #fcb631;
-    line-height: 30px;
-  }
-#loginBox a:hover {
-    color: #ff4010;
-}
-/*fin login*/
+/* clases del navbar */
+/*clases del footer*/
 .row {
   width: 85%;
   margin: auto;
@@ -251,3 +251,10 @@ main {
 .texto-responsive {
   text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+  .texto-footer {
+    display: none;
+  }
+}
+/*fin clases del footer*/
