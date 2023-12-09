@@ -6,12 +6,12 @@
   transition: 0.3s color;
 }
 
-.navbar-togger {
+.navbar-toggler {
   border: none;
   font-size: 1.25rem;
 }
 
-.navbar-togger:focus,
+.navbar-toggler:focus,
 .btn-close:focus {
   box-shadow: none;
   outline: none;
@@ -94,6 +94,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
 }
 
 main {
@@ -201,4 +202,10 @@ main {
 
 .texto-responsive {
   text-align: center;
+}
+
+@media screen and (max-width: 600px){
+  .texto-footer{
+      display: none;
+  }
 }
