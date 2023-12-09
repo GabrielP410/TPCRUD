@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.imgProductos {
+    height: 400px;
+    object-fit: contain;    
+}
+.imgUser {
+    height: 100px;
+    object-fit: contain;
+}
+
+.detalles{
+    color: #D99E30;
+}
+
+.botonesCompra, .listaCarrito{
+    color: white;
+    background-color: #D99E30;
+
+}
+.cantidad{
+    color: white;
+    background-color: #D99E30;
+    width: 60px;
+}
