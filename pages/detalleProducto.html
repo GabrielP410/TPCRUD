@@ -103,7 +103,7 @@
                     <!-- Agregar más productos -->
                 </div>
             </section>
-            <!-- Modal detalles del producto -->
+            <!-- ventana Modal de detalles del producto -->
             <section class="modal fade" id="detalleModalAlmendras" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -162,10 +162,86 @@
                     </div>
                 </div>
             </section>    
+            <!-- Ventana modal del carrito -->
+            <section class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Usuario ingresado -->
+                            <div>
+                                <p>Usted a ingresado como: Usario1.</p>
+                                <img src="../img/user1.png" alt="user1" class="imgUser">
 
+                            </div>
 
-
-
+                            <!-- Lista de productos en el carrito -->
+                            <ul class="list-group listaCarrito">
+                                <li class="list-group-item">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2">
+                                            <img src="../img/almendras.jpg" alt="Producto 1" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h5>Almendras Sin Cáscara Pote x250 G.</h5>
+                                            <p>$3.780,00</p>
+                                            <p>Código: 254689</p>
+                                        </div>
+                                        <div class="col-md-3">  
+                                            <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                                                                   
+                                            <button type="button" class="btn btn-danger">Borrar</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2">
+                                            <img src="../img/almendras.jpg" alt="Producto 1" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h5>Almendras Sin Cáscara Pote x250 G.</h5>
+                                            <p>$3.780,00</p>
+                                            <p>Código: 254689</p>
+                                        </div>
+                                        <div class="col-md-3">  
+                                            <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                                                                   
+                                            <button type="button" class="btn btn-danger">Borrar</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2">
+                                            <img src="../img/almendras.jpg" alt="Producto 1" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h5>Almendras Sin Cáscara Pote x250 G.</h5>
+                                            <p>$3.780,00</p>
+                                            <p>Código: 254689</p>
+                                        </div>
+                                        <div class="col-md-3">  
+                                            <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                                                                   
+                                            <button type="button" class="btn btn-danger">Borrar</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Agregar más productos en el carrito -->
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <div class="mt-3">
+                                <h5>Total: $<span id="totalPrecio">3780,00</span></h5>
+                            </div>
+                            <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Seguir Comprando</button>
+                            <button type="button" class="btn btn-warning m-2 botonesCompra">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </section>    
         </main> 
         <footer class="bg-dark text-white text-center py-3 mt-4">
             <p>&copy; 2023 Venta de Frutos Secos</p>
