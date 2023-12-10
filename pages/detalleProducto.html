@@ -12,36 +12,95 @@
         <title>Venta de Frutos Secos</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">Frutos Secos</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./detalleProducto.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                    </ul>
+              <a class="navbar-brand me-auto" href="./index.html"
+                ><i class="fa-solid fa-seedling me-1"></i>DE RAÍZ</a
+              >
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    <i class="fa-solid fa-seedling me-1"></i>DE RAÍZ
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
                 </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active mx-lg-2"
+                        aria-current="page"
+                        href="../index.html"
+                        >INICIO</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="../pages/nosotros.html"
+                        >¿QUIÉNES SOMOS?</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-lg-2" href="./detalleProducto.html"
+                        >NUESTROS PRODUCTOS</a
+                      >
+                    </li>
+                    <div class="iconos px-5">
+                      <i class="bi bi-search fa-2x" aria-hidden="true"></i>
+                      <i class="bi bi-cart-fill fa-2x px-3" aria-hidden="true"></i>
+                      <i class="bi bi-person-fill fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="buscador">
+                      <form class="d-flex" role="search">
+                        <input
+                          class="form-control me-2"
+                          type="search"
+                          placeholder="Buscar..."
+                          aria-label="Search"
+                        />
+                      </form>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
             </div>
         </nav>
-        <main>
-            <hr class="container">
-            <section class="container">
-                <h1 class="mt-3 mb-3"> Nuestros Productos <img src="../img/logoSinLetra.png" alt="logoSinLetra" class="img-fluid logoSinLetra"></h1>
-            </section>
-            <hr class="container">             
+
+        <main>           
+            
+            <section class="seccionPortada">
+                <img
+                    src="../img/img-login.jpg"
+                    class="imagenPortada"
+                    alt="portada para productos"
+                />
+                <div class=" tituloPortada text-center">
+                    <h1 class="mt-3"> Nuestros Productos <img src="../img/logoSinLetra.png" alt="logoSinLetra" class="img-fluid logoSinLetra"></h1>
+                </div>
+            </section>             
+                         
             <section class="container mt-4">
                 <div class="row justify-content-evenly">
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalAlmendras">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalAlmendras" data-codigo="001">
                         <div class="card">
                             <img src="../img/almendras.jpg" class="card-img-top  img-fluid imgProductos" alt="almendras">
                             <div class="card-body">
@@ -51,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalPistachos">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalPistachos" data-codigo="002">
                         <div class="card">
                             <img src="../img/pistachos.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -60,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalaArandanos">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalArandanos" data-codigo="003">
                         <div class="card">
                             <img src="../img/arándanos.jpg" class="card-img-top img-fluid imgProductos" alt="arandanos">
                             <div class="card-body">
@@ -69,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal" data-codigo="001">
                         <div class="card">
                             <img src="../img/ciruelas.png" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -78,7 +137,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal" data-codigo="001">
                         <div class="card">
                             <img src="../img/pasas-de-uva.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -87,7 +146,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal" data-codigo="001">
                         <div class="card">
                             <img src="../img/pasas-de-uva-rubia.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -96,7 +155,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal" data-codigo="001">
                         <div class="card">
                             <img src="../img/peras.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -105,7 +164,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModal" data-codigo="001">
                         <div class="card">
                             <img src="../img/tomates.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -118,14 +177,14 @@
             </section>
             
             <!-- Combos -->
-            <hr class="container">            
-            <section class="container">
-                <h1 class="mt-3 mb-3"> Combos <img src="../img/logoSinLetra.png" alt="logoSinLetra" class="img-fluid logoSinLetra"></h1>
-            </section>
-            <hr class="container">             
+            <section class=" text-center bg-light bg-gradient">      
+                <hr>         
+                <h1> Combos <img src="../img/logoSinLetra.png" alt="logoSinLetra" class="img-fluid logoSinLetra"></h1>      
+                <hr>         
+            </section>              
             <section class="container mt-4">
                 <div class="row justify-content-evenly">
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalAlmendras">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalCombo1">
                         <div class="card">
                             <img src="../img/combo1.jpg" class="card-img-top  img-fluid imgProductos" alt="almendras">
                             <div class="card-body">
@@ -135,7 +194,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalPistachos">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalCombo2">
                         <div class="card">
                             <img src="../img/combo2.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -144,7 +203,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalaArandanos">
+                    <div class="col-md-4 mb-3" data-bs-toggle="modal" data-bs-target="#detalleModalCombo3">
                         <div class="card">
                             <img src="../img/combo3.jpg" class="card-img-top img-fluid imgProductos" alt="arandanos">
                             <div class="card-body">
@@ -168,7 +227,7 @@
                         </div>
                     
                         <div class="modal-body m-2">
-                            <div id="carouselExample" class="carousel slide text-center mt-0" data-bs-ride="carousel">
+                            <div id="carouselAlmendras" class="carousel slide text-center mt-0" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="../img/almendras.jpg" class="imgProductos img-fluid" alt="Imagen 1">
@@ -180,11 +239,11 @@
                                         <img src="../img/almendras3.jpg" class="imgProductos img-fluid" alt="Imagen 3">
                                     </div>                      
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlmendras" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Anterior</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselAlmendras" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Siguiente</span>
                                 </button>
@@ -228,7 +287,7 @@
                         </div>
                     
                         <div class="modal-body m-2">
-                            <div id="carouselExample" class="carousel slide text-center mt-0" data-bs-ride="carousel">
+                            <div id="carouselPistachos" class="carousel slide text-center mt-0" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="../img/pistachos.jpg" class="imgProductos img-fluid" alt="Imagen 1">
@@ -240,11 +299,11 @@
                                         <img src="../img/pistachos3.jpg" class="imgProductos img-fluid" alt="Imagen 3">
                                     </div>                      
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPistachos" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Anterior</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselPistachos" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Siguiente</span>
                                 </button>
@@ -288,7 +347,7 @@
                         </div>
                     
                         <div class="modal-body m-2">
-                            <div id="carouselExample" class="carousel slide text-center mt-0" data-bs-ride="carousel">
+                            <div id="carouselArandanos" class="carousel slide text-center mt-0" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="../img/arándanos.jpg" class="imgProductos img-fluid" alt="Imagen 1">
@@ -300,11 +359,11 @@
                                         <img src="../img/arándanos3.jpg" class="imgProductos img-fluid" alt="Imagen 3">
                                     </div>                      
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselArandanos" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Anterior</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselArandanos" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Siguiente</span>
                                 </button>
@@ -320,6 +379,202 @@
                                 <hr>
                                 <div class="row align-items-center justify-content-between m-lg-2 mb-0">   
                                     <p class="col-6 text-center align-items-center justify-content-between fs-1"> $2.465,00 </p>                              
+                                    <div class="col-6"> 
+                                        <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-0" data-bs-toggle="modal" data-bs-target="#modalFormasPago"> Formas de pago <i class="bi bi-credit-card"></i></button>                                       
+                                        <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalFormasEnvio"> Envios <i class="bi bi-truck"></i></button> 
+                                    </div>                                 
+                                </div>              
+                                
+                                <hr>
+                                <div class="text-center mt-2 justify-content-evenly">
+                                    <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                           
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-toggle="modal" data-bs-target="#carritoModal"> <i class="bi bi-cart"></i> Comprar ahora</button>
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Añadir al carrito y seguir Comprando</button>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ventana Modal combo 1 -->
+            <section class="modal fade" id="detalleModalCombo1" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="../img/logoSinFondo-removebg-preview.png" alt="logo" class="img-fluid w-25">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                    
+                        <div class="modal-body m-2">
+                            <div id="carouselCombo1" class="carousel slide text-center mt-0" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/combo1.jpg" class="imgProductos img-fluid" alt="Imagen 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/combo1-1.jpg" class="imgProductos img-fluid" alt="Imagen 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/arándanos.jpg" class="imgProductos img-fluid" alt="Imagen 3">
+                                    </div>                      
+                                    <div class="carousel-item">
+                                        <img src="../img/ciruelas.png" class="imgProductos img-fluid" alt="Imagen 4">
+                                    </div>                      
+                                    <div class="carousel-item">
+                                        <img src="../img/peras.jpg" class="imgProductos img-fluid" alt="Imagen 5">
+                                    </div>                      
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCombo1" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCombo1" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                            <div>
+                                <h5 class="mt-1">Combo 1 (6 Unid.) - Arándanos, Ciruelas Y Peras</h5>    
+                                <p class="text-secondary mb-0">Detalles sobre el producto:</p>        
+                                <p class="detalles mt-0">CONTIENE: - 2 potes de 250g de Arándanos rojos deshidratados libre de gluten - SIN TACC. - 2 potes de 250g de Ciruelas deshidratadas tiernas sin carozo libre de gluten - SIN TACC. - 2 potes de 200g de Peras deshidratadas en mitades libre de gluten - SIN TACC. Listos para consumo directo o para ser utilizados como ingredientes en tus preparaciones.</p>
+                                <div>
+                                    <p class="mb-0">En stock: 100u.</p>  
+                                    <p class="mt-0">Codigo: 111111</p>
+                                </div>
+                                <hr>
+                                <div class="row align-items-center justify-content-between m-lg-2 mb-0">   
+                                    <p class="col-6 text-center align-items-center justify-content-between fs-1"> $11.800,00 </p>                              
+                                    <div class="col-6"> 
+                                        <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-0" data-bs-toggle="modal" data-bs-target="#modalFormasPago"> Formas de pago <i class="bi bi-credit-card"></i></button>                                       
+                                        <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalFormasEnvio"> Envios <i class="bi bi-truck"></i></button> 
+                                    </div>                                 
+                                </div>              
+                                
+                                <hr>
+                                <div class="text-center mt-2 justify-content-evenly">
+                                    <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                           
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-toggle="modal" data-bs-target="#carritoModal"> <i class="bi bi-cart"></i> Comprar ahora</button>
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Añadir al carrito y seguir Comprando</button>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ventana Modal Combo2 -->
+            <section class="modal fade" id="detalleModalCombo2" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="../img/logoSinFondo-removebg-preview.png" alt="logo" class="img-fluid w-25">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                    
+                        <div class="modal-body m-2">
+                            <div id="carouselCombo2" class="carousel slide text-center mt-0" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/combo2.jpg" class="imgProductos img-fluid" alt="Imagen 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/combo2-2.jpg" class="imgProductos img-fluid" alt="Imagen 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/arándanos.jpg" class="imgProductos img-fluid" alt="Imagen 3">
+                                    </div>                      
+                                    <div class="carousel-item">
+                                        <img src="../img/pistachos.jpg" class="imgProductos img-fluid" alt="Imagen 4">
+                                    </div>                      
+                                    <div class="carousel-item">
+                                        <img src="../img/ciruelas.png" class="imgProductos img-fluid" alt="Imagen 5">
+                                    </div>                      
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCombo2" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCombo2" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                            <div>
+                                <h5 class="mt-1">Combo 2 (6 Unid.) - Arándanos, Pistachos Y Ciruelas</h5>    
+                                <p class="text-secondary mb-0">Detalles sobre el producto:</p>        
+                                <p class="detalles mt-0">CONTIENE: - 2 potes de 250g de Arándanos rojos deshidratados libre de gluten - SIN TACC. - 2 potes de 250g de Ciruelas deshidratadas tiernas sin carozo libre de gluten - SIN TACC. - 2 potes de 200g de Pistachos con cáscara tostados y salados libre de gluten - SIN TACC. Listos para consumo directo o para ser utilizados como ingredientes en tus preparaciones.</p>
+                                <div>
+                                    <p class="mb-0">En stock: 100u.</p>  
+                                    <p class="mt-0">Codigo: 111112</p>
+                                </div>
+                                <hr>
+                                <div class="row align-items-center justify-content-between m-lg-2 mb-0">   
+                                    <p class="col-6 text-center align-items-center justify-content-between fs-1"> $14.775,00 </p>                              
+                                    <div class="col-6"> 
+                                        <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-0" data-bs-toggle="modal" data-bs-target="#modalFormasPago"> Formas de pago <i class="bi bi-credit-card"></i></button>                                       
+                                        <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalFormasEnvio"> Envios <i class="bi bi-truck"></i></button> 
+                                    </div>                                 
+                                </div>              
+                                
+                                <hr>
+                                <div class="text-center mt-2 justify-content-evenly">
+                                    <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                           
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-toggle="modal" data-bs-target="#carritoModal"> <i class="bi bi-cart"></i> Comprar ahora</button>
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Añadir al carrito y seguir Comprando</button>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ventana Modal Combo 3 -->
+            <section class="modal fade" id="detalleModalCombo3" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="../img/logoSinFondo-removebg-preview.png" alt="logo" class="img-fluid w-25">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                    
+                        <div class="modal-body m-2">
+                            <div id="carouselCombo3" class="carousel slide text-center mt-0" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/combo3.jpg" class="imgProductos img-fluid" alt="Imagen 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/combo3-2.jpg" class="imgProductos img-fluid" alt="Imagen 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/almendras.jpg" class="imgProductos img-fluid" alt="Imagen 3">
+                                    </div>                      
+                                    <div class="carousel-item">
+                                        <img src="../img/arándanos.jpg" class="imgProductos img-fluid" alt="Imagen 4">
+                                    </div>                      
+                                    <div class="carousel-item">
+                                        <img src="../img/ciruelas.png" class="imgProductos img-fluid" alt="Imagen 5">
+                                    </div>                      
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCombo3" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCombo3" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                            <div>
+                                <h5 class="mt-1">Combo 3 ( 6 Unid) - Almendras, Arándanos Y Ciruelas.</h5>    
+                                <p class="text-secondary mb-0">Detalles sobre el producto:</p>        
+                                <p class="detalles mt-0">CONTIENE: - 2 potes de 250g de Arándanos rojos deshidratados libre de gluten - SIN TACC. - 2 potes de 250g de Ciruelas deshidratadas tiernas sin carozo libre de gluten - SIN TACC. - 2 potes de 250g de Almendras sin cáscara libre de gluten - SIN TACC. Listos para consumo directo o para ser utilizados como ingredientes en tus preparaciones.</p>
+                                <div>
+                                    <p class="mb-0">En stock: 100u.</p>  
+                                    <p class="mt-0">Codigo: 111113</p>
+                                </div>
+                                <hr>
+                                <div class="row align-items-center justify-content-between m-lg-2 mb-0">   
+                                    <p class="col-6 text-center align-items-center justify-content-between fs-1"> $16.215,00 </p>                              
                                     <div class="col-6"> 
                                         <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-0" data-bs-toggle="modal" data-bs-target="#modalFormasPago"> Formas de pago <i class="bi bi-credit-card"></i></button>                                       
                                         <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalFormasEnvio"> Envios <i class="bi bi-truck"></i></button> 
@@ -500,7 +755,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <!-- Agregar más productos en el carrito -->
+                                <!-- Agregar más productos al carrito -->
                             </ul>
                         </div>
                         
@@ -514,12 +769,149 @@
                     </div>
                 </div>
             </section>    
-        </main> 
-        <footer class="bg-dark text-white text-center py-3 mt-4">
-            <p>&copy; 2023 Venta de Frutos Secos</p>
-        </footer>
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="script.js"></script> 
+        </main>
+
+        <footer>
+        <div class="container-fluid bg-body-secondary">
+            <section class="row">
+            <div class="col-md-12 col-lg-3 mt-3 text-center text-lg-start">
+                <img
+                src="../img/logoSinFondo-removebg-preview.png"
+                alt="logo de raices"
+                class="img-fluid logo-footer"
+                />
+                <p class="texto-footer">
+                <b
+                    >De Raíz es una tienda en línea que ofrece una variedad de
+                    frutos secos de alta calidad. Se destaca por su compromiso con
+                    la frescura y la calidad, proporcionando productos orgánicos y
+                    sin aditivos. Su plataforma es fácil de usar y ofrece entrega
+                    rápida y confiable.</b
+                >
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-3 mt-3">
+                <h5 class="text-uppercase text-center">Productos</h5>
+                <hr class="mb-4" />
+                <ul class="list-unstyled text-center">
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Nueces</a
+                    >
+                </li>
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Almendras</a
+                    >
+                </li>
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Pasas</a
+                    >
+                </li>
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Avellanas</a
+                    >
+                </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg-3 mt-3">
+                <h5 class="text-uppercase text-center">Legal</h5>
+                <hr class="mb-4" />
+                <ul class="list-unstyled text-center">
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Políticas de Privacidad</a
+                    >
+                </li>
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Términos y Condiciones</a
+                    >
+                </li>
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Acuerdo de Licencia</a
+                    >
+                </li>
+                <li class="my-3">
+                    <a
+                    href="../index.html"
+                    class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                    >Derechos de Autor</a
+                    >
+                </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg-3 mt-3">
+                <h5 class="text-uppercase text-center">Seguinos</h5>
+                <hr class="mb-4" />
+                <ul
+                class="list-unstyled d-flex justify-content-between justify-content-lg-start iconos-footer"
+                >
+                <li class="me-3">
+                    <a href="../pages/error404.html">
+                    <i class="fa-brands fa-instagram fs-2 color-icon"></i>
+                    </a>
+                </li>
+                <li class="me-3">
+                    <a href="../pages/error404.html">
+                    <i class="fa-brands fa-x-twitter fs-2 color-icon"></i>
+                    </a>
+                </li>
+                <li class="me-3">
+                    <a href="../pages/error404.html">
+                    <i class="fa-brands fa-facebook fs-2 color-icon"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <hr class="my-4" />
+            <div class="container">
+                <article class="row">
+                <div class="col-md-6 col-lg-6 text-center">
+                    <h5 class="mb-4">Formas de Pago</h5>
+                    <img
+                    src="../img/formasdepago01-footer.png"
+                    alt="formas de pago"
+                    class="img-fluid mb-3"
+                    />
+                </div>
+                <div
+                    class="col-md-6 col-lg-6 d-flex align-items-center justify-content-center mt-3"
+                >
+                    <p class="texto-responsive">
+                    &copy; Todos los derechos reservados.
+                    </p>
+                </div>
+                </article>
+            </div>
+            </section>
+        </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/5fdb8b7a26.js"
+      crossorigin="anonymous"
+    ></script>
     </body>
 </html>
