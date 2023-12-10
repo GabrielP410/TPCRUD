@@ -128,10 +128,18 @@ display: flex;
    background-color: #FDB632;
    
  }
+ .btn_editar_admin:hover{
+  background-color: #ffa705;
+ }
  .texto_blanco_btn_amdin{
    color: whitesmoke;
    font-family: 'Roboto', 'sans-serif';
    font-weight: 300;
+ }
+ .texto_blanco_btn_amdin:hover{
+  color: whitesmoke;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
  }
  .body_admin{
 background-color: #f7ecdd35;
@@ -153,3 +161,8 @@ background-color: #f7ecdd35;
    display: flex;
    justify-content: space-between;
  }
+
+ .form-check-input-admin{
+  background-color: #ffa705;
+ }
+
