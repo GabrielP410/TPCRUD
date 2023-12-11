@@ -1,3 +1,4 @@
+/*Detalle del producto*/
 * {
   margin: 0;
   padding: 0;
@@ -60,11 +61,18 @@
   color: #f1f1f0;
 }
 
+.cardProducto{
+  transition: all 400ms ease;
+  max-height: 500px;
+}
+
 .cardProducto:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   z-index: 1;
 }
+
+
 
 /* clases del navbar */
 .navbar-brand {
@@ -96,6 +104,7 @@
 }
 
 @media (min-width: 991px) {
+
   .nav-link::before {
     content: "";
     position: absolute;
