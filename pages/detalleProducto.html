@@ -237,12 +237,12 @@
                 <hr>         
             </section>              
             <section class="mt-3 pb-5">
-                <div class="row justify-content-evenly">
+                <div class="row">
                     <div class="col-lg-4 mt-3 mb-3 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalCombo1">
                         <div class="card">
                             <img src="../img/combo1.jpg" class="card-img-top  img-fluid imgProductos" alt="almendras">
                             <div class="card-body">
-                                <h5 class="card-title">Combo 1 (6 Unid.) - Arándanos, Ciruelas Y Peras</h5>
+                                <h5 class="card-title">Combo 1 (6 Unid. )  -  Arándanos, Ciruelas Y Peras</h5>
                                 <p class="card-text">$11.800,00</p>                       
                             </div>
                         </div>
@@ -252,7 +252,7 @@
                         <div class="card">
                             <img src="../img/combo2.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
-                                <h5 class="card-title">Combo 2 (6 Unid.) - Arándanos, Pistachos Y Ciruelas</h5>
+                                <h5 class="card-title">Combo 2 (6 Unid.)  -  Arándanos, Pistachos Y Ciruelas</h5>
                                 <p class="card-text">$14.775,00</p>
                             </div>
                         </div>
@@ -261,7 +261,7 @@
                         <div class="card">
                             <img src="../img/combo3.jpg" class="card-img-top img-fluid imgProductos" alt="arandanos">
                             <div class="card-body">
-                                <h5 class="card-title">Combo 3 ( 6 Unid) - Almendras, Arándanos Y Ciruelas.</h5>
+                                <h5 class="card-title">Combo 3 ( 6 Unid)  -  Almendras, Arándanos Y Ciruelas.</h5>
                                 <p class="card-text">$16.215,00</p>
                             </div>
                         </div>
@@ -1286,62 +1286,62 @@
 
                             <!-- Lista de productos en el carrito -->
                             <ul class="list-group listaCarrito">
-                                <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-2">
+                                <li class="list-group-item" >
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-lg-3 text-center">
                                             <img src="../img/almendras.jpg" alt="Producto 1" class="img-fluid">
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-lg-5">
                                             <h5>Almendras Sin Cáscara Pote x250 G.</h5>
                                             <p>$4.650,00</p>
                                             <p>Código: 254689</p>
                                         </div>
-                                        <div class="col-md-3">  
+                                        <div class="col-lg-4 text-end">  
                                             <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                                                                   
                                             <button type="button" class="btn btn-danger">Borrar</button>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-2">
-                                            <img src="../img/pistachos.jpg" alt="Producto 1" class="img-fluid">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-lg-3 text-center">
+                                            <img src="../img/pistachos.jpg" alt="Producto 2" class="img-fluid">
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-lg-5">
                                             <h5>Pistachos Con Cascara - Pote x200 G.</h5>
                                             <p>$3.780,00</p>
                                             <p>Código: 265682</p>
                                         </div>
-                                        <div class="col-md-3">  
+                                        <div class="col-lg-4 text-end">  
                                             <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                                                                   
                                             <button type="button" class="btn btn-danger">Borrar</button>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="list-group-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-2">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-lg-3 text-center">
                                             <img src="../img/arándanos.jpg" alt="Producto 1" class="img-fluid">
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-lg-5">
                                             <h5>Arándanos Rojos - Pote x200 G.</h5>
                                             <p>$2.465,00</p>
                                             <p>Código: 628895</p>
                                         </div>
-                                        <div class="col-md-3">  
-                                            <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                                                                   
+                                        <div class="col-lg-4 text-end">  
+                                            <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning col-lg-3">                                                                   
                                             <button type="button" class="btn btn-danger">Borrar</button>
                                         </div>
                                     </div>
                                 </li>
-                                <!-- Agregar más productos al carrito -->
+                                <li class="list-group-item">
+                                    <h5 class="mt-3 text-end">Total: $12.210,00</h5> 
+                                </li>
+                                <!-- Agregar productos con js-->
                             </ul>
                         </div>
                         
-                        <div class="modal-footer">
-                            <div class="mt-3">
-                                <h5>Total: $12.210,00</h5>
-                            </div>
+                        <div class="modal-footer">                                                       
                             <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Seguir Comprando</button>
                             <button type="button" class="btn btn-warning m-2 botonesCompra">Finalizar Compra</button>
                         </div>
