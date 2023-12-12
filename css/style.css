@@ -161,6 +161,7 @@ background-color: #f7ecdd35;
  text-decoration: none;
  color: #FDB632;
  margin-left: 10px;
+ margin-right: 10px;
 
  font-family: 'Roboto', sans-serif;
  
@@ -172,6 +173,7 @@ background-color: #f7ecdd35;
  list-style: none;
  display: flex;
  justify-content: space-between;
+ padding-left: 0;
 }
 
 .form-check-input-admin{
@@ -193,7 +195,7 @@ background-color: #ffa705;
    .card_producto_admin{
     width: 100%;
     height: auto;
-    margin: 3%;
+    margin: 0%;
     border:0px ;
    }
    
