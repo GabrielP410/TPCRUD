@@ -1,211 +1,169 @@
-/* clases del navbar */
-.navbar-brand {
-    font-weight: 500;
-    color: #fcb631;
-    font-size: 24px;
-    transition: 0.3s color;
-  }
+.card_foto_de_perfil_admin{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 2%;
+  padding-bottom: 50px;
+}
+
+.texto_negrita_chico_admin{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0%;   
+}
+.texto_negrita_centrado_mediano_admin{
+  font-size: x-large;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0%; 
+  text-align: center;
+  margin-right: 3%;
+}
+.texto_gris_chico_admin{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgb(163, 163, 163);
+}
+.imagen_del_admin{
+  width: 100px;
+  height: 100px;
+  padding: right 10%;
+ border-radius: 50%;
+border: 5px solid #FDB632;}
+
+.imagen_boton_agregar_producto_admin{
+ width: 30%;
+ margin: 0%;
+
   
-  .navbar-toggler {
-    border: none;
-    font-size: 1.25rem;
-  }
+}   
+
+.contendor_del_boton_agregar_producto_admin{
+  width: 100%; 
+  height: auto;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding-right: 5%;
+}
+
+.botona_gregar_producto_admin{
   
-  .navbar-toggler:focus,
-  .btn-close:focus {
-    box-shadow: none;
-    outline: none;
-  }
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.buscador input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #000;
+  padding: 1rem;
+  text-transform: none;
+}
+
+/* clases del footer */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.rowfooter {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.logo-footer {
+  width: 300px;
+  margin-bottom: 30px;
+}
+.cuadro_busqueda_admin:focus{
+ outline:none;
+}
+.cuadro_busqueda_admin::placeholder{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: rgba(148, 148, 148, 0.388);
+  padding-left: 1%;
   
-  .nav-link {
-    color: #666777;
-    font-weight: 500;
-    position: relative;
-  }
-  .nav-link:hover,
-  .nav-link.active {
-    color: #000;
-  }
   
-  @media (min-width: 991px) {
-    .nav-link::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background-color: #fcb631;
-      visibility: hidden;
-      transition: 0.3s ease-in-out;
-    }
-  
-    .nav-link:hover::before,
-    .nav-link.active::before {
-      width: 100%;
-      visibility: visible;
-    }
-  }
-  
-  .iconos {
-    cursor: pointer;
-    font-size: 0.99rem;
-    margin-left: 1rem;
-  }
-  
-  .bi:hover {
-    color: #fcb631;
-  }
-  
-  @media (max-width: 768px) {
-    .iconos {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
-  }
-  
-  .buscador {
-    position: absolute;
-    top: 115%;
-    right: 13%;
-    background: #fff;
-    width: 17rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-  
-  .buscador input {
-    height: 100%;
-    width: 100%;
-    font-size: 1.1rem;
-    color: #000;
-    padding: 1rem;
-    text-transform: none;
-  }
-  
-  /* clases del footer */
-  
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-  }
-  
-  main {
-    flex-grow: 1;
-  }
-  
-  .row {
-    width: 85%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  
-  .col {
-    flex-basis: 25%;
-    padding: 10px;
-  }
-  
-  .logo-footer {
-    width: 300px;
-    margin-bottom: 30px;
-  }
-  
-  .fs-2 {
-    font-size: calc(1.325rem + 0.9vw) !important;
-  }
-  
-  .fa-brands,
-  .fab {
-    font-weight: 400;
-  }
-  
-  .fa-brands,
-  .fab {
-    font-family: "Font Awesome 6 Brands";
-  }
-  
-  .fa,
-  .fa-brands,
-  .fa-classic,
-  .fa-regular,
-  .fa-sharp,
-  .fa-solid,
-  .fab,
-  .far,
-  .fas {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-variant-east-asian: normal;
-    font-variant-alternates: normal;
-    font-variant-position: normal;
-    line-height: 1;
-    text-rendering: auto;
-  }
-  
-  .color-icon {
-    color: #000;
-  }
-  
-  @media (min-width: 768px) {
-    .col-md-6 {
-      flex: 0 0 auto;
-      width: 50%;
-    }
-  }
-  
-  .links-footer {
-    color: #666777;
-    font-weight: 500;
-    position: relative;
-  }
-  .links-footer:hover,
-  .links-footer.active {
-    color: #000;
-  }
-  
-  @media (min-width: 991px) {
-    .links-footer::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background-color: #fcb631;
-      visibility: hidden;
-      transition: 0.3s ease-in-out;
-    }
-  
-    .links-footer:hover::before,
-    .links-footer.active::before {
-      width: 100%;
-      visibility: visible;
-    }
-  }
-  
-  .texto-responsive {
-    text-align: center;
-  }
-  
-  @media screen and (max-width: 600px){
-    .texto-footer{
-        display: none;
-    }
-  }
+}
+
+.lista_de_productos_admin{
+list-style: none;
+display: flex;
+
+}
+.lista_de_busqueda_admin{
+  list-style-type: none;
+  padding-left: 0%;
+}
+.lista_imagenes_de_productos_admin{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+
+ }
+ .card_producto_admin{
+   width: 40%;
+   height: auto;
+   margin: 3%;
+   border:0px ;
+ }
+ 
+ .btn_editar_admin{
+   background-color: #FDB632;
+   
+ }
+ .texto_blanco_btn_amdin{
+   color: whitesmoke;
+   font-family: 'Roboto', 'sans-serif';
+   font-weight: 300;
+ }
+ .body_admin{
+background-color: #f7ecdd35;
+}
+
+.numero_paginacion_admin{
+ text-decoration: none;
+ color: #FDB632;
+ margin-left: 10px;
+
+ font-family: 'Roboto', sans-serif;
+ 
+ font-size: large;
+
+}
+
+ .pagination_admin{
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+ }
+
