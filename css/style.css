@@ -57,49 +57,36 @@ border: 5px solid #FDB632;}
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  transform: scaleY(0);
-  transform-origin: top;
+  flex-direction: row;
+  background-color: #FFDEB1;
+  height: 50px;
+  width: 150px;
+ padding: 3%;
+ 
+
+
 }
 
-.buscador input {
-  height: 100%;
-  width: 100%;
-  font-size: 1.1rem;
-  color: #000;
-  padding: 1rem;
-  text-transform: none;
+.texto_blanco_mediano_admin{
+font-size: 70%;
+font-family: 'roboto',sans-serif;
+font-weight: 800;
+color: white;
+margin: 0;
+padding: 0;
+
 }
 
-/* clases del footer */
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
-}
-
-main {
-  flex-grow: 1;
-}
-
-.rowfooter {
-  width: 85%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.col {
-  flex-basis: 25%;
-  padding: 10px;
-}
-
-.logo-footer {
-  width: 300px;
-  margin-bottom: 30px;
+.cuadro_busqueda_admin{
+  outline: #FDB632;
+  
+  border-radius: 10px;
+  border: 2px solid #FDB632;
+  height: 30px;
+  width: 50%;
+  text-align: start;
+  padding-bottom: 0.5%;  
+  background-color: #fdb63200;
 }
 .cuadro_busqueda_admin:focus{
  outline:none;
@@ -129,24 +116,32 @@ display: flex;
  flex-wrap: wrap;
  justify-content: space-around;
 
- }
- .card_producto_admin{
-   width: 40%;
-   height: auto;
-   margin: 3%;
-   border:0px ;
- }
+}
+.card_producto_admin{
+ width: 40%;
+ height: auto;
+ margin: 3%;
+ border:0px ;
+}
+
+.btn_editar_admin{
+ background-color: #FDB632;
  
- .btn_editar_admin{
-   background-color: #FDB632;
-   
- }
- .texto_blanco_btn_amdin{
-   color: whitesmoke;
-   font-family: 'Roboto', 'sans-serif';
-   font-weight: 300;
- }
- .body_admin{
+}
+.btn_editar_admin:hover{
+background-color: #ffa705;
+}
+.texto_blanco_btn_amdin{
+ color: whitesmoke;
+ font-family: 'Roboto', 'sans-serif';
+ font-weight: 300;
+}
+.texto_blanco_btn_amdin:hover{
+color: whitesmoke;
+font-family: 'Roboto', 'sans-serif';
+font-weight: 300;
+}
+.body_admin{
 background-color: #f7ecdd35;
 }
 
@@ -161,8 +156,13 @@ background-color: #f7ecdd35;
 
 }
 
- .pagination_admin{
-   list-style: none;
-   display: flex;
-   justify-content: space-between;
- }
+.pagination_admin{
+ list-style: none;
+ display: flex;
+ justify-content: space-between;
+}
+
+.form-check-input-admin{
+background-color: #ffa705;
+}
+
