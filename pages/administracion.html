@@ -61,7 +61,7 @@
       </button> -->
 
       
-      <!-- ventana modal -->
+      <!-- ventana modal agregar producto -->
 
 <!-- boton agregar producto -->
 <button type="button" class="botona_gregar_producto_admin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -72,30 +72,43 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
+<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content modal_admin_background">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Nuevo Producto</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal_prod_admin">
 
-        <div class="card card_producto_admin" >
+        <div class="card_producto_admin_modal" >
+
+          <p>Click en "agregar imagen" para cargar mas imagenes</p>
+
+
+
+  
+  
+  <button for="files" class="btn btn_editar_admin texto_blanco_btn_amdin">Agregar imagen</button>
+  
+
           <img src="../img/almendras2.png" class="card-img-top" alt="...">
-          <div class="card-body">
+          
+          <div class="body_card_modal_agregar_prod">
            
-            <input type="text" class="cuadro_busqueda_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Nombre del producto">
-            
+            <input type="text" class="nombre_prod_modal_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Nombre del producto">
+
+            <!-- CODIGO VER DE GENERAR -->
             <h5 class="card-title" id="codigodelproductocardadmin">COD.15526488795</h5>
-            <p class="card-text" id="descripciondelproductoadmin">Descripcion del producto para desplegar, normalmente dos o tres lineas de texto</p>
-            <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
+
+            <textarea name="descripciondelproductoadmin" class="descripcion_prod_admin" id="descripciondelproductoadmin" cols="30" rows="10"></textarea>
+            
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn_editar_admin texto_blanco_btn_amdin">Agregar</button>
       </div>
     </div>
   </div>
