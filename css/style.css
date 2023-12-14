@@ -5,6 +5,9 @@
   color: black;
   transition: background-color 0.01s, color 0.01s;
 }
+.form-control {
+  border: 1px solid #000000; /* Borde negro de 1px */
+}
 
 .BotonBusqueda:hover {
   background-color: black;
