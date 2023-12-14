@@ -40,14 +40,14 @@
       <div class="container-fluid">
         <!-- Logo de Inicio -->
         <a
-  class="d-flex align-items-center navbar-brand textosNav fs-3 ps-3"
+  class="d-flex align-items-center navbar-brand logoNav fs-3 ps-3"
   href="index.html"
 >
   <i class="fa-solid fa-seedling fs-3"></i>
   <h2 class="d-md-inline fs-3 ms-3">De Raíz</h2>
 </a>
-    <a class="px-3 d-none d-lg-block IconosNav" href="./pages/nosotros.html">Quiénes Somos</a>
-    <a class="px-3 d-none d-lg-block IconosNav" href="./pages/detalleProducto.html">Nuestros Productos</a>
+    <a class="mx-3 d-none d-lg-block linksNav" href="./pages/nosotros.html">Quiénes Somos</a>
+    <a class="mx-3 d-none d-lg-block linksNav" href="./pages/detalleProducto.html">Nuestros Productos</a>
 
         <!-- Boton Hamburguesa -->
         <button
@@ -64,7 +64,7 @@
 
         <!-- Opciones del navbar -->
         <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+            <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
                 <!-- Etiquetas en el botón hamburguesa (pantallas pequeñas) -->
                 <li class="nav-item d-lg-none">
                   <a class="nav-link px-3 textosNav" href="./pages/nosotros.html">Quiénes Somos</a>
@@ -73,20 +73,7 @@
                   <a class="nav-link px-3 textosNav" href="./pages/detalleProducto.html">Nuestros Productos</a>
                 </li>
               </ul>
-          <!-- Buscador -->
-          <form class="d-flex">
-            <div class="input-group mx-2 mb-3 m-lg-0 me-lg-3">
-              <input
-                class="form-control formBorde"
-                type="search"
-                placeholder="¿Qué buscas?"
-                aria-label="search"
-              />
-              <button type="button" class="btn BotonBusqueda">
-                <i class="bi bi-search"></i>
-              </button>
-            </div>
-          </form>
+         
 
           <!-- Botones de opciones -->
           <div
@@ -99,16 +86,27 @@
             <a href="./pages/administracion.html" class="IconosNav"
               ><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i
             ></a>
-            <!-- <a href="./pages/contacto.html" class="IconosNav"
-              ><i class="bi bi-headset fs-2 ms-3 pe-1"></i
-            ></a> -->
             <a href="./pages/carrito.html" class="IconosNav"
               ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
             ></a>
             <a href="./pages/loggin.html" class="IconosNav"
-              ><i class="bi bi-people-fill fs-2 ms-3"></i
+              ><i class="bi bi-people-fill me-3 fs-2 ms-3"></i
             ></a>
-          </div>
+           
+          </div> <!-- Buscador -->
+          <form class="d-flex ms-1">
+            <div class="input-group  my-2 m-lg-0 me-lg-3">
+              <input
+                class="form-control formBorde"
+                type="search"
+                placeholder="¿Qué buscas?"
+                aria-label="search"
+              />
+              <button type="button" class="btn BotonBusqueda">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
         </div>
         <!-- Opciones del navbar -->
       </div>
