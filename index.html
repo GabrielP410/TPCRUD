@@ -1,78 +1,112 @@
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg tx-titulo bgAzulOscuro">
-    <div class="container-fluid">
-      <!-- Logo de Inicio -->
-      <a
-        class="d-flex align-items-center navbar-brand text-light link-navbar fs-3"
-        href="index.html"
-      >
-        <img
-          src="./img/logoSinFondo-removebg-preview.png"
-          class="ms-2"
-          width="60"
-          alt="Logo Entrelíneas"
-        />
-
-        <h2 class="d-none d-md-inline fs-3 ms-3">entrelíneas</h2>
-      </a>
-
-      <!-- Boton Hamburguesa -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Opciones del navbar -->
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul
-          class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-          style="--bs-scroll-height: 100px"
-        ></ul>
-
-        <!-- Buscador -->
-        <form class="d-flex">
-          <div class="input-group mx-2 mb-3 m-lg-0 me-lg-3">
-            <input
-              class="form-control"
-              type="search"
-              placeholder="Buscar libro o autor"
-              aria-label="search"
-            />
-            <button type="button" class="btn BotonBusqueda">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
-        </form>
-
-        <!-- Botones de opciones -->
-        <div
-          class="d-flex justify-content-between justify-content-md-evenly mx-3"
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Guadalupe Villareal, Eugenio Cruz Cornejo, Gabriel Peréz, Ivan Baldiviezo, Alani Camila, José Vera"
+    />
+    <meta name="description" content="CRUD de frutos secos" />
+    <meta
+      name="keywords"
+      content="frutos secos, almendras, avellanas, nueces, castañas"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/detalleProducto.css" />
+    <title>De Raíz</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg tx-titulo bgAzulOscuro">
+      <div class="container-fluid">
+        <!-- Logo de Inicio -->
+        <a
+          class="d-flex align-items-center navbar-brand text-light link-navbar fs-3"
+          href="index.html"
         >
-          <a href="./index.html" class="IconosNav"
-            ><i class="bi bi-house-fill fs-2 pe-1"></i
-          ></a>
-          <a href="./pages/login.html" class="IconosNav"
-            ><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i
-          ></a>
-          <a href="./pages/contacto.html" class="IconosNav"
-            ><i class="bi bi-headset fs-2 ms-3 pe-1"></i
-          ></a>
-          <a href="./pages/carrito.html" class="IconosNav"
-            ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
-          ></a>
-          <a href="./pages/sobre_nosotros.html" class="IconosNav"
-            ><i class="bi bi-people-fill fs-2 ms-3"></i
-          ></a>
+          <img
+            src="./img/logoSinFondo-removebg-preview.png"
+            class="ms-2"
+            width="60"
+            alt="Logo Entrelíneas"
+          />
+
+          <h2 class="d-none d-md-inline fs-3 ms-3">DeRaíz</h2>
+        </a>
+
+        <!-- Boton Hamburguesa -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Opciones del navbar -->
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          ></ul>
+
+          <!-- Buscador -->
+          <form class="d-flex">
+            <div class="input-group mx-2 mb-3 m-lg-0 me-lg-3">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Buscar libro o autor"
+                aria-label="search"
+              />
+              <button type="button" class="btn BotonBusqueda">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Botones de opciones -->
+          <div
+            class="d-flex justify-content-between justify-content-md-evenly mx-3"
+          >
+            <a href="./index.html" class="IconosNav"
+              ><i class="bi bi-house-fill fs-2 pe-1"></i
+            ></a>
+            <a href="./pages/login.html" class="IconosNav"
+              ><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i
+            ></a>
+            <a href="./pages/contacto.html" class="IconosNav"
+              ><i class="bi bi-headset fs-2 ms-3 pe-1"></i
+            ></a>
+            <a href="./pages/carrito.html" class="IconosNav"
+              ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
+            ></a>
+            <a href="./pages/sobre_nosotros.html" class="IconosNav"
+              ><i class="bi bi-people-fill fs-2 ms-3"></i
+            ></a>
+          </div>
         </div>
+        <!-- Opciones del navbar -->
       </div>
-      <!-- Opciones del navbar -->
-    </div>
-  </nav>
-  <!-- NAVBAR -->
+    </nav>
+    <!-- NAVBAR -->
+  </body>
+</html>
