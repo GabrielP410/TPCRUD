@@ -209,3 +209,13 @@ main {
       display: none;
   }
 }
+
+.contenedorIconosFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justificadoDeTexto {
+  text-align: justify;
+}
