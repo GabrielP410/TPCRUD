@@ -10,12 +10,26 @@
 }
 
 .BotonBusqueda:hover {
-  background-color: black;
-  color: white;
+  background-color: rgb(121, 121, 121));
+  border: 1px solid black;
+  color: :black;
 }
+.botonFiltro {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+.botonFiltro:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+
 
 .textosNav {
   color: black;
+  font-family: Playfair Display;
   transition: transform 0.005s;
   text-decoration: none;
 
@@ -51,7 +65,34 @@
 
 .navbar-toggler {
   margin-right: 8px;
-  background-color: rgb(71, 71, 71);
+  background-color: secondary;
   border: 1px solid black;
 }
 
+/* Inicio de Estilos José */
+.TextosSubNav {
+  position: relative;
+  text-decoration: none; 
+  color: black;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Pseudo-elemento ::before para el subrayado */
+.TextosSubNav::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+/*subrayado al pasar el mouse por encima */
+.TextosSubNav:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
