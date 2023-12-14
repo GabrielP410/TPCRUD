@@ -1,3 +1,44 @@
+/* Navbar */
+.BotonBusqueda {
+  background-color: #0d2572;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: background-color 0.01s, color 0.01s;
+}
+
+.BotonBusqueda:hover {
+  background-color: #7b92ff;
+  color: white;
+}
+
+.IconosNav {
+  color: white;
+  transition: transform 0.005s;
+}
+
+.IconosNav:hover {
+  color: #7b92ff;
+  transform: scale(1.2);
+}
+
+.navbarentrelineas {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.link-navbar:hover {
+  color: #7b92ff;
+  transform: scale(1.1);
+}
+
+.navbar-toggler {
+  margin-right: 8px;
+  background-color: #7b91ff85;
+  border: 1px solid #7b91ff;
+}
+
 /* clases del navbar */
 .navbar-brand {
   font-weight: 500;
