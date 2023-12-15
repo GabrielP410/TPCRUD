@@ -26,3 +26,13 @@
     transform: scaleX(1);
   }
   
+  .fondoOferta {
+    background-image: url(../img/FondoFrutosSecosOfertas.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    filter: brightness(50%);
+  }
+  
