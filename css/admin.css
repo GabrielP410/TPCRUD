@@ -1,3 +1,11 @@
+
+.blur{
+  filter: blur(20px);
+pointer-events: none;
+user-select: none;
+}
+
+
 .card_foto_de_perfil_admin{
   display: flex;
   flex-wrap: nowrap;
@@ -76,6 +84,16 @@ border: 5px solid #FDB632;}
   padding: 1%;
 
 
+}
+
+.contenedor_blur_agregar_producto#blur.acive{
+ width: 100%;
+ height: 1000%;
+  background-color: rgba(0, 0, 0, 0.09);
+ backdrop-filter: blur(20px);
+color: #f5f2ed;
+position:absolute;
+top: 0;
 }
 
 .texto_blanco_mediano_admin{
