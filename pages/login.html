@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="author"
-      content="Guadalupe Villarreal, Eugenio Cruz Cornejo, Gabriel Peréz, Ivan Baldiviezo, Alani Camila, José Vera"
+      content="Guadalupe Villareal, Eugenio Cruz Cornejo, Gabriel Peréz, Ivan Baldiviezo, Alani Camila, José Vera"
     />
     <meta name="description" content="CRUD de frutos secos" />
     <meta
@@ -22,14 +22,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <title>De Raíz</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary fixed-top">
       <div class="container">
-        <a class="navbar-brand me-auto" href="../index.html"
-          ><i class="fa-solid fa-seedling me-1"></i>DE RAÍCES</a
+        <a class="navbar-brand me-auto" href="./index.html"
+          ><i class="fa-solid fa-seedling me-1"></i>DE RAÍZ</a
         >
         <div
           class="offcanvas offcanvas-end"
@@ -39,7 +40,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <i class="fa-solid fa-seedling me-1"></i>DE RAÍCES
+              <i class="fa-solid fa-seedling me-1"></i>DE RAÍZ
             </h5>
             <button
               type="button"
@@ -52,26 +53,28 @@
             <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li class="nav-item">
                 <a
-                  class="nav-link mx-lg-2"
+                  class="nav-link active mx-lg-2"
                   aria-current="page"
-                  href="../index.html"
+                  href="./index.html"
                   >INICIO</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="../pages/nosotros.html"
+                <a class="nav-link mx-lg-2" href="./pages/nosotros.html"
                   >¿QUIÉNES SOMOS?</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="../index.html"
+                <a class="nav-link mx-lg-2" href="./index.html"
                   >NUESTROS PRODUCTOS</a
                 >
               </li>
               <div class="iconos px-5">
                 <i class="bi bi-search fa-2x" aria-hidden="true"></i>
                 <i class="bi bi-cart-fill fa-2x px-3" aria-hidden="true"></i>
-                <i class="bi bi-person-fill fa-2x active" aria-hidden="true"></i>
+                <a href="./pages/login.html"
+                  ><i class="bi bi-person-fill fa-2x" aria-hidden="true"></i
+                ></a>
               </div>
               <div class="buscador">
                 <form class="d-flex" role="search">
@@ -98,24 +101,27 @@
         </button>
       </div>
     </nav>
-    <main id="fondoLogin" class="container-fluid ">
-      <!--    <section class="row justify-content-center border border-secondary">-->
-      <div class="translate-middle my-5" style="width: 50%" id="loginBox">
-        <img
-          id="loginBoxAvatar"
-          src="../img/logo-verde-png.png"
-          alt="Logo de la empresa"
-        />
-        <form class="text-center">
-          <div class="mb-3">
-            <h2 id="loginBox-h">Login</h2>
+
+    <main class="container-fluid">
+      <section class="my-5 justify-content-center">
+        <form class="container align-items-center claseForm">
+          <div class="avatarImg">
+            <img src="./img/logo-verde-png.png" alt="" />
+          </div>
+          <div class="h2Login">
+            <h2>Login</h2>
+          </div>
+          <div>
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input
               type="email"
-              class="form-control"
-              id="exampleInputEmail1 "
+              class="form-control tamanioInput"
+              id="exampleInputEmail1"
+              width="20px"
               aria-describedby="emailHelp"
               placeholder="Ej: nombre@mail.com"
+              minlength="11"
+              maxlength="50"
               required
             />
             <div id="emailHelp" class="form-text">
@@ -128,34 +134,34 @@
             >
             <input
               type="password"
-              class="form-control"
+              class="form-control tamanioInput"
               id="exampleInputPassword1"
               placeholder="Ej: Zaqxsw123$"
+              minlength="5"
+              maxlength="50"
               required
             />
           </div>
-          <div class="mb-3 text-center">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1"
-              >Recordar datos</label
-            >
-          </div>
-          <button type="submit" class="btn btn-primary">Ingresar</button>
-          <br /><br /><a href="#">¿Has olvidado la contraseña?</a> <br /><a
-            href="#"
-            >Registrate</a
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Recordar datos</label
           >
+          <div class="mb-3 form-check">
+            <br />
+            <button type="submit" class="btn btn-primary btnIngresar">
+              Ingresar
+            </button>
+            <br /><br />
+            <a href="#">¿Has olvidado la contraseña?</a>
+            <br />
+            <a href="#">Registrate</a>
+          </div>
         </form>
-      </div>
-      <!--    </section>-->
+      </section>
     </main>
     <footer>
       <div class="container-fluid bg-body-secondary">
-        <section class="row">
+        <section class="rowfooter">
           <div class="col-md-12 col-lg-3 mt-3 text-center text-lg-start">
             <img
               src="./img/logoSinFondo-removebg-preview.png"
@@ -265,7 +271,7 @@
           </div>
           <hr class="my-4" />
           <div class="container">
-            <article class="row">
+            <article class="rowfooter">
               <div class="col-md-6 col-lg-6 text-center">
                 <h5 class="mb-4">Formas de Pago</h5>
                 <img
@@ -292,8 +298,7 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      src="https://kit.fontawesome.com/5fdb8b7a26.js"
       crossorigin="anonymous"
     ></script>
   </body>

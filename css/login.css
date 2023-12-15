@@ -1,0 +1,63 @@
+/*login*/ 
+main {
+    background-image: url("../img/img-login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 75vh;
+    color: #ff4010;
+    filter: grayscale(40%);
+  }
+  .claseForm {
+    padding: 75px 0px;
+    background-color: #e2e9b8;
+    filter: opacity(90%);
+    border-radius: 10%;
+    margin-top: 13%;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    position: relative;
+  }
+  /*media para el form en tablet y cel*/
+  @media screen and (max-width: 991px) {
+    .claseForm {
+      margin-top: 25%;
+      width: auto;
+    }
+    /*media para elimina el avatar */
+    .avatarImg {
+      display: none;
+    }
+    .h2Login {
+      margin-top: 10px;
+    }
+  }
+  .tamanioInput {
+    width: 75%;
+    margin: 0% 10%;
+  }
+  .btnIngresar {
+    border: none;
+    outline: none;
+    background-color: #ff4010;
+  }
+  .btnIngresar:hover {
+    background-color: #e98b03;
+  }
+  form a {
+    color: #ff4010;
+    text-decoration: none;
+  }
+  form a:hover {
+    color: #fcb631;
+    text-decoration: underline;
+  }
+  .avatarImg {
+    position: absolute;
+    top: -39%;
+    left: calc(50% - 29%);
+  }
+  .h2Login {
+    margin-top: 70px;
+  }
+  /*fin login*/
