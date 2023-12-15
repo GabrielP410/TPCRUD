@@ -6,7 +6,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
 }
+
 main {
   flex-grow: 1;
 }
@@ -50,7 +52,6 @@ main {
 }
 #loginBox a {
   text-decoration: none;
-
   color: #fcb631;
   line-height: 30px;
 }
@@ -112,6 +113,11 @@ main {
   cursor: pointer;
   font-size: 0.99rem;
   margin-left: 1rem;
+
+}
+.iconos a {
+    text-decoration: none;
+    color: #000;
 }
 
 .bi:hover {
@@ -147,8 +153,8 @@ main {
   padding: 1rem;
   text-transform: none;
 }
-/* clases del navbar */
-/*clases del footer*/
+
+/* clases del footer */
 .row {
   width: 85%;
   margin: auto;
@@ -252,9 +258,8 @@ main {
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-  .texto-footer {
-    display: none;
+@media screen and (max-width: 600px){
+  .texto-footer{
+      display: none;
   }
 }
-/*fin clases del footer*/
