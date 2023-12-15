@@ -17,81 +17,85 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/detalleProducto.css">
+        <link rel="stylesheet" href="../css/style.css">
+
         <title>De Raíz</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary fixed-top">
-            <div class="container">
-              <a class="navbar-brand me-auto" href="../index.html"
-                ><i class="fa-solid fa-seedling me-1"></i>DE RAÍZ</a
-              >
-              <div
-                class="offcanvas offcanvas-end"
-                tabindex="-1"
-                id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel"
-              >
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    <i class="fa-solid fa-seedling me-1"></i>DE RAÍZ
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a
-                        class="nav-link  mx-lg-2"
-                        aria-current="page"
-                        href="../index.html"
-                        >INICIO</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mx-lg-2" href="../pages/nosotros.html"
-                        >¿QUIÉNES SOMOS?</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active mx-lg-2" href="./detalleProducto.html"
-                        >NUESTROS PRODUCTOS</a
-                      >
-                    </li>
-                    <div class="iconos px-5">
-                      <i class="bi bi-search fa-2x" aria-hidden="true"></i>
-                      <i class="bi bi-cart-fill fa-2x px-3" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#carritoModal" ></i>
-                      <i class="bi bi-person-fill fa-2x" aria-hidden="true"></i>
-                    </div>
-                    <div class="buscador">
-                      <form class="d-flex" role="search">
-                        <input
-                          class="form-control me-2"
-                          type="search"
-                          placeholder="Buscar..."
-                          aria-label="Search"
-                        />
-                      </form>
-                    </div>
-                  </ul>
-                </div>
-              </div>
+        <nav class="navbar navbar-expand-lg tx-titulo bg-body-secondary navbar-sticky">
+            <div class="container-fluid">
+              <!-- Logo de Inicio -->
+              <a
+                 class="d-flex align-items-center navbar-brand logoNav fs-3 ps-3"
+                 href="../index.html" >
+                <i class="fa-solid fa-seedling fs-3"></i>
+                <h2 class="d-md-inline fs-3 ms-3">De Raíz</h2> 
+                </a>
+                <a href="../pages/nosotros.html" class="mx-3 d-none d-lg-block linksNav " >Quiénes Somos</a>
+                <a class="mx-3 d-none d-lg-block linksNav active" href="../pages/detalleProducto.html">Nuestros Productos</a>
+      
+              <!-- Boton Hamburguesa -->
               <button
                 class="navbar-toggler"
                 type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll"
+                aria-expanded="false"
                 aria-label="Toggle navigation"
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
-            </div>
-        </nav>
+      
+              <!-- Opciones del navbar -->
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+                      <!-- Etiquetas en el botón hamburguesa (pantallas pequeñas) -->
+                      <li class="nav-item d-lg-none">
+                        <a class="nav-link px-3 textosNav" href="./nosotros.html">Quiénes Somos</a>
+                      </li>
+                      <li class="nav-item d-lg-none">
+                        <a class="nav-link px-3 textosNav" href="./detalleProducto.html">Nuestros Productos</a>
+                      </li>
+                    </ul>
+               
+      
+                    <!-- Botones de opciones -->
+                    <div
+                    class="d-flex justify-content-between justify-content-md-evenly mx-3"
+                    >
+                
+                    <a href="/index.html" class="IconosNav"
+                        ><i class="bi bi-house-fill fs-2 pe-1"></i
+                    ></a>
+                    <a href="./administracion.html" class="IconosNav"
+                        ><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i
+                    ></a>
+                    <a href="./carrito.html" class="IconosNav"
+                        ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
+                    ></a>
+                    <a href="./login.html" class="IconosNav"
+                        ><i class="bi bi-people-fill me-3 fs-2 ms-3"></i
+                    ></a>
+                    
+                    </div> <!-- Buscador -->
+                    <form class="d-flex ms-1">
+                    <div class="input-group  my-2 m-lg-0 me-lg-3">
+                        <input
+                        class="form-control formBorde"
+                        type="search"
+                        placeholder="¿Qué buscas?"
+                        aria-label="search"
+                        />
+                        <button type="button" class="btn BotonBusqueda">
+                        <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    </form>
+                </div>
+              <!-- Opciones del navbar -->
+            </div>           
+          </nav>
 
         <main>           
             
@@ -152,7 +156,7 @@
                         <div class="card">
                             <img src="../img/pasas-de-uva.jpg" class="card-img-top img-fluid imgProductos" alt="PasasUva">
                             <div class="card-body">
-                                <h5 class="card-title">Pasas de uva x200 G.</h5>
+                                <h5 class="card-title">Pasas de uva <br> x200 G.</h5>
                                 <p class="card-text">$1.850,00</p>
                             </div>
                         </div>
@@ -162,7 +166,7 @@
                         <div class="card">
                             <img src="../img/pasas-de-uva-rubia.jpg" class="card-img-top img-fluid imgProductos" alt="Uvas rubias">
                             <div class="card-body">
-                                <h5 class="card-title">Pasas de uva rubias  x200 G.</h5>
+                                <h5 class="card-title">Pasas de uva rubias <br> x200 G.</h5>
                                 <p class="card-text">$1.825,00</p>
                             </div>
                         </div>
@@ -172,7 +176,7 @@
                         <div class="card">
                             <img src="../img/peras.jpg" class="card-img-top img-fluid imgProductos" alt="peras">
                             <div class="card-body">
-                                <h5 class="card-title">Peras Desihidratadas x200 G.</h5>
+                                <h5 class="card-title">Peras Desihidratadas <br> x200 G.</h5>
                                 <p class="card-text">$2.085,00</p>
                             </div>
                         </div>
@@ -182,7 +186,7 @@
                         <div class="card">
                             <img src="../img/tomates.jpg" class="card-img-top img-fluid imgProductos" alt="tomate">
                             <div class="card-body">
-                                <h5 class="card-title">Tomates Deshidratados x120 G.</h5>
+                                <h5 class="card-title">Tomates Deshidratados <br> x120 G.</h5>
                                 <p class="card-text">$1.560,00</p>
                             </div>
                         </div>           
