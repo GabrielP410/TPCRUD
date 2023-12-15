@@ -1,4 +1,9 @@
 /* Navbar */
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .BotonBusqueda {
   background-color: white;
   border: 1px solid black;
