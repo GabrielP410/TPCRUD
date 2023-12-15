@@ -236,3 +236,143 @@ main {
 }
 /* Fin estilos para footer */
 
+/* Inicio estilos admin */
+
+.card_foto_de_perfil_admin{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 2%;
+  padding-bottom: 50px;
+}
+
+.texto_negrita_chico_admin{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0%;   
+}
+.texto_negrita_centrado_mediano_admin{
+  font-size: x-large;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0%; 
+  text-align: center;
+  margin-right: 3%;
+}
+.texto_gris_chico_admin{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgb(163, 163, 163);
+}
+.imagen_del_admin{
+  width: 100px;
+  height: 100px;
+  padding: right 10%;
+ border-radius: 50%;
+border: 5px solid #FDB632;}
+
+.imagen_boton_agregar_producto_admin{
+ width: 30%;
+ margin: 0%;
+
+  
+}   
+
+.contendor_del_boton_agregar_producto_admin{
+  width: 100%; 
+  height: auto;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding-right: 5%;
+}
+
+.botona_gregar_producto_admin{
+  
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.buscador input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #000;
+  padding: 1rem;
+  text-transform: none;
+}
+
+.cuadro_busqueda_admin:focus{
+ outline:none;
+}
+.cuadro_busqueda_admin::placeholder{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: rgba(148, 148, 148, 0.388);
+  padding-left: 1%;
+  
+  
+}
+
+.lista_de_productos_admin{
+list-style: none;
+display: flex;
+
+}
+.lista_de_busqueda_admin{
+  list-style-type: none;
+  padding-left: 0%;
+}
+.lista_imagenes_de_productos_admin{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+
+ }
+ .card_producto_admin{
+   width: 40%;
+   height: auto;
+   margin: 3%;
+   border:0px ;
+ }
+ 
+ .btn_editar_admin{
+   background-color: #FDB632;
+   
+ }
+ .texto_blanco_btn_amdin{
+   color: whitesmoke;
+   font-family: 'Roboto', 'sans-serif';
+   font-weight: 300;
+ }
+ .body_admin{
+background-color: #f7ecdd35;
+}
+
+.numero_paginacion_admin{
+ text-decoration: none;
+ color: #FDB632;
+ margin-left: 10px;
+
+ font-family: 'Roboto', sans-serif;
+ 
+ font-size: large;
+
+}
+
+ .pagination_admin{
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+ }
+
