@@ -116,10 +116,20 @@ href="index.html"
 
     <title>Raices</title>
 
+
 <!-- ADMIN -->
-<main>
+  <main class="" id="">
+
+
+    <!-- blur general agregarproducto -->
+<div class="" id="blur">
+
+</div>
+<!-- blur general agregarproducto -->
+
+
     <!-- Seccion de la foto del admin y parte de arriba -->
-    <section class="d-flex flex-row ">
+    <section class="d-flex flex-row " id="">
       <div class=" card_foto_de_perfil_admin"  id="">
         <div class="">
           <img src="../img/foto_carnet_2.jpg" class="card-img-bottom imagen_del_admin" alt="imgen de perfil del admin">
@@ -138,62 +148,102 @@ href="index.html"
 
 </section>
 
+<!-- Seccion de la foto del admin y parte de arriba -->
+
 <!-- barra de busqueda y titulo Productos-->
 
-<div class="my-3 m-3 d-flex align-items-center ">
+<div class="contendor_busqueda_y_boton_agregar ">
+  <div >
   <span class="texto_negrita_centrado_mediano_admin" id="inputGroup-sizing-sm">Productos</span>
   <input type="text" class="cuadro_busqueda_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombre">
-  
-  <!-- boton agregar producto -->
+
+</div>
+
+<!-- barra de busqueda y titulo Productos-->
+
+
+<!-- boton agregar producto -->
 <div class="contendor_del_boton_agregar_producto_admin">
-  <div class="botona_gregar_producto_admin" >
-    
-      <div class="">
-        <p class=" texto_blanco_mediano_admin container-fluid " id="textonegrita">Agregar nuevo producto</p>
+
+
+
+
+
+
+<button type="button" class="botona_gregar_producto_admin" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  onclick="toggle ()">
+  <div class="">
+    <p class=" texto_blanco_mediano_admin container-fluid " id="textonegrita">Agregar nuevo producto</p>
+  </div>
+    <img src="../img/boton redondo con cruz-01.svg" class="imagen_boton_agregar_producto_admin "   alt="boton agregar producto">
+</button>
+<!-- boton agregar producto -->
+
+<!-- Modal -->
+<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content modal_admin_background">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Nuevo Producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-        <img src="../img/boton redondo con cruz-01.svg" class="imagen_boton_agregar_producto_admin " alt="boton agregar producto">
-      </div>
-      
-      
+      <div class="modal_prod_admin">
 
-</div>
+        <div class="card_producto_admin_modal" >
 
-</div>
+          <p>Click en "agregar imagen" para cargar mas imagenes</p>
 
-<!-- seccion de lsita de productos -->
-<section class="lista_de_productos_admin mx-3">
-<div>
-<h6 class=" ">Filtrar por:</h6>
-<ul class="lista_de_busqueda_admin me-4">
-  <li><div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
-      Nueces
-    </label>
-  </div></li>
-  <li><div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
-      Mix
-    </label>
-  </div></li>
-  <li><div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
-      Especias
-    </label>
-  </div></li>
-  <li><div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
-      Otros
-    </label>
-  </div></li>
+
+
   
-</ul>
+  
+  <button for="files" class="btn btn_editar_admin texto_blanco_btn_amdin">Agregar imagen</button>
+  
+
+          <img src="../img/almendras2.png" class="card-img-top" alt="...">
+          
+          <div class="body_card_modal_agregar_prod">
+           
+            <input type="text" class="nombre_prod_modal_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Nombre del producto">
+
+            <!-- Modal -->
+
+            <!-- CODIGO VER DE GENERAR -->
+            <h5 class="card-title" id="codigodelproductocardadmin">COD.15526488795</h5>
+
+            <textarea name="descripciondelproductoadmin" class="descripcion_prod_admin" id="descripciondelproductoadmin" cols="30" rows="10"></textarea>
+            
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" id="" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn_editar_admin texto_blanco_btn_amdin">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- seccion de lista de productos -->
+
+
 </div>
 <div class="lista_imagenes_de_productos_admin">
-  <div class="card card_producto_admin" >
+  <div class="card_producto_admin" >
+    <img src="../img/almendras2.png" class="card-img-top" id="card_producto_editar_admin" alt="...">
+    <div class="card-body">
+      <h4 class="card-title" id="nombredelproductocardadmin">Nombre del producto</h4>
+      <h5 class="card-title" id="codigodelproductocardadmin">COD.15526488795</h5>
+      <p class="card-text" id="descripciondelproductoadmin">Descripcion del producto para desplegar, normalmente dos o tres lineas de texto</p>
+      <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
+    </div>
+  </div>
+  <div class=" card_producto_admin" >
     <img src="../img/almendras2.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h4 class="card-title" id="nombredelproductocardadmin">Nombre del producto</h4>
@@ -202,7 +252,7 @@ href="index.html"
       <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
     </div>
   </div>
-  <div class="card card_producto_admin" >
+  <div class="card_producto_admin" >
     <img src="../img/almendras2.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h4 class="card-title" id="nombredelproductocardadmin">Nombre del producto</h4>
@@ -211,16 +261,7 @@ href="index.html"
       <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
     </div>
   </div>
-  <div class="card card_producto_admin" >
-    <img src="../img/almendras2.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h4 class="card-title" id="nombredelproductocardadmin">Nombre del producto</h4>
-      <h5 class="card-title" id="codigodelproductocardadmin">COD.15526488795</h5>
-      <p class="card-text" id="descripciondelproductoadmin">Descripcion del producto para desplegar, normalmente dos o tres lineas de texto</p>
-      <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
-    </div>
-  </div>
-  <div class="card card_producto_admin" >
+  <div class="card_producto_admin" >
     <img src="../img/almendras2.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h4 class="card-title" id="nombredelproductocardadmin">Nombre del producto</h4>
@@ -232,10 +273,12 @@ href="index.html"
 
 
 </div>
+<!-- seccion de lista de productos -->
 
+<!-- paginacion -->
 </section>
 <section class="d-flex justify-content-center">
-  <nav aria-label="Page navigation example">
+  <nav aria-label="paginacion" class="">
     <ul class="pagination_admin">
       <li class="page-item">
         <a class="numero_paginacion_admin" href="#" aria-label="Previous">
@@ -253,8 +296,12 @@ href="index.html"
     </ul>
   </nav>
 </section>
+
+<!-- paginacion -->
 </nav>
-  </main>
+    
+</main>
+
 
    <!-- footer -->
    <footer>
@@ -389,6 +436,7 @@ href="index.html"
     </div>
   </footer>
 
+  <!-- js -->
   <script src="../js/admin.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -399,6 +447,6 @@ href="index.html"
     src="https://kit.fontawesome.com/5fdb8b7a26.js"
     crossorigin="anonymous"
   ></script>
- 
+ <!-- js -->
 </body>
 </html>
