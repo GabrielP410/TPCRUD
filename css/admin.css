@@ -86,14 +86,15 @@ border: 5px solid #FDB632;}
 
 }
 
-.contenedor_blur_agregar_producto#blur.acive{
+.contenedor_blur_modal_admin#blur.active{
  width: 100%;
- height: 1000%;
+ height: 300%;
   background-color: rgba(0, 0, 0, 0.09);
  backdrop-filter: blur(20px);
 color: #f5f2ed;
-position:absolute;
+position: absolute;
 top: 0;
+
 }
 
 .texto_blanco_mediano_admin{
