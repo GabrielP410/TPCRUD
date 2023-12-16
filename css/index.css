@@ -25,6 +25,15 @@
     visibility: visible;
     transform: scaleX(1);
   }
+ 
+   .botonFiltroPrincipal {
+    max-width: fit-content;
+   }
+  .dropdown-menu {
+    border: none;
+    box-shadow: none;
+  }
+  
   
   .fondoOferta {
     background-image: url(../img/FondoFrutosSecosOfertas.jpg);
