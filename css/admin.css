@@ -141,6 +141,19 @@ padding: 0;
   padding-bottom: 0.5%;  
   background-color: #fdb63200;
 }
+.precio_prod_modal_admin{
+  outline: #FDB632;
+  
+  border-radius: 10px;
+  border: 2px solid #FDB632;
+  height: auto;
+  width: 30%;
+  margin-bottom: 1%;
+  
+  text-align: start;
+  padding-bottom: 0.5%;  
+  background-color: #fdb63200;
+}
 .modal_prod_admin{
   display: flex;
   justify-content: center;
