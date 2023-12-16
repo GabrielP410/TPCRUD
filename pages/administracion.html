@@ -190,7 +190,8 @@ href="index.html"
 
         <div class="card_producto_admin_modal" >
 
-          <p>Click en "agregar imagen" para cargar mas imagenes</p>
+          <p>Click en "agregar imagen" para cargar una imagen</p>
+
 
 
 
@@ -199,25 +200,25 @@ href="index.html"
   <button for="files" class="btn btn_editar_admin texto_blanco_btn_amdin">Agregar imagen</button>
   
 
-          <img src="../img/almendras2.png" class="card-img-top" alt="...">
+          <img src="../img/almendras2.png" class="card-img-top" id="imagen_cargada_usuario" alt="...">
           
           <div class="body_card_modal_agregar_prod">
            
-            <input type="text" class="nombre_prod_modal_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Nombre del producto">
+            <input type="text" class="nombre_prod_modal_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Nombre del producto" id="nombre_prod_cargado">
 
-            <!-- Modal -->
+            
 
             <!-- CODIGO VER DE GENERAR -->
             <h5 class="card-title" id="codigodelproductocardadmin">COD.15526488795</h5>
 
-            <textarea name="descripciondelproductoadmin" class="descripcion_prod_admin" id="descripciondelproductoadmin" cols="30" rows="10"></textarea>
+            <textarea name="descripciondelproductoadmin" class="descripcion_prod_admin" id="descripcion_del_prod_cargado" cols="30" rows="10"></textarea>
             
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" id="" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn_editar_admin texto_blanco_btn_amdin">Agregar</button>
+        <button type="submit" class="btn btn_editar_admin texto_blanco_btn_amdin" data-bs-dismiss="modal" >Agregar</button>
       </div>
     </div>
   </div>
@@ -227,12 +228,12 @@ href="index.html"
 </div>
 
 </div>
-
+<!-- Modal -->
 
 <!-- seccion de lista de productos -->
 
 
-</div>
+<!-- </div>
 <div class="lista_imagenes_de_productos_admin">
   <div class="card_producto_admin" >
     <img src="../img/almendras2.png" class="card-img-top" id="card_producto_editar_admin" alt="...">
@@ -272,7 +273,7 @@ href="index.html"
   </div>
 
 
-</div>
+</div> -->
 <!-- seccion de lista de productos -->
 
 <!-- paginacion -->
