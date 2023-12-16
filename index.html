@@ -267,23 +267,12 @@
       </section>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+    <script src="/js/boostrap.min.js"></script>
   <script src="https://kit.fontawesome.com/5fdb8b7a26.js" crossorigin="anonymous"></script>
-  <script>
-    window.addEventListener('scroll', function () {
-      const navbarHeight = document.querySelector('.navbar').offsetHeight;
-      const barraFiltros = document.querySelector('.barra-filtros');
-
-      if (window.pageYOffset >= navbarHeight) {
-        barraFiltros.style.top = `${navbarHeight}px`;
-      } else {
-        barraFiltros.style.top = '0';
-      }
-    });
-
-  </script>
+  <script src="/js/stickyFilters.js"></script>
 </body>
 
 </html>
