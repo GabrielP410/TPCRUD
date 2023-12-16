@@ -150,7 +150,7 @@ padding: 0;
   height: auto;
 }
 .card_producto_admin_modal{
-  width: 100%;
+  width: 30%;
   height: auto;
   margin: 0%;
   border:0px ;
@@ -189,6 +189,8 @@ padding: 0;
 .lista_de_productos_admin{
 list-style: none;
 display: flex;
+flex-direction: column;
+flex-wrap: wrap;
 
 }
 
@@ -200,13 +202,14 @@ display: flex;
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
- justify-content: space-around;
+ 
+ align-content: start;
 
 }
 
 
 .card_producto_admin{
- width: 40%;
+ width: 25%;
  height: auto;
  margin: 3%;
  border:0px ;
@@ -263,7 +266,7 @@ background-color: #ffa705;
   }
   .lista_imagenes_de_productos_admin{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
    
