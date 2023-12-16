@@ -1,3 +1,6 @@
+
+
+
 .blur{
   filter: blur(20px);
 pointer-events: none;
@@ -112,7 +115,11 @@ padding: 0;
   border-radius: 10px;
   border: 2px solid #FDB632;
   height: 30px;
+
   width: 100%;
+
+ 
+
   text-align: start;
   padding-bottom: 0.5%;  
   background-color: #fdb63200;
