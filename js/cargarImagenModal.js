@@ -1,4 +1,4 @@
-console.log('cargarimagen')
+
 
 function nombre_imagen() {
     const input = document.getElementById('cargarimagen');
