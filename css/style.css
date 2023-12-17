@@ -96,7 +96,7 @@
 }
 
 .IconosNav:hover {
-  color: #fcb631;
+  color: rgb(252, 182, 49);
   transform: scale(1.2);
 }
 .IconosNav.active {
@@ -111,6 +111,7 @@
 /* clases del footer */
 
 body {
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
