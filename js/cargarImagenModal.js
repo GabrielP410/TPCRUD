@@ -1,3 +1,5 @@
+console.log('cargarimagen')
+
 function nombre_imagen() {
     const input = document.getElementById('cargarimagen');
     const nombre_imagen_display = document.getElementById('nombre_imagen');
@@ -14,7 +16,7 @@ function nombre_imagen() {
       verimagen.onload = function(e) {
         previewImage.src = e.target.result;
       };
-      verimagen.readAsDataURL(file);
+      verimagen.readAsDataURL(archivo);
 
     } else {
       nombre_imagen_display.textContent = '';
