@@ -20,6 +20,7 @@
   border: 1px solid black;
   color: black;
 }
+
 .botonFiltro {
   background-color: white;
   border: 1px solid black;
@@ -120,7 +121,7 @@ main {
   flex-grow: 1;
 }
 
-.row {
+.rowfooter {
   width: 85%;
   margin: auto;
   display: flex;
