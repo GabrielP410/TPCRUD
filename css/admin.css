@@ -136,7 +136,7 @@ padding: 0;
   height: auto;
   width: 100%;
   margin-bottom: 1%;
-  
+  padding-left: 2%;
   text-align: start;
   padding-bottom: 0.5%;  
   background-color: #fdb63200;
@@ -147,7 +147,7 @@ padding: 0;
   border-radius: 10px;
   border: 2px solid #FDB632;
   height: auto;
-  width: 30%;
+  width: 35%;
   margin-bottom: 1%;
   
   text-align: start;
