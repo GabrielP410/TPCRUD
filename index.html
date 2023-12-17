@@ -60,9 +60,9 @@
 
         </div> <!-- Buscador -->
         <form class="d-flex ms-1">
-          <div class="input-group  my-2 m-lg-0 me-lg-3">
-            <input class="form-control formBorde" type="search" placeholder="¿Qué buscas?" aria-label="search" />
-            <button type="button" class="btn BotonBusqueda">
+          <div class="input-group my-2 m-lg-0 me-lg-3">
+            <input class="form-control formBorde" type="search" placeholder="¿Qué buscas?" aria-label="search" minlength="2" maxlength="25" />
+            <button class="btn BotonBusqueda" >
               <i class="bi bi-search"></i>
             </button>
           </div>
@@ -139,10 +139,10 @@
     <div id="barraFiltros" class="conteiner bg-white barra-filtros">
       <section class="container d-none  d-md-block" id="SeccionesSubNav">
         <div class="row text-center justify-content-between">
-          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3">Frutos Secos</button>
-          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3">Frutos Frescos</button>
-          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3">Mix Variados</button>
-          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3">Combos Imperdibles</button>
+          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3 fBtnPrincipal" id="filtFrutosSecosL">Frutos Secos</button>
+          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3 fBtnPrincipal" id="filtFrutosFrescosL">Frutos Frescos</button>
+          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3 fBtnPrincipal" id="filtMixVariadosL">Mix Variados</button>
+          <button type="button" class="btn TextosSubNav botonFiltroPrincipal col-3 fBtnPrincipal" id="filtCombosImperdibles">Combos Imperdibles</button>
         </div>
     </div>
     </section>
@@ -155,14 +155,16 @@
 
       <!-- Contenido desplegable -->
       <ul class="dropdown-menu text-center px-3 w-100" aria-labelledby="menuDesplegableFiltrosPrincipal">
-        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3">Frutos Secos</button></li>
-        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3">Frutos Frescos</button></li>
-        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3">Mix Variados</button></li>
-        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3">Frutos Secos</button></li>
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3 fBtnPrincipal" id="filtFrutosSecosS">Frutos Secos</button></li>
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3 fBtnPrincipal" id="filtFrutosFrescosS">Frutos Frescos</button></li>
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3 fBtnPrincipal" id="filtMixVariadosS">Mix Variados</button></li>
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal col-3 fBtnPrincipal" id="filtCombosImperdiblesS">filtCombosImperdibles</button></li>
       </ul>
     </div>
+    <button class="btn" id="botonSimulacion">Simular producto</button>
+
     <section class="mx-3 my-2 fondoOferta">
-      <div class="row"></div>
+      <div class="row" id="grillaPrincipal"></div>
 
     </section>
   </main>
@@ -272,6 +274,8 @@
     <!-- <script src="/js/boostrap.min.js"></script> -->
   <script src="https://kit.fontawesome.com/5fdb8b7a26.js" crossorigin="anonymous"></script>
   <script src="/js/stickyFilters.js"></script>
+  <script src="./js/creaCardPrincipal.js"></script>
+  <script src="./js/buscadorPrincipal.js"></script>
 </body>
 
 </html>
