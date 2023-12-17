@@ -96,5 +96,4 @@ class Producto {
   console.log(producto1.getStock());   // Output: 15
   console.log(producto1.getDescripcion());  // Output: Updated description
   console.log(producto1.getPrecio());      // Output: 39.99
-  console.log(producto1.getImage());        // Output: updated_product1.jpg
-  
+  console.log(producto1.getImage());        // Output: updated_product1.jp
