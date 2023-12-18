@@ -55,7 +55,7 @@
 
           <a href="./index.html" class="IconosNav active"><i class="bi bi-house-fill fs-2 pe-1"></i></a>
           <a href="./pages/administracion.html" class="IconosNav"><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i></a>
-          <a href="./pages/carrito.html" class="IconosNav"><i class="bi bi-cart fs-2 ms-3 pe-1"></i></a>
+          <a href="./carrito.html" class="IconosNav" data-bs-toggle="modal" data-bs-target="#carritoModal" ><i class="bi bi-cart fs-2 ms-3 pe-1"></i></a>
           <a href="./pages/login.html" class="IconosNav"><i class="bi bi-people-fill me-3 fs-2 ms-3"></i></a>
 
         </div> <!-- Buscador -->
@@ -165,6 +165,35 @@
     <section class="container card my-2 fondoOferta">
       <div class="row"></div>
 
+    </section>
+
+    <!-- Ventana modal carrito -->
+    <section>
+      <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <img src="../img/logoSinFondo-removebg-preview.png" alt="logo" class="img-fluid w-25">                         
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                  <h5 class="modal-title">Carrito de Compras</h5>
+      
+                  <ul id="carritoLista" class="list-group"></ul>
+                          
+                      <!-- Agregar productos con js-->
+      
+                  </ul>
+      
+                  <b class="mt-3 display-6">Total: $<span id="totalPrecio">0.00</span></b>
+              </div>
+              <div class="modal-footer">                                                       
+                  <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Seguir Comprando</button>
+                  <a href="../pages/error404.html" type="button" class="btn btn-warning m-2 botonesCompra">Finalizar Compra</a>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
   </main>
   <!-- footer -->
