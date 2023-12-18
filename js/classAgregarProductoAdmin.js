@@ -1,14 +1,18 @@
 export default class Producto {
   #nombre;
   #cod;
+  #categoria;
+  #presentacion;
   #stock;
   #descripcion;
   #precio;
   #image; 
 
-  constructor(nombre, cod=1, stock, descripcion, precio, image) {
+  constructor(nombre, cod=1,categoria,presentacion, stock, descripcion, precio, image) {
     this.#nombre = nombre;
     this.#cod = cod;
+    this.#categoria = categoria;
+    this.#presentacion = presentacion;
     this.#stock = stock;
     this.#descripcion = descripcion;
     this.#precio = precio;
@@ -22,6 +26,13 @@ export default class Producto {
 
   getCod() {
     return this.#cod;
+  }
+
+  getcategoria (){
+    return this.#categoria;
+  }
+  getpresentacion() {
+    return this.#presentacion;
   }
 
   getStock() {
@@ -48,6 +59,18 @@ export default class Producto {
   setCod(newCod) {
     this.#cod = newCod;
   }
+
+
+  setCategoria(newcategoria) {
+    this.#categoria = newcategoria;
+  }
+
+
+
+  setpresentacion(newpresentacion) {
+    this.#presentacion = newpresentacion;
+  }
+
 
   setStock(newStock) {
     this.#stock = newStock;
