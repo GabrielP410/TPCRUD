@@ -10,10 +10,19 @@ const modalAdminProducto = new bootstrap.Modal(document.getElementById('adminPro
 
 const botonAgregarProductoAdmin = document.getElementById('botonAgregarProductoAdmin');
 
+const formularioAgregarProductoAdmin = document.getElementById('formAgregarProductoAdmin');
+
+
 // funciones
 const mostrarModal = () =>{
     modalAdminProducto.show();
-    
+    console.log('algo')
+
+}
+
+const crearProducto = (e) =>{
+e.preventDefault()
+console.log('creaprodducto');
 }
 
 
@@ -21,3 +30,4 @@ const mostrarModal = () =>{
 
 botonAgregarProductoAdmin.addEventListener('click',mostrarModal);
 
+formularioAgregarProductoAdmin.addEventListener('submit',crearProducto)
