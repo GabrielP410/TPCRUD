@@ -284,7 +284,7 @@ href="index.html"
 
 </div>
 
-<div class="lista_imagenes_de_productos_admin">
+<div class="lista_imagenes_de_productos_admin" id="cardProductoAdminCrear">
 
   <div class="card_producto_admin" >
     <img src="../img/almendras2.png" class="card-img-top" id="card_producto_editar_admin" alt="...">
@@ -292,11 +292,15 @@ href="index.html"
       <h4 class="card-title" id="nombre_del_producto_card_admin">Nombre del producto</h4>
       <h5 class="card-title" id="codigo_del_producto_card_admin">COD.15526488795</h5>
       <p class="card-text" id="descripcion_del_producto_admin">Descripcion del producto para desplegar, normalmente dos o tres lineas de texto</p>
+      <div class="d-flex justify-content-between">
+        <h5 id="categoriaProductoAdmin">categoria</h5>
+        <h5 id="presentacionProductoAdmin">presentacion</h5>
+      </div>
       <div class="d-flex justify-content-between align-content-center my-2">
         <h5 class="stock_admin card-title" id="stock_del_producto_admin">
-          STOCK 54 Kg.
+          STOCK 40kg
         </h5>
-      <h5 class="card-title" id="precio_del_prudcto_admin"> PRECIO $2500.25</h5>
+      <h5 class=" text-end" id="precio_del_prudcto_admin"> PRECIO $2500.25</h5>
     </div>
       <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
     </div>
