@@ -27,6 +27,8 @@ const precioProductAdmin = document.getElementById('precio_prod_cargado_admin');
 
 const imagenProductoAdmin = document.getElementById('cargarimagen');
 
+const productosCargadosAdmin = [];
+
 
 // funciones
 const mostrarModal = () =>{
@@ -43,6 +45,7 @@ e.preventDefault();
 const nuevoProducto = new Producto (nombreProducto.value,undefined,checkcategoria.value,presentacionAdmin.value,stockAdmin.value,detalleProducto.value,precioProductAdmin.value,imagenProductoAdmin.value);
 console.log(nuevoProducto);
 
+agenda.push(nuevoProducto);
 
 }
 
