@@ -20,75 +20,94 @@ export default class Producto {
   }
 
   // Getter methods
-  getNombre() {
+  get nombre() {
     return this.#nombre;
   }
 
-  getCod() {
+  get cod() {
     return this.#cod;
   }
 
-  getcategoria (){
+  get categoria (){
     return this.#categoria;
   }
-  getpresentacion() {
+  get presentacion() {
     return this.#presentacion;
   }
 
-  getStock() {
+  get stock() {
     return this.#stock;
   }
 
-  getDescripcion() {
+  get descripcion() {
     return this.#descripcion;
   }
 
-  getPrecio() {
+  get precio() {
     return this.#precio;
   }
 
-  getImage() { 
+  get image() { 
     return this.#image;
   }
 
   // Setter 
-  setNombre(newNombre) {
+  set nombre(newNombre) {
     this.#nombre = newNombre;
   }
 
-  setCod(newCod) {
+  set cod(newCod) {
     this.#cod = newCod;
   }
 
 
-  setCategoria(newcategoria) {
+  set categoria(newcategoria) {
     this.#categoria = newcategoria;
   }
 
 
 
-  setpresentacion(newpresentacion) {
+  set presentacion(newpresentacion) {
     this.#presentacion = newpresentacion;
   }
 
 
-  setStock(newStock) {
+  set stock(newStock) {
     this.#stock = newStock;
   }
 
-  setDescripcion(newDescripcion) {
+  set descripcion(newDescripcion) {
     this.#descripcion = newDescripcion;
   }
 
-  setPrecio(newPrecio) {
-    this.#precio = newPrecio;
+  set precio(newprecio) {
+    this.#precio = newprecio;
   }
 
-  setImage(newImage) { 
+  set image(newImage) { 
     this.#image = newImage;
+  }
+
+
+// metodo para el stringyfy
+toJSON(){
+
+  return{
+
+    nombre:  this.nombre,
+    cod: this.cod,
+    categoria: this.categoria,
+    presentacion: this.presentacion,
+    stock: this.stock,
+    descripcion: this.descripcion,
+    precio: this.precio,
+    image: this.image,
+   
   }
 }
 
+
+}
 // // Example usage:
 // const producto1 = new Producto(
 //   "Product 1",
