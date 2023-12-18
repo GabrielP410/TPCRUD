@@ -58,6 +58,14 @@ background-color: #00000077;}
   font-weight: bold;
 }
 
+
+.cardBodyMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .botonesCompra{
   color: white;
   background-color: #d99e30;

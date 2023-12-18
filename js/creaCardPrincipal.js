@@ -70,10 +70,11 @@ function crearProducto(categorias, precio, codigo, identificador, descripcion, r
     cardProducto.classList.add('col-lg-3', 'col-md-4', 'col-6', 'mt-3', 'mb-5', 'cardProducto');
     cardProducto.setAttribute('data-categorias', textoCategorias); // Añadir atributo con las categorías
     cardProducto.innerHTML = `
-        <div class="card cardCreada" data-bs-toggle="modal" data-bs-target="#modalAllCardsMain">
+        <div class="card cardCreada h-100" data-bs-toggle="modal" data-bs-target="#modalAllCardsMain">
             <img src="${rutaImagen1}" class="card-img-top img-fluid imgProductos" alt="${descripcion}">
-            <div class="card-body">
+            <div class="card-body cardBodyMain">
                 <h5 class="card-title">${descripcion}</h5>
+                
                 <p class="card-text parrafoDeCategoria">Categorías: ${textoCategorias}</p>
                 <p class="card-text">$${precio}</p>
             </div>

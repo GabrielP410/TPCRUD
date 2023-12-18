@@ -4,14 +4,17 @@
   top: 0;
   z-index: 1000;
 }
+
 .BotonBusqueda {
   background-color: white;
   border: 1px solid black;
   color: black;
   transition: background-color 0.5s, color 0.01s;
 }
+
 .formBorde {
-  border: 1px solid #000000; /* Borde negro de 1px */
+  border: 1px solid #000000;
+  /* Borde negro de 1px */
 }
 
 .BotonBusqueda:hover {
@@ -25,6 +28,7 @@
   border: 1px solid black;
   color: black;
 }
+
 .botonFiltro:hover {
   background-color: white;
   border: 1px solid black;
@@ -32,16 +36,18 @@
 }
 
 .logoNav {
-  color: #666777;
+  color: #fcb631;
   font-family: Playfair Display;
   transition: color 0.5s;
   text-decoration: none;
 
 }
+
 .logoNav:hover {
-  color: #fcb631;
-  
+  color: #666777;
+
 }
+
 .linksNav {
   font-size: 1.1rem;
   position: relative;
@@ -67,15 +73,17 @@
   visibility: visible;
   transform: scaleX(1);
   transition: transform 0.3s ease, visibility 0s linear;
-  
+
 }
 
 .linksNav:hover {
   font-size: 1.12rem;
-  transition: font-size 0.3s ease, color 0.3s ease; /* Transición para el tamaño del texto y el color */
+  transition: font-size 0.3s ease, color 0.3s ease;
+  /* Transición para el tamaño del texto y el color */
   color: black;
   font-weight: bold;
 }
+
 .linksNav.active {
   font-size: 1.12rem;
   color: black;
@@ -99,6 +107,7 @@
   color: rgb(252, 182, 49);
   transform: scale(1.2);
 }
+
 .IconosNav.active {
   color: #fcb631;
 }
@@ -108,10 +117,11 @@
   background-color: secondary;
   border: 1px solid black;
 }
+
 /* clases del footer */
 
 body {
-  
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -194,6 +204,7 @@ main {
   font-weight: 500;
   position: relative;
 }
+
 .links-footer:hover,
 .links-footer.active {
   color: #000;
@@ -224,9 +235,9 @@ main {
   text-align: center;
 }
 
-@media screen and (max-width: 600px){
-  .texto-footer{
-      display: none;
+@media screen and (max-width: 600px) {
+  .texto-footer {
+    display: none;
   }
 }
 
@@ -239,5 +250,5 @@ main {
 .justificadoDeTexto {
   text-align: justify;
 }
-/* Fin estilos para footer */
 
+/* Fin estilos para footer */
