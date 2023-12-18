@@ -26,7 +26,7 @@ rel="stylesheet"
     rel="stylesheet"
   />
   
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/admin.css">
   <title>De Raíz</title>
 </head>
@@ -169,8 +169,10 @@ href="index.html"
 
 
 
-<button type="button" class="botona_gregar_producto_admin" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  onclick="toggle ()">
+<button type="button" class="botona_gregar_producto_admin" id="botonAgregarProductoAdmin" data-bs-toggle="modal" data-bs-target="#adminProducto" >
   <div class="">
+
+    
     <p class=" texto_blanco_mediano_admin container-fluid " id="textonegrita">Agregar nuevo producto</p>
   </div>
     <img src="../img/boton redondo con cruz-01.svg" class="imagen_boton_agregar_producto_admin "   alt="boton agregar producto">
@@ -178,13 +180,14 @@ href="index.html"
 <!-- boton agregar producto -->
 
 <!-- Modal -->
-<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="adminProducto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="adminProductoLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content modal_admin_background">
       <div class="modal-header">
-        <h2 class="modal-title fs-5" id="staticBackdropLabel">Agregar Nuevo Producto</h2>
+        <h2 class="modal-title fs-5" id="adminProductoLabel">Agregar Nuevo Producto</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form id="formAgregarProductoAdmin">
       <div class="modal_prod_admin">
 
         <div class="card_producto_admin_modal" >
@@ -195,14 +198,12 @@ href="index.html"
 
 
           <div>
-            <label for="cargarimagen" class="btn btn_editar_admin texto_blanco_btn_amdin">Agregar imagen</label>
-        
+           
 
-          <!-- cargar imagen -->
-<input type="file" id="cargarimagen" accept="image/*" style="display: none;" onchange="nombre_imagen()">
 
-<!-- nombre de la imagen -->
-<p id="nombre_imagen"></p>
+<input type="text" class="nombre_prod_modal_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Agregar URL de la imagen" id="cargarimagen">
+
+
         </div>
         
         <img id="previewImage"  class="card-img-top" alt="Previsualizacion imagen">
@@ -216,54 +217,45 @@ href="index.html"
             
 
             <!-- CODIGO VER DE GENERAR -->
-            <h5 class="card-title" id="codigo_del_producto_card_admin">COD.15526488795</h5>
+            
+            <input type="text" class="nombre_prod_modal_admin " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ingrese codigo unico" id="codigo_del_producto_card_admin">
 
             <textarea name="descripciondelproductoadmin" class="descripcion_prod_admin" id="descripcion_del_prod_cargado" cols="30" rows="10"></textarea>
 
 
             <!-- checks categorias -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Seco
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-              <label class="form-check-label" for="flexCheckChecked">
-                Fresco
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-              <label class="form-check-label" for="flexCheckChecked">
-                Mix
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-              <label class="form-check-label" for="flexCheckChecked">
-                Combo
-              </label>
-            </div>
+
+            <select class="form-select precio_prod_modal_admin" aria-label="" id="categoria">
+              <option selected>categoria</option>
+              <option value="Seco">Seco</option>
+              <option value="Fresco">Fresco</option>
+              <option value="Mix">Mix</option>
+              <option value="Combo">Combo</option>
+            </select>
+
+          
 <!-- checks categorias -->
-            <select class="form-select precio_prod_modal_admin" aria-label="">
+
+
+
+
+            <select class="form-select precio_prod_modal_admin" aria-label="" id="presentacionAdmin">
   <option selected>Presentacion</option>
-  <option value="1">100g</option>
-  <option value="2">250g</option>
-  <option value="3">500g</option>
-  <option value="4">1Kg</option>
+  <option value="100g">100g</option>
+  <option value="250g">250g</option>
+  <option value="500g">500g</option>
+  <option value="1kg">1Kg</option>
 </select>
 
             <div class="d-flex justify-content-between">
             <div class="d-flex flex-row align-content-center">
-              <p class="mt-1 mb-0 me-2">U.</p>
-              <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm" placeholder="STOCK" id="stock_prod_cargado_admin">
+              <p class="mt-1 mb-0 me-2">Stock</p>
+              <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm"  id="stock_prod_cargado_admin">
             </div>
               
 <div class='d-flex flex-row align-item-center '>
   <p class="mb-0 mt-1 me-2">$</p>
-            <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm" placeholder="PRECIO" id="precio_prod_cargado_admin">
+            <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm"  id="precio_prod_cargado_admin">
 
           </div>
           </div>
@@ -275,6 +267,7 @@ href="index.html"
         <button type="button" class="btn btn-danger" id="" data-bs-dismiss="modal">Cerrar</button>
         <button type="submit" class="btn btn_editar_admin texto_blanco_btn_amdin" data-bs-dismiss="modal" >Agregar</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
@@ -290,19 +283,49 @@ href="index.html"
 
 </div>
 
-<div class="lista_imagenes_de_productos_admin">
+<div class="lista_imagenes_de_productos_admin" id="cardProductoAdminCrear">
 
   <div class="card_producto_admin" >
     <img src="../img/almendras2.png" class="card-img-top" id="card_producto_editar_admin" alt="...">
     <div class="card-body">
-      <h4 class="card-title" id="nombre_del_producto_card_admin">Nombre del producto</h4>
-      <h5 class="card-title" id="codigo_del_producto_card_admin">COD.15526488795</h5>
+      
+      <h4 class="card-title mb-1" id="nombre_del_producto_card_admin">Nombre del producto</h4>
+      
+
+      <h5 class="card-title mb-1" id="codigo_del_producto_card_admin">N.</h5>
+
+      <h5 class="card-title" id="codigo_del_producto_card_admin">COD.</h5>
+      
       <p class="card-text" id="descripcion_del_producto_admin">Descripcion del producto para desplegar, normalmente dos o tres lineas de texto</p>
+      <div class="d-flex justify-content-between">
+        <div>
+        <h5 id="categoriaProductoAdmin">categoria:</h5>
+        <h5 id="categoriaProductoAdmin">Seco</h5>
+      </div>
+      <div class="mb-2">
+        <h5 class="text-end" id="presentacionProductoAdmin">Peso:</h5>
+        <h5 class="text-end" id="presentacionProductoAdmin">100g</h5>
+      </div>
+
+      </div>
       <div class="d-flex justify-content-between align-content-center my-2">
+
+        <div>
         <h5 class="stock_admin card-title" id="stock_del_producto_admin">
-          STOCK 54 Kg.
+          STOCK:
         </h5>
-      <h5 class="card-title" id="precio_del_prudcto_admin"> PRECIO $2500.25</h5>
+        <h5 class="stock_admin card-title" id="stock_del_producto_admin">
+          40kg
+        </h5>
+
+      </div>
+
+<div>
+      <h5 class=" text-end" id="precio_del_prudcto_admin"> PRECIO: </h5>
+      <h5 class=" text-end" id="precio_del_prudcto_admin"> $2500.25</h5>
+    </div>
+
+
     </div>
       <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
     </div>

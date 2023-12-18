@@ -225,7 +225,10 @@ flex-wrap: wrap;
  width: 25%;
  height: auto;
  margin: 3%;
- border:0px ;
+border:0px ;
+ padding: 3%;
+ border-radius: 5px;
+ background-color: #f5f2ed;
 }
 
 .btn_editar_admin{
@@ -289,6 +292,9 @@ background-color: #ffa705;
     height: auto;
     margin: 0%;
     border:0px ;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #f5f2ed;
    }
    
    .contendor_busqueda_y_boton_agregar{
@@ -343,6 +349,9 @@ background-color: #ffa705;
     height: auto;
     margin: 3%;
     border:0px ;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #f5f2ed;
    }
    
    .contendor_busqueda_y_boton_agregar{
@@ -413,6 +422,10 @@ background-color: #ffa705;
     height: auto;
     margin: 3%;
     border:0px ;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #f5f2ed;
+    
    }
    
    .contendor_busqueda_y_boton_agregar{
