@@ -76,23 +76,24 @@ function guardarEnLocalStorageAdmin() {
   );
 }
 
-function crearCardProducto(productoAdmin) {
+function crearCardProducto(productoAdmin,numerodeproducto) {
   const cardProductoAdmin = document.getElementById("cardProductoAdminCrear");
   cardProductoAdmin.innerHTML =
     cardProductoAdmin.innerHTML +
     `<div class="card_producto_admin" >
    <img src="../img/almendras2.png" class="card-img-top" id="card_producto_editar_admin" alt="...">
    <div class="card-body">
-     <h4 class="card-title" id="nombre_del_producto_card_admin">${productoAdmin.nombre}</h4>
+     <h4 class="card-title mb-1" id="nombre_del_producto_card_admin">${productoAdmin.nombre}</h4>
+     <h5 class="card-title mb-1" id="codigo_del_producto_card_admin">N.${numerodeproducto}</h5>
      <h5 class="card-title" id="codigo_del_producto_card_admin">COD:${productoAdmin.cod}</h5>
      <p class="card-text" id="descripcion_del_producto_admin">${productoAdmin.descripcion}</p>
      <div class="d-flex justify-content-between">
      <div>
-     <h5 id="categoriaProductoAdmin">categoria:</h5>
+     <h6 id="categoriaProductoAdmin">Categoría:</h6>
      <h5 id="categoriaProductoAdmin">${productoAdmin.categoria}</h5>
    </div>
    <div class="mb-2">
-     <h5 class="text-end" id="presentacionProductoAdmin">Peso:</h5>
+     <h6 class="text-end" id="presentacionProductoAdmin">Peso:</h6>
      <h5 class="text-end" id="presentacionProductoAdmin">${productoAdmin.presentacion}</h5>
    </div>
      </div>
@@ -121,7 +122,7 @@ function crearCardProducto(productoAdmin) {
 
 function cargaInicial() {
   if (productosCargadosAdmin.length > 0) {
-    productosCargadosAdmin.map((productoAdmin) => crearCardProducto(productoAdmin));
+    productosCargadosAdmin.map((productoAdmin,posicion) => crearCardProducto(productoAdmin,posicion +1));
   }
 }
 
