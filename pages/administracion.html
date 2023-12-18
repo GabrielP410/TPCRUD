@@ -170,8 +170,10 @@ href="index.html"
 
 
 
-<button type="button" class="botona_gregar_producto_admin" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  onclick="toggle ()">
+<button type="button" class="botona_gregar_producto_admin" id="botonAgregarProductoAdmin" data-bs-toggle="modal" data-bs-target="#adminProducto" >
   <div class="">
+
+    
     <p class=" texto_blanco_mediano_admin container-fluid " id="textonegrita">Agregar nuevo producto</p>
   </div>
     <img src="../img/boton redondo con cruz-01.svg" class="imagen_boton_agregar_producto_admin "   alt="boton agregar producto">
@@ -179,11 +181,11 @@ href="index.html"
 <!-- boton agregar producto -->
 
 <!-- Modal -->
-<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="adminProducto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="adminProductoLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content modal_admin_background">
       <div class="modal-header">
-        <h2 class="modal-title fs-5" id="staticBackdropLabel">Agregar Nuevo Producto</h2>
+        <h2 class="modal-title fs-5" id="adminProductoLabel">Agregar Nuevo Producto</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal_prod_admin">
@@ -258,13 +260,13 @@ href="index.html"
 
             <div class="d-flex justify-content-between">
             <div class="d-flex flex-row align-content-center">
-              <p class="mt-1 mb-0 me-2">U.</p>
-              <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm" placeholder="STOCK" id="stock_prod_cargado_admin">
+              <p class="mt-1 mb-0 me-2">Stock</p>
+              <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm"  id="stock_prod_cargado_admin">
             </div>
               
 <div class='d-flex flex-row align-item-center '>
   <p class="mb-0 mt-1 me-2">$</p>
-            <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm" placeholder="PRECIO" id="precio_prod_cargado_admin">
+            <input type="number" class="precio_prod_modal_admin nombre_prod_modal_admin" aria-label="" aria-describedby="inputGroup-sizing-sm"  id="precio_prod_cargado_admin">
 
           </div>
           </div>
