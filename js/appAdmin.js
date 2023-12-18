@@ -81,7 +81,7 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
   cardProductoAdmin.innerHTML =
     cardProductoAdmin.innerHTML +
     `<div class="card_producto_admin" >
-   <img src="../img/almendras2.png" class="card-img-top" id="card_producto_editar_admin" alt="...">
+   <img src="${productoAdmin.image}" class="card-img-top" id="card_producto_editar_admin" alt="...">
    <div class="card-body">
      <h4 class="card-title mb-1" id="nombre_del_producto_card_admin">${productoAdmin.nombre}</h4>
      <h5 class="card-title mb-1" id="codigo_del_producto_card_admin">N.${numerodeproducto}</h5>
