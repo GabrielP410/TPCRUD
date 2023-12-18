@@ -79,3 +79,6 @@ min-height: 300px;
   .parrafosVenta {
     color: #d99e30;
   }
+  .hidden-card {
+    display: none;
+  }

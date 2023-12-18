@@ -1,4 +1,3 @@
-// Función para generar una categoría aleatoria de las disponibles
 function generarCategoriasAleatorias() {
     const categorias = [];
     let tieneCategoria = false;
@@ -69,12 +68,13 @@ function crearProducto(categorias, precio, codigo, identificador, descripcion, r
     const cardProducto = document.createElement('div');
 
     cardProducto.classList.add('col-lg-3', 'col-md-4', 'col-6', 'mt-3', 'mb-5', 'cardProducto');
+    cardProducto.setAttribute('data-categorias', textoCategorias); // Añadir atributo con las categorías
     cardProducto.innerHTML = `
-        <div class="card" data-bs-toggle="modal" data-bs-target="#modalAllCardsMain">
+        <div class="card cardCreada" data-bs-toggle="modal" data-bs-target="#modalAllCardsMain">
             <img src="${rutaImagen1}" class="card-img-top img-fluid imgProductos" alt="${descripcion}">
             <div class="card-body">
                 <h5 class="card-title">${descripcion}</h5>
-                <p class="card-text">Categorías: ${textoCategorias}</p>
+                <p class="card-text parrafoDeCategoria">Categorías: ${textoCategorias}</p>
                 <p class="card-text">$${precio}</p>
             </div>
         </div>
@@ -83,4 +83,71 @@ function crearProducto(categorias, precio, codigo, identificador, descripcion, r
     // Agregar tanto la card como el modal al contenedor 'grillaPrincipal'
     const grillaPrincipal = document.getElementById('grillaPrincipal');
     grillaPrincipal.appendChild(cardProducto);
+}
+
+let catFiltros = [false, false, false, false];
+
+document.addEventListener("DOMContentLoaded", function () {
+    var botones = document.querySelectorAll(".botonFiltroPrincipal");
+
+    botones.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            var icono = boton.querySelector("i.bi-check-lg");
+            if (!icono) {
+                icono = document.createElement("i");
+                icono.classList.add("bi", "bi-check-lg");
+                boton.appendChild(icono);
+            } else {
+                boton.removeChild(icono);
+            }
+
+            // Actualizar el estado de los filtros después de cada clic
+            let nuevoEstado = obtenerEstadoFiltros();
+            catFiltros = nuevoEstado;
+
+            // Llamar a la función para mostrar u ocultar las tarjetas según los filtros
+            actualizarTarjetas();
+        });
+    });
+
+    // Llamamos a esta función al inicio para configurar las tarjetas según los filtros iniciales
+    actualizarTarjetas();
+});
+
+function actualizarTarjetas() {
+    const tarjetas = document.querySelectorAll('.cardProducto');
+    const filtrosActivos = catFiltros.some(filtro => filtro); // Verificar si hay filtros activos
+
+    tarjetas.forEach(function (tarjeta) {
+        const categoriasTarjeta = tarjeta.getAttribute('data-categorias').split(', ');
+
+        const mostrar = categoriasTarjeta.some(function (categoria, index) {
+            return (categoria === 'Secos' && catFiltros[0]) ||
+                   (categoria === 'Frescos' && catFiltros[1]) ||
+                   (categoria === 'Mix' && catFiltros[2]) ||
+                   (categoria === 'Combos' && catFiltros[3]) ||
+                   !filtrosActivos; // Si no hay filtros activos, mostrar todas las tarjetas
+        });
+
+        if (mostrar) {
+            tarjeta.classList.remove('d-none');
+        } else {
+            tarjeta.classList.add('d-none');
+        }
+    });
+}
+
+function obtenerEstadoFiltros() {
+    let estadoDeFiltros = [];
+
+    let clases = ['filtFrutosSecos', 'filtFrutosFrescos', 'filtMixVariados', 'filtCombosImperdibles'];
+
+    clases.forEach(function (clase) {
+        let botones = document.querySelectorAll(".botonFiltroPrincipal." + clase);
+        let tieneIcono = Array.from(botones).some(function (boton) {
+            return boton.querySelector("i.bi-check-lg");
+        });
+        estadoDeFiltros.push(tieneIcono);
+    });
+    return estadoDeFiltros;
 }
