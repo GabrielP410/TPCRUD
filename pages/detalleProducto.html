@@ -85,6 +85,7 @@
                         type="search"
                         placeholder="¿Qué buscas?"
                         aria-label="search"
+                        id="busqueda"
                         />
                         <button type="button" class="btn BotonBusqueda">
                         <i class="bi bi-search"></i>
@@ -110,8 +111,8 @@
             </section>             
                          
             <section class="pt-2 pb-3 bg-body-secondary">
-                <div class="row rowfooter">
-                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalAlmendras">
+                <div class="row rowfooter" id="seccionProductos">
+                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-name="Almendras" data-bs-toggle="modal" data-bs-target="#detalleModalAlmendras">
                         <div class="card">
                             <img src="../img/almendras.jpg" class="card-img-top img-fluid imgProductos " alt="almendras">
                             <div class="card-body">
@@ -121,7 +122,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalPistachos">
+                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-name="Pistachos" data-bs-toggle="modal" data-bs-target="#detalleModalPistachos">
                         <div class="card">
                             <img src="../img/pistachos.jpg" class="card-img-top img-fluid imgProductos" alt="pistacho">
                             <div class="card-body">
@@ -131,7 +132,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalArandanos">
+                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-name="Arandanos" data-bs-toggle="modal" data-bs-target="#detalleModalArandanos">
                         <div class="card">
                             <img src="../img/arándanos.jpg" class="card-img-top img-fluid imgProductos" alt="arandanos">
                             <div class="card-body">
@@ -141,7 +142,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalCiruelas" >
+                    <div class="col-lg-3 mt-3 mb-5 cardProducto" data-name="Ciruelas" data-bs-toggle="modal" data-bs-target="#detalleModalCiruelas" >
                         <div class="card">                        
                             <img src="../img/ciruelas.png" class="card-img-top img-fluid imgProductos" alt="Ciruelas">
                             <div class="card-body">
@@ -151,7 +152,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalPasasUva" >
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Pasas de uva" data-bs-toggle="modal" data-bs-target="#detalleModalPasasUva" >
                         <div class="card">
                             <img src="../img/pasas-de-uva.jpg" class="card-img-top img-fluid imgProductos" alt="PasasUva">
                             <div class="card-body">
@@ -161,7 +162,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalPasasUvaRubias">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Pasas de uva rubias" data-bs-toggle="modal" data-bs-target="#detalleModalPasasUvaRubias">
                         <div class="card">
                             <img src="../img/pasas-de-uva-rubia.jpg" class="card-img-top img-fluid imgProductos" alt="Uvas rubias">
                             <div class="card-body">
@@ -171,7 +172,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalPeras">
+                    <div class="col-lg-3 mb-4 cardProducto"  data-name="Peras" data-bs-toggle="modal" data-bs-target="#detalleModalPeras">
                         <div class="card">
                             <img src="../img/peras.jpg" class="card-img-top img-fluid imgProductos" alt="peras">
                             <div class="card-body">
@@ -181,7 +182,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalTomates">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Tomates" data-bs-toggle="modal" data-bs-target="#detalleModalTomates">
                         <div class="card">
                             <img src="../img/tomates.jpg" class="card-img-top img-fluid imgProductos" alt="tomate">
                             <div class="card-body">
@@ -191,7 +192,7 @@
                         </div>           
                     </div>   
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalNuezPelada">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Nuez Pelada" data-bs-toggle="modal" data-bs-target="#detalleModalNuezPelada">
                         <div class="card">
                             <img src="../img/nueces2.jpg" class="card-img-top img-fluid imgProductos" alt="nueces">
                             <div class="card-body">
@@ -201,7 +202,7 @@
                         </div>           
                     </div>   
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalNuezCascara">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Nuez Con Cascara" data-bs-toggle="modal" data-bs-target="#detalleModalNuezCascara">
                         <div class="card">
                             <img src="../img/nuecesCascara.jpg" class="card-img-top img-fluid imgProductos" alt="nueces con cascara">
                             <div class="card-body">
@@ -211,7 +212,7 @@
                         </div>           
                     </div>   
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalCastana">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Castañas Tostadas" data-bs-toggle="modal" data-bs-target="#detalleModalCastana">
                         <div class="card">
                             <img src="../img/castanaTostadaconsal.jpg" class="card-img-top img-fluid imgProductos" alt="castañas tostadas">
                             <div class="card-body">
@@ -221,7 +222,7 @@
                         </div>            
                     </div>    
 
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalCastanaCruda">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Castañas Cruda" data-bs-toggle="modal" data-bs-target="#detalleModalCastanaCruda">
                         <div class="card">
                             <img src="../img/castanacruda.jpg" class="card-img-top img-fluid imgProductos" alt="Castañas crudas">
                             <div class="card-body">
@@ -230,7 +231,7 @@
                             </div>
                         </div>           
                     </div>                    
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalMixEuropeo">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Mix Europeo Atuel Valley" data-bs-toggle="modal" data-bs-target="#detalleModalMixEuropeo">
                         <div class="card">
                             <img src="../img/mix-europeo.jpg" class="card-img-top img-fluid imgProductos" alt="Castañas crudas">
                             <div class="card-body">
@@ -239,7 +240,7 @@
                             </div>
                         </div>           
                     </div>                    
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalMixTropical">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Mix Tropical Atuel Valley" data-bs-toggle="modal" data-bs-target="#detalleModalMixTropical">
                         <div class="card">
                             <img src="../img/mix-tropical.jpg" class="card-img-top img-fluid imgProductos" alt="Castañas crudas">
                             <div class="card-body">
@@ -248,7 +249,7 @@
                             </div>
                         </div>           
                     </div>                    
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalMixPatagonico">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Mix Patagonico Atuel Valley" data-bs-toggle="modal" data-bs-target="#detalleModalMixPatagonico">
                         <div class="card">
                             <img src="../img/mix-patagonico.jpg" class="card-img-top img-fluid imgProductos" alt="Castañas crudas">
                             <div class="card-body">
@@ -257,7 +258,7 @@
                             </div>
                         </div>           
                     </div>                    
-                    <div class="col-lg-3 mb-4 cardProducto" data-bs-toggle="modal" data-bs-target="#detalleModalMixSerrano">
+                    <div class="col-lg-3 mb-4 cardProducto" data-name="Mix Serrano Atuel Valley" data-bs-toggle="modal" data-bs-target="#detalleModalMixSerrano">
                         <div class="card">
                             <img src="../img/mix-serrano.jpg" class="card-img-top img-fluid imgProductos" alt="Castañas crudas">
                             <div class="card-body">
