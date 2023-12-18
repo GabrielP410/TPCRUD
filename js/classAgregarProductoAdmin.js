@@ -108,34 +108,3 @@ toJSON(){
 
 
 }
-// // Example usage:
-// const producto1 = new Producto(
-//   "Product 1",
-//   1,
-//   10,
-//   "Description of Product 1",
-//   29.99,
-//   "product1.jpg" // Example image file name
-// );
-
-// // Accessing private properties and image using getters
-// console.log(producto1.getNombre()); // Output: Product 1
-// console.log(producto1.getCod());     // Output: 1
-// console.log(producto1.getStock());   // Output: 10
-// console.log(producto1.getDescripcion());  // Output: Description of Product 1
-// console.log(producto1.getPrecio());      // Output: 29.99
-// console.log(producto1.getImage());        // Output: product1.jpg
-
-// // Modifying private properties and image using setters
-// producto1.setNombre("Updated Product 1");
-// producto1.setCod(2);
-// producto1.setStock(15);
-// producto1.setDescripcion("Updated description");
-// producto1.setPrecio(39.99);
-// producto1.setImage("updated_product1.jpg");
-// console.log(producto1.getNombre()); // Output: Updated Product 1
-// console.log(producto1.getCod());     // Output: 2
-// console.log(producto1.getStock());   // Output: 15
-// console.log(producto1.getDescripcion());  // Output: Updated description
-// console.log(producto1.getPrecio());      // Output: 39.99
-// console.log(producto1.getImage());        // Output: updated_product1.jpg

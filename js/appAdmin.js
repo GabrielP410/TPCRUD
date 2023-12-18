@@ -66,6 +66,7 @@ const crearProducto = (e) => {
 
 guardarEnLocalStorageAdmin();
 
+
 };
 
 function limpiarformulario() {
