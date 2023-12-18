@@ -46,7 +46,7 @@ const crearProducto = (e) => {
   //   crea el prodcuto
   const nuevoProducto = new Producto(
     nombreProducto.value,
-    undefined,
+    codigo.value,
     checkcategoria.value,
     presentacionAdmin.value,
     stockAdmin.value,
@@ -84,17 +84,34 @@ function crearCardProducto(productoAdmin) {
    <img src="../img/almendras2.png" class="card-img-top" id="card_producto_editar_admin" alt="...">
    <div class="card-body">
      <h4 class="card-title" id="nombre_del_producto_card_admin">${productoAdmin.nombre}</h4>
-     <h5 class="card-title" id="codigo_del_producto_card_admin">${productoAdmin.cod}</h5>
+     <h5 class="card-title" id="codigo_del_producto_card_admin">COD:${productoAdmin.cod}</h5>
      <p class="card-text" id="descripcion_del_producto_admin">${productoAdmin.descripcion}</p>
      <div class="d-flex justify-content-between">
-       <h5 id="categoriaProductoAdmin">${productoAdmin.categoria}</h5>
-       <h5 id="presentacionProductoAdmin">${productoAdmin.presentacion}</h5>
+     <div>
+     <h5 id="categoriaProductoAdmin">categoria:</h5>
+     <h5 id="categoriaProductoAdmin">${productoAdmin.categoria}</h5>
+   </div>
+   <div class="mb-2">
+     <h5 class="text-end" id="presentacionProductoAdmin">Peso:</h5>
+     <h5 class="text-end" id="presentacionProductoAdmin">${productoAdmin.presentacion}</h5>
+   </div>
      </div>
      <div class="d-flex justify-content-between align-content-center my-2">
-       <h5 class="stock_admin card-title" id="stock_del_producto_admin">
-         STOCK ${productoAdmin.stock}
-       </h5>
-     <h5 class=" text-end" id="precio_del_prudcto_admin"> PRECIO $ ${productoAdmin.precio}</h5>
+       
+     <div>
+     <h5 class="stock_admin card-title" id="stock_del_producto_admin">
+       STOCK:
+     </h5>
+     <h5 class="stock_admin card-title" id="stock_del_producto_admin">
+       ${productoAdmin.stock}
+     </h5>
+
+   </div>
+
+<div>
+   <h5 class=" text-end" id="precio_del_prudcto_admin"> PRECIO: </h5>
+   <h5 class=" text-end" id="precio_del_prudcto_admin"> $${productoAdmin.precio}</h5>
+ </div>
    </div>
      <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
    </div>
