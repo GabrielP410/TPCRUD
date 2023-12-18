@@ -51,8 +51,18 @@ border-radius: 20px;
 
 min-height: 300px;
   }
-  
-  .barra-filtros {
+  .fondoModalMAin {
+    background-image: url(../img/frutosFondoModalMain.webp);
+    position: relative;
+    height: 500px;
+    filter: brightness(50%);    
+}
+.botonesCompra{
+  color: white;
+  background-color: #d99e30;
+}
+
+    .barra-filtros {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -64,4 +74,8 @@ min-height: 300px;
   .cardProducto:hover {
     transform: scale(1.05);
     z-index: 1;
+  }
+
+  .parrafosVenta {
+    color: #d99e30;
   }

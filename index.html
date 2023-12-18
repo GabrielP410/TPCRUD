@@ -172,25 +172,40 @@
     <button class="btn" id="botonSimulacion">Simular producto</button>
 
     <section class="mx-3 p-3 fondoGrillaProductos">
-      <div class="row mx-2 g-4" id="grillaPrincipal"></div>
-      <div class="card col-3">
-        <!-- Contenido de la tarjeta -->
-        <div class="card-body">
-          <h5 class="card-title">sdfsdfsdfsfd</h5>
-          <p class="card-text">Categorías: ${textoCategorias}</p>
-          <p class="card-text">$${precio}</p>
-        </div>
-      </div>
-      <div class="card col-3">
-        <!-- Contenido de la tarjeta -->
-        <div class="card-body">
-          <h5 class="card-title">sdfsdfsdfsfd</h5>
-          <p class="card-text">Categorías: ${textoCategorias}</p>
-          <p class="card-text">$${precio}</p>
-        </div>
-      </div>
+      <div class="row mx-2 g-4" id="grillaPrincipal">
 
       </div>
+
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAllCardsMain">
+  Launch demo modal
+</button>
+<button id="verEstadoBotonesBtn">Ver Estados de Botones</button>
+
+
+<!-- Modal -->
+<div class="modal fade " id="modalAllCardsMain" tabindex="-1" aria-labelledby="modalAllCardsMainLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <img src="./img/logoSinFondo-removebg-preview.png" alt="logo de Raiz sin fondo" class="img-fluid w-25">
+        <h1 class="modal-title fs-5" id="modalAllCardsMainLabel"></h1>
+      </div>
+      <div class="modal-body bg-light">
+        <h5 class="pb-2">Nombre del producto</h5>
+        <p class="justificadoDeTexto parrafosVenta"><i class="fa-solid fa-seedling"></i>  ¡En nuestra tienda encontrarás una gran variedad de frutos secos y similares, cuidadosamente seleccionados para garantizar frescura y calidad! </p>
+        <p class="justificadoDeTexto parrafosVenta">Aquí en Raíz, promovemos la energía sana y te ofrecemos jugosas ofertas en cada compra. ¡Descubre nuestros productos y benefíciate de lo mejor!  <i class="fa-solid fa-seedling"></i></p>
+
+      </div>
+      <hr>
+      <div class="modal-foote ms-auto pb-3">
+     
+        <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Seguir Viendo</button>
+        <a href="./pages/detalleProducto.html"><button type="button" class="btn btn-warning m-2 botonesCompra">Ver más y comprar</button></a>
+      </div>
+    </div>
+  </div>
+</div>
 
     </section>
   </main>
@@ -302,6 +317,7 @@
   <script src="/js/stickyFilters.js"></script>
   <script src="./js/creaCardPrincipal.js"></script>
   <script src="./js/buscadorPrincipal.js"></script>
+  <script src="./js/filtrosGrillaPrincipal.js"></script>
 </body>
 
 </html>
