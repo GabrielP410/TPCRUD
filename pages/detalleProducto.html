@@ -71,8 +71,7 @@
                     <a href="./administracion.html" class="IconosNav"
                         ><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i
                     ></a>
-                    <a href="./carrito.html" class="IconosNav"
-                        ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
+                    <a href="./carrito.html" class="IconosNav" data-bs-toggle="modal" data-bs-target="#carritoModal" ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
                     ></a>
                     <a href="./login.html" class="IconosNav"
                         ><i class="bi bi-people-fill me-3 fs-2 ms-3"></i
@@ -1175,7 +1174,7 @@
                                 </div>
                                 <hr>
                                 <div class="row rowfooter align-items-center justify-content-between m-lg-2 mb-0">   
-                                    <p class="col-6 text-center align-items-center justify-content-between fs-1"> $800,00 </p>                              
+                                    <p class="col-6 text-center align-items-center justify-content-between fs-1"> $1.000,00 </p>                              
                                     <div class="col-6"> 
                                         <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-0" data-bs-toggle="modal" data-bs-target="#modalFormasPago"> Formas de pago <i class="bi bi-credit-card"></i></button>                                       
                                         <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalFormasEnvio"> Envios <i class="bi bi-truck"></i></button> 
@@ -1185,8 +1184,8 @@
                                 <hr>
                                 <div class="text-center mt-2 justify-content-evenly">
                                     <input type="number" value="1" min="1" max="20" class="form-control d-inline cantidad btn btn-warning">                           
-                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-toggle="modal" data-bs-target="#carritoModal" onclick="agregarAlCarrito('Mix Patagonico Atuel Valley x 40 G.', 1.000 , '../img/mix-tropical.jpg')" > <i class="bi bi-cart"></i> Comprar ahora</button>
-                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal" onclick="agregarAlCarrito('Mix Patagonico Atuel Valley x 40 G.', 1.000 , '../img/mix-tropical.jpg')" >Añadir al carrito y seguir Comprando</button>
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-toggle="modal" data-bs-target="#carritoModal" onclick="agregarAlCarrito('Mix Patagonico Atuel Valley x 40 G.', 1.000 , '../img/mix-patagonico.jpg')" > <i class="bi bi-cart"></i> Comprar ahora</button>
+                                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal" onclick="agregarAlCarrito('Mix Patagonico Atuel Valley x 40 G.', 1.000 , '../img/mix-patagonico.jpg')" >Añadir al carrito y seguir Comprando</button>
                                 </div>                              
                             </div>
                         </div>
@@ -1234,7 +1233,7 @@
                                 </div>
                                 <hr>
                                 <div class="row rowfooter align-items-center justify-content-between m-lg-2 mb-0">   
-                                    <p class="col-6 text-center align-items-center justify-content-between fs-1"> $800,00 </p>                              
+                                    <p class="col-6 text-center align-items-center justify-content-between fs-1"> $1.000,00 </p>                              
                                     <div class="col-6"> 
                                         <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-0" data-bs-toggle="modal" data-bs-target="#modalFormasPago"> Formas de pago <i class="bi bi-credit-card"></i></button>                                       
                                         <button type="button" class="btn btn-outline-secondary w-100 p-0 mt-1" data-bs-toggle="modal" data-bs-target="#modalFormasEnvio"> Envios <i class="bi bi-truck"></i></button> 
@@ -1576,7 +1575,7 @@
                         </div>
                         <div class="modal-footer">                                                       
                             <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Seguir Comprando</button>
-                            <button type="button" class="btn btn-warning m-2 botonesCompra">Finalizar Compra</button>
+                            <a href="../pages/error404.html" type="button" class="btn btn-warning m-2 botonesCompra">Finalizar Compra</a>
                         </div>
                       </div>
                     </div>
@@ -1725,5 +1724,6 @@
       src="https://kit.fontawesome.com/5fdb8b7a26.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/carrito.js"></script>
     </body>
 </html>
