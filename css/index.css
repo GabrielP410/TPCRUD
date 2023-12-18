@@ -51,12 +51,13 @@ border-radius: 20px;
 
 min-height: 300px;
   }
-  .fondoModalMAin {
-    background-image: url(../img/frutosFondoModalMain.webp);
-    position: relative;
-    height: 500px;
-    filter: brightness(50%);    
+  .fondoModalMAin{
+background-color: #00000077;}
+
+.texto-negrita {
+  font-weight: bold;
 }
+
 .botonesCompra{
   color: white;
   background-color: #d99e30;
