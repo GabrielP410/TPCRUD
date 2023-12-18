@@ -1,82 +1,120 @@
-.card_foto_de_perfil_admin{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  width: 50%;
-  margin-top: 5%;
-  margin-left: 2%;
-  padding-bottom: 50px;
+
+/* Navbar */
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.BotonBusqueda {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  transition: background-color 0.5s, color 0.01s;
+}
+.formBorde {
+  border: 1px solid #000000; /* Borde negro de 1px */
 }
 
-.texto_negrita_chico_admin{
-  font-size: small;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  margin-bottom: 0%;   
+.BotonBusqueda:hover {
+  background-color: #fcb631;
+  border: 1px solid black;
+  color: black;
 }
-.texto_negrita_centrado_mediano_admin{
-  font-size: x-large;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  margin-bottom: 0%; 
-  text-align: center;
-  margin-right: 3%;
-}
-.texto_gris_chico_admin{
-  font-size: small;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  color: rgb(163, 163, 163);
-}
-.imagen_del_admin{
-  width: 100px;
-  height: 100px;
-  padding: right 10%;
- border-radius: 50%;
-border: 5px solid #FDB632;}
 
-.imagen_boton_agregar_producto_admin{
- width: 30%;
- margin: 0%;
+.botonFiltro {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+.botonFiltro:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
 
+.logoNav {
+  color: #666777;
+  font-family: Playfair Display;
+  transition: color 0.5s;
+  text-decoration: none;
+
+}
+.logoNav:hover {
+  color: #fcb631;
   
-}   
-
-.contendor_del_boton_agregar_producto_admin{
-  width: 100%; 
-  height: auto;
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  padding-right: 5%;
 }
-
-.botona_gregar_producto_admin{
-  
-  border-radius: 15px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-
-.buscador input {
-  height: 100%;
-  width: 100%;
+.linksNav {
   font-size: 1.1rem;
-  color: #000;
-  padding: 1rem;
-  text-transform: none;
+  position: relative;
+  color: #666777;
+  transition: font-weight 0.5s ease, font-size 0.3s ease;
+  text-decoration: none;
 }
 
+.linksNav::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fcb631;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.linksNav:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+  transition: transform 0.3s ease, visibility 0s linear;
+  
+}
+
+.linksNav:hover {
+  font-size: 1.12rem;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Transición para el tamaño del texto y el color */
+  color: black;
+  font-weight: bold;
+}
+.linksNav.active {
+  font-size: 1.12rem;
+  color: black;
+  font-weight: bold;
+}
+
+.linksNav.active::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.IconosNav {
+  color: #666777;
+  transition: transform 0.5s;
+  transition: color 0.5s;
+  text-decoration: none;
+
+}
+
+.IconosNav:hover {
+  color: #fcb631;
+  transform: scale(1.2);
+}
+.IconosNav.active {
+  color: #fcb631;
+}
+
+.navbar-toggler {
+  margin-right: 8px;
+  background-color: secondary;
+  border: 1px solid black;
+}
 /* clases del footer */
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
 }
 
 main {
@@ -101,69 +139,106 @@ main {
   width: 300px;
   margin-bottom: 30px;
 }
-.cuadro_busqueda_admin:focus{
- outline:none;
+
+.fs-2 {
+  font-size: calc(1.325rem + 0.9vw) !important;
 }
-.cuadro_busqueda_admin::placeholder{
-  font-size: small;
-  font-family: 'Roboto', sans-serif;
+
+.fa-brands,
+.fab {
+  font-weight: 400;
+}
+
+.fa-brands,
+.fab {
+  font-family: "Font Awesome 6 Brands";
+}
+
+.fa,
+.fa-brands,
+.fa-classic,
+.fa-regular,
+.fa-sharp,
+.fa-solid,
+.fab,
+.far,
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-variant-alternates: normal;
+  font-variant-position: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.color-icon {
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+.links-footer {
+  color: #666777;
   font-weight: 500;
-  color: rgba(148, 148, 148, 0.388);
-  padding-left: 1%;
-  
-  
+  position: relative;
+}
+.links-footer:hover,
+.links-footer.active {
+  color: #000;
 }
 
-.lista_de_productos_admin{
-list-style: none;
-display: flex;
+@media (min-width: 991px) {
+  .links-footer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #fcb631;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
 
-}
-.lista_de_busqueda_admin{
-  list-style-type: none;
-  padding-left: 0%;
-}
-.lista_imagenes_de_productos_admin{
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: space-around;
-
- }
- .card_producto_admin{
-   width: 40%;
-   height: auto;
-   margin: 3%;
-   border:0px ;
- }
- 
- .btn_editar_admin{
-   background-color: #FDB632;
-   
- }
- .texto_blanco_btn_amdin{
-   color: whitesmoke;
-   font-family: 'Roboto', 'sans-serif';
-   font-weight: 300;
- }
- .body_admin{
-background-color: #f7ecdd35;
+  .links-footer:hover::before,
+  .links-footer.active::before {
+    width: 100%;
+    visibility: visible;
+  }
 }
 
-.numero_paginacion_admin{
- text-decoration: none;
- color: #FDB632;
- margin-left: 10px;
-
- font-family: 'Roboto', sans-serif;
- 
- font-size: large;
-
+.texto-responsive {
+  text-align: center;
 }
 
- .pagination_admin{
-   list-style: none;
-   display: flex;
-   justify-content: space-between;
- }
+@media screen and (max-width: 600px){
+  .texto-footer{
+      display: none;
+  }
+}
+
+.contenedorIconosFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justificadoDeTexto {
+  text-align: justify;
+}
+/* Fin estilos para footer */
+
 
