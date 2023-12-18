@@ -1,91 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="author"
-      content="Guadalupe Villareal, Eugenio Cruz Cornejo, Gabriel Peréz, Ivan Baldiviezo, Alani Camila, José Vera"
-    />
-    <meta name="description" content="CRUD de frutos secos" />
-    <meta
-      name="keywords"
-      content="frutos secos, almendras, avellanas, nueces, castañas"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>De Raíz</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary fixed-top">
-      <div class="container">
-        <a class="navbar-brand me-auto" href="./index.html"
-          ><i class="fa-solid fa-seedling me-1"></i>DE RAÍZ</a
-        >
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <i class="fa-solid fa-seedling me-1"></i>DE RAÍZ
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author"
+    content="Guadalupe Villareal, Eugenio Cruz Cornejo, Gabriel Peréz, Ivan Baldiviezo, Alani Camila, José Vera" />
+  <meta name="description" content="CRUD de frutos secos" />
+  <meta name="keywords" content="frutos secos, almendras, avellanas, nueces, castañas" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>De Raíz</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-body-secondary navbar-sticky">
+    <div class="container-fluid">
+      <!-- Logo de Inicio -->
+      <a class="d-flex align-items-center navbar-brand logoNav fs-3 ps-3" href="index.html">
+        <i class="fa-solid fa-seedling fs-3"></i>
+        <h2 class="d-md-inline fs-3 ms-3">De Raíz</h2>
+      </a>
+      <a class="mx-3 d-none d-md-block linksNav" href="./pages/nosotros.html">Quiénes Somos</a>
+      <a class="mx-3 d-none d-md-block linksNav" href="./pages/detalleProducto.html">Nuestros Productos</a>
+      <!-- Boton Hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Opciones del navbar -->
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+          <!-- Etiquetas en el botón hamburguesa (pantallas pequeñas) -->
+          <li class="nav-item d-md-none">
+            <a class="nav-link px-3 textosNav text-center" href="./pages/nosotros.html">Quiénes Somos</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link px-3 textosNav text-center" href="./pages/detalleProducto.html">Nuestros Productos</a>
+          </li>
+        </ul>
+
+
+        <!-- Botones de opciones -->
+        <div class="d-flex justify-content-between justify-content-md-evenly mx-3">
+
+          <a href="./index.html" class="IconosNav active"><i class="bi bi-house-fill fs-2 pe-1"></i></a>
+          <a href="./pages/administracion.html" class="IconosNav"><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i></a>
+          <a href="./pages/carrito.html" class="IconosNav"><i class="bi bi-cart fs-2 ms-3 pe-1"></i></a>
+          <a href="./pages/login.html" class="IconosNav"><i class="bi bi-people-fill me-3 fs-2 ms-3"></i></a>
+
+        </div> <!-- Buscador -->
+        <form class="d-flex ms-1">
+          <div class="input-group  my-2 m-lg-0 me-lg-3">
+            <input class="form-control formBorde" type="search" placeholder="¿Qué buscas?" aria-label="search" />
+            <button type="button" class="btn BotonBusqueda">
+              <i class="bi bi-search"></i>
+            </button>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a
-                  class="nav-link active mx-lg-2"
-                  aria-current="page"
-                  href="./index.html"
-                  >INICIO</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="./pages/nosotros.html"
-                  >¿QUIÉNES SOMOS?</a
-                >
-              </li>
-              <li class="nav-item">
+        </form>
+      </div>
+      <!-- Opciones del navbar -->
+    </div>
 
-                <a class="nav-link mx-lg-2" href="./index.html"
+  </nav>
 
-                  >NUESTROS PRODUCTOS</a
-                >
-              </li>
-              <div class="iconos px-5">
-                <i class="bi bi-search fa-2x" aria-hidden="true"></i>
-                <i class="bi bi-cart-fill fa-2x px-3" aria-hidden="true"></i>
-                <i class="bi bi-person-fill fa-2x" aria-hidden="true"></i>
-              </div>
-              <div class="buscador">
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Buscar..."
-                    aria-label="Search"
-                  />
-                </form>
-              </div>
-            </ul>
+  <!-- NAVBAR -->
+  <main>
+    <section class="m-0 pb-0">
+      <!-- carousel para dispositivos pequeños -->
+      <div id="carouselPromos" class="carousel slide d-md-none" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="./pages/error404.html"><img src="./img/bannerLogo1200x640.png" class="d-block w-100"
+                alt="..." /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="./pages/error404.html"><img src="./img/Energiasaludable1200x640.png" class="d-block w-100"
+                alt="..." /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="./pages/error404.html"><img src="./img/Banner oferta 1200x640.png" class="d-block w-100"
+                alt="..." /></a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPromos" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- fin de carousel para dispositivos pequeños  -->
+      <!-- carousel para dispositivos medianos y grandes -->
+      <div id="carouselPromos1" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselPromos1" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselPromos1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselPromos1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="#"><img src="./img/bannerLogo1600x500.png" class="d-block w-100" alt="..." /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="#"><img src="./img/banner oferta 1600x500.png" class="d-block w-100" alt="..." /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="#"><img src="./img/EnergiaSaludable1600x500.png" class="d-block w-100" alt="..." /></a>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromos1" data-bs-slide="prev">
@@ -97,104 +130,108 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </nav>
+      <!-- fin de carrousel grande -->
+      <section class="container card my-2 fondoOferta">
+        <div class="row"></div>
 
-    <main></main>
+      </section>
+    </section>
+    <div id="barraFiltros" class="conteiner bg-white barra-filtros">
+      <section class="container-fluid d-none  d-md-block" id="SeccionesSubNav">
+        <div class="row text-center">
+          <div class="col-3"><a href="./pages/error404.html" class="tx-Intermedio TextosSubNav">Frutos Secos</a></div>
+          <div class="col-3"><a href="./pages/error404.html" class="tx-Intermedio TextosSubNav">Frutos Frescos</a></div>
+          <div class="col-3"><a href="./pages/seccionMasVendidos.html" class="tx-Intermedio TextosSubNav">Combos
+              Imperdibles</a></div>
+          <div class="col-3"><a href="./pages/error404.html" class="tx-Intermedio TextosSubNav">Mix Variados</a></div>
+        </div>
+    </div>
+    </section>
+    </div>
+    <div class="dropdown d-md-none conteiner px-2 col-12">
+      <button class="btn botonFiltro dropdown-toggle w-100" type="button" id="dropdownMenuButton"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        Filtrar por Categoría
+      </button>
 
-    <footer>
-      <div class="container-fluid bg-body-secondary">
+      <!-- Contenido desplegable -->
+      <ul class="dropdown-menu text-center  w-100" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Frutos Secos</a></li>
+        <li><a class="dropdown-item" href="#">Frutos Frescos</a></li>
+        <li><a class="dropdown-item" href="#">Combos Imperdibles</a></li>
+        <li><a class="dropdown-item" href="#">Mix Variados</a></li>
+      </ul>
+    </div>
+    <section class="container card my-2 fondoOferta">
+      <div class="row"></div>
 
-        <section class="rowfooter">
-          <div class="col-md-12 col-lg-3 mt-3 text-center text-lg-start">
-            <img
-              src="./img/logoSinFondo-removebg-preview.png"
-              alt="logo de raices"
-              class="img-fluid logo-footer"
-            />
-            <p class="texto-footer">
-              <b
-                >De Raíz es una tienda en línea que ofrece una variedad de
-                frutos secos de alta calidad. Se destaca por su compromiso con
-                la frescura y la calidad, proporcionando productos orgánicos y
-                sin aditivos. Su plataforma es fácil de usar y ofrece entrega
-                rápida y confiable.</b
-              >
-            </p>
-          </div>
-          <div class="col-md-4 col-lg-3 mt-3">
-            <h5 class="text-uppercase text-center">Productos</h5>
-            <hr class="mb-4" />
-            <ul class="list-unstyled text-center">
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Nueces</a
-                >
-              </li>
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Almendras</a
-                >
-              </li>
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Pasas</a
-                >
-              </li>
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Avellanas</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-lg-3 mt-3">
-            <h5 class="text-uppercase text-center">Legal</h5>
-            <hr class="mb-4" />
-            <ul class="list-unstyled text-center">
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Políticas de Privacidad</a
-                >
-              </li>
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Términos y Condiciones</a
-                >
-              </li>
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Acuerdo de Licencia</a
-                >
-              </li>
-              <li class="my-3">
-                <a
-                  href="./index.html"
-                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
-                  >Derechos de Autor</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-lg-3 mt-3">
-            <h5 class="text-uppercase text-center">Seguinos</h5>
-            <hr class="mb-4" />
-            <ul
-              class="list-unstyled d-flex justify-content-between justify-content-lg-start iconos-footer"
-            >
+    </section>
+  </main>
+  <!-- footer -->
+  <footer>
+    <div class="container-fluid bg-body-secondary">
+      <section class="row rowfooter">
+        <div class="col-md-12 col-lg-3 mt-3 text-center text-lg-start">
+          <img src="./img/logoSinFondo-removebg-preview.png" alt="logo de raices" class="img-fluid logo-footer" />
+          <p class="texto-footer justificadoDeTexto">
+            <b>De Raíz es una tienda en línea que ofrece una amplia gama de frutos secos de excelente calidad. Se
+              distingue por su dedicación a la frescura y calidad, ofreciendo productos orgánicos y libres de aditivos.
+              Su plataforma es intuitiva y garantiza entregas rápidas y confiables.</b>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-3">
+          <h5 class="text-uppercase text-center">Productos</h5>
+          <hr class="mb-4" />
+          <ul class="list-unstyled text-center">
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Nueces</a>
+            </li>
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Almendras</a>
+            </li>
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Pasas</a>
+            </li>
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Avellanas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-3">
+          <h5 class="text-uppercase text-center">Legal</h5>
+          <hr class="mb-4" />
+          <ul class="list-unstyled text-center">
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Políticas
+                de Privacidad</a>
+            </li>
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Términos
+                y Condiciones</a>
+            </li>
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Acuerdo
+                de Licencia</a>
+            </li>
+            <li class="my-3">
+              <a href="./index.html"
+                class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer">Derechos
+                de Autor</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-3">
+          <h5 class="text-uppercase text-center">Seguinos</h5>
+          <hr class="mb-4" />
+          <div class="contenedorIconosFooter">
+            <ul class="list-unstyled d-flex justify-content-between justify-content-lg-start iconos-footer">
               <li class="me-3">
                 <a href="./pages/error404.html">
                   <i class="fa-brands fa-instagram fs-2 color-icon"></i>
@@ -212,38 +249,41 @@
               </li>
             </ul>
           </div>
-          <hr class="my-4" />
-          <div class="container">
+        </div>
+        <hr class="my-4" />
+        <div class="container">
+          <article class="row rowfooter">
+            <div class="col-md-6 col-lg-6 text-center">
+              <h5 class="mb-4">Formas de Pago</h5>
+              <img src="./img/formasdepago01-footer.png" alt="formas de pago" class="img-fluid mb-3" />
+            </div>
+            <div class="col-md-6 col-lg-6 d-flex align-items-center justify-content-center mt-3">
+              <p class="texto-responsive">
+                &copy; Todos los derechos reservados.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/5fdb8b7a26.js" crossorigin="anonymous"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbarHeight = document.querySelector('.navbar').offsetHeight;
+      const barraFiltros = document.querySelector('.barra-filtros');
 
-            <article class="rowfooter">
-              <div class="col-md-6 col-lg-6 text-center">
-                <h5 class="mb-4">Formas de Pago</h5>
-                <img
-                  src="./img/formasdepago01-footer.png"
-                  alt="formas de pago"
-                  class="img-fluid mb-3"
-                />
-              </div>
-              <div
-                class="col-md-6 col-lg-6 d-flex align-items-center justify-content-center mt-3"
-              >
-                <p class="texto-responsive">
-                  &copy; Todos los derechos reservados.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/5fdb8b7a26.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      if (window.pageYOffset >= navbarHeight) {
+        barraFiltros.style.top = `${navbarHeight}px`;
+      } else {
+        barraFiltros.style.top = '0';
+      }
+    });
+
+  </script>
+</body>
+
 </html>
