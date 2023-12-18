@@ -46,6 +46,7 @@ const crearProducto = (e) => {
   //   crea el prodcuto
   const nuevoProducto = new Producto(
     nombreProducto.value,
+    undefined,
     codigo.value,
     checkcategoria.value,
     presentacionAdmin.value,
@@ -123,6 +124,10 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
 function cargaInicial() {
   if (productosCargadosAdmin.length > 0) {
     productosCargadosAdmin.map((productoAdmin,posicion) => crearCardProducto(productoAdmin,posicion +1));
+
+
+
+
   }
 }
 
@@ -131,5 +136,6 @@ function cargaInicial() {
 botonAgregarProductoAdmin.addEventListener("click", mostrarModal);
 
 formularioAgregarProductoAdmin.addEventListener("submit", crearProducto);
+
 
 cargaInicial();
