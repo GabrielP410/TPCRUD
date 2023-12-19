@@ -26,13 +26,13 @@ function agregarAlCarrito(nombre, precio, imagen) {
     }
 
 
-    //contadorProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
+    contadorProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
     total += precio;
 
     // Guardar el carrito en el localStorage
     localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("total", total.toString());
-    //localStorage.setItem("contadorProductosCarrito", contadorProductos.toString());
+    localStorage.setItem("contadorProductosCarrito", contadorProductos.toString());
 
     actualizarCarrito();
     
