@@ -1,5 +1,20 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let total = parseFloat(localStorage.getItem("total")) || 0;
+let contadorProductos = parseInt(localStorage.getItem("contadorProductosCarrito")) || 0;
+
+function inicializarCarrito() {
+
+    // Cargar la información del localStorage
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    total = parseFloat(localStorage.getItem("total")) || 0;
+    contadorProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
+
+    
+    actualizarCarrito();
+}
+
+inicializarCarrito();
+
 
 function agregarAlCarrito(nombre, precio, imagen) {
     const indice = carrito.findIndex(item => item.nombre === nombre);
@@ -10,11 +25,14 @@ function agregarAlCarrito(nombre, precio, imagen) {
         carrito.push({ nombre, precio, cantidad: 1, imagen });
     }
 
+
+    contadorProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
     total += precio;
 
     // Guardar el carrito en el localStorage
     localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("total", total.toString());
+    localStorage.setItem("contadorProductosCarrito", contadorProductos.toString());
 
     actualizarCarrito();
     
@@ -25,6 +43,7 @@ function actualizarCantidad(index, nuevaCantidad) {
     
     if (!isNaN(parseFloat(nuevaCantidad)) && isFinite(nuevaCantidad) && nuevaCantidad >= 0) {
         carrito[index].cantidad = parseInt(nuevaCantidad, 10);
+        contadorProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
         total += (carrito[index].cantidad - cantidadAnterior) * carrito[index].precio;
 
         // Guardar el carrito en el localStorage
@@ -40,11 +59,13 @@ function borrarProducto(index) {
 
     if (confirmacion) {
         total -= carrito[index].precio * carrito[index].cantidad;
+        contadorProductos -= carrito[index].cantidad;
         carrito.splice(index, 1);
 
         // Guardar el carrito en el localStorage
         localStorage.setItem("carrito", JSON.stringify(carrito));
         localStorage.setItem("total", total.toString());
+        localStorage.setItem("contadorProductosCarrito", contadorProductos.toString());
 
         actualizarCarrito();
     }
@@ -54,6 +75,13 @@ function borrarProducto(index) {
 function actualizarCarrito() {
     const carritoLista = document.getElementById("carritoLista");
     const totalPrecio = document.getElementById("totalPrecio");
+    const contadorProductosElement = document.getElementById("contadorProductosCarrito");
+
+    if (!contadorProductosElement) {
+         //Manejar la situación donde el elemento no se encuentra
+        console.error("El elemento contadorProductosCarrito no se encontró.");
+        return;
+    }
 
     carritoLista.innerHTML = "";
     carrito.forEach((item, index) => {
@@ -80,6 +108,10 @@ function actualizarCarrito() {
     });
 
     totalPrecio.textContent = total.toFixed(3);
+    contadorProductosElement.textContent = contadorProductos;
+
+     //Actualizar el contador de productos en la interfaz
+     document.getElementById("contadorProductosCarrito").textContent = contadorProductos;
 
     mostrarCarritoModal();
 }
