@@ -62,7 +62,7 @@
 
 .cardProducto{
   transition: all 400ms ease;
-  max-height: 500px;
+  max-height: 550px;
 }
 
 .cardProducto:hover {
