@@ -64,7 +64,12 @@ const crearProducto = (e) => {
   // guarda en localstorage
 
   guardarEnLocalStorageAdmin();
+
+  crearCardProducto(nuevoProducto, productosCargadosAdmin.length);
 };
+//agrega nueva card al display
+
+
 
 function limpiarformulario() {
   formularioAgregarProductoAdmin.reset();
@@ -119,6 +124,7 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
    </div>
    </div>
 `;
+
 }
 
 function cargaInicial() {
