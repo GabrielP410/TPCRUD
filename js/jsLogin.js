@@ -17,9 +17,7 @@ function registrarUsuario() {
   );
 
   alert("Usuario registrado exitosamente");
-
-  // Cerrar la ventana modal después de registrar
-  closeModal("registroModal");
+  window.location.href = '../index.html';
 }
 
 // Función para el login del administrador y redirigir al index
