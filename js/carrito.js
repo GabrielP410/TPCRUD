@@ -43,7 +43,7 @@ function actualizarCantidad(index, nuevaCantidad) {
     
     if (!isNaN(parseFloat(nuevaCantidad)) && isFinite(nuevaCantidad) && nuevaCantidad >= 0) {
         carrito[index].cantidad = parseInt(nuevaCantidad, 10);
-        //contadorProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
+        contadorProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
         total += (carrito[index].cantidad - cantidadAnterior) * carrito[index].precio;
 
         // Guardar el carrito en el localStorage
@@ -59,13 +59,13 @@ function borrarProducto(index) {
 
     if (confirmacion) {
         total -= carrito[index].precio * carrito[index].cantidad;
-        //contadorProductos -= carrito[index].cantidad;
+        contadorProductos -= carrito[index].cantidad;
         carrito.splice(index, 1);
 
         // Guardar el carrito en el localStorage
         localStorage.setItem("carrito", JSON.stringify(carrito));
         localStorage.setItem("total", total.toString());
-        //localStorage.setItem("contadorProductosCarrito", contadorProductos.toString());
+        localStorage.setItem("contadorProductosCarrito", contadorProductos.toString());
 
         actualizarCarrito();
     }
