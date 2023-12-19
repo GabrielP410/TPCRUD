@@ -72,7 +72,7 @@ const crearProducto = (e) => {
 Swal.fire({
     position: "top-end",
     icon: "success",
-    title: `Producto ${nuevoProducto.nombre} Agregado`,
+    title: `Se agrego el producto ${nuevoProducto.nombre} correctamente`,
     showConfirmButton: false,
     timer: 1500
   });
@@ -132,8 +132,8 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
  </div>
    </div>
    <div class="d-flex justify-content-between">
-   <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
-   <a href="#" class="btn btn_borrar_admin texto_blanco_btn_amdin">Borrar</a>
+   <button href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</button>
+   <button href="#" class="btn btn_borrar_admin texto_blanco_btn_amdin" onclick="borrarProducto('${productoAdmin.id}')">Borrar</button>
  </div>
 
    </div>
@@ -148,6 +148,14 @@ function cargaInicial() {
 
 
 
+
+  }
+
+
+
+  window.borrarProducto = (idproductoborrar) =>{
+    console.log('desdelafuncionborrar');
+    console.log(idproductoborrar);
 
   }
 }
