@@ -1,5 +1,6 @@
 export default class Producto {
   #nombre;
+  #id;
   #cod;
   #categoria;
   #presentacion;
@@ -8,8 +9,9 @@ export default class Producto {
   #precio;
   #image; 
 
-  constructor(nombre, cod=1,categoria,presentacion, stock, descripcion, precio, image) {
+  constructor(nombre,id= crypto.randomUUID(), cod=1,categoria,presentacion, stock, descripcion, precio, image) {
     this.#nombre = nombre;
+    this.#id = id;
     this.#cod = cod;
     this.#categoria = categoria;
     this.#presentacion = presentacion;
@@ -22,6 +24,9 @@ export default class Producto {
   // Getter methods
   get nombre() {
     return this.#nombre;
+  }
+  get id() {
+    return this.#id;
   }
 
   get cod() {
@@ -54,6 +59,9 @@ export default class Producto {
   // Setter 
   set nombre(newNombre) {
     this.#nombre = newNombre;
+  }
+  set id(newid) {
+    this.#id = newid;
   }
 
   set cod(newCod) {
@@ -95,6 +103,7 @@ toJSON(){
   return{
 
     nombre:  this.nombre,
+    id: this.id,
     cod: this.cod,
     categoria: this.categoria,
     presentacion: this.presentacion,

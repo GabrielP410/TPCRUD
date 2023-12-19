@@ -46,6 +46,7 @@ const crearProducto = (e) => {
   //   crea el prodcuto
   const nuevoProducto = new Producto(
     nombreProducto.value,
+    undefined,
     codigo.value,
     checkcategoria.value,
     presentacionAdmin.value,
@@ -63,7 +64,23 @@ const crearProducto = (e) => {
   // guarda en localstorage
 
   guardarEnLocalStorageAdmin();
+
+  //agrega nueva card al display
+  crearCardProducto(nuevoProducto, productosCargadosAdmin.length);
+
+// muestra el alert
+Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: `Se agrego el producto ${nuevoProducto.nombre} correctamente`,
+    showConfirmButton: false,
+    timer: 1500
+  });
+
+
 };
+
+
 
 function limpiarformulario() {
   formularioAgregarProductoAdmin.reset();
@@ -114,16 +131,67 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
    <h5 class=" text-end" id="precio_del_prudcto_admin"> $${productoAdmin.precio}</h5>
  </div>
    </div>
-     <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
+   <div class="d-flex justify-content-between">
+   <button href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</button>
+   <button href="#" class="btn btn_borrar_admin texto_blanco_btn_amdin" onclick="borrarProducto('${productoAdmin.id}')">Borrar</button>
+ </div>
+
    </div>
    </div>
 `;
+
 }
 
 function cargaInicial() {
   if (productosCargadosAdmin.length > 0) {
     productosCargadosAdmin.map((productoAdmin,posicion) => crearCardProducto(productoAdmin,posicion +1));
+
+
+
+
   }
+
+
+
+  window.borrarProducto = (idproductoborrar) =>{
+
+    Swal.fire({
+        title: `Estas seguro que quieres borrar este producto?`,
+        text: "La informacion no podra ser recuperada",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#666777",
+        cancelButtonColor: "#FDB632",
+        cancelButtonText: "CANCELAR",
+        confirmButtonText: "Borrar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          
+            
+// buscar el producto
+const posicionProducto = productosCargadosAdmin.findIndex((itemProducto)=> itemProducto.id === idproductoborrar);
+
+// borrar el objeto
+productosCargadosAdmin.splice(posicionProducto,1);
+// actualizar el local storage
+guardarEnLocalStorageAdmin();
+// borrar card
+const cardProductoAdmin = document.getElementById("cardProductoAdminCrear");
+cardProductoAdmin.removeChild(cardProductoAdmin.children[posicionProducto])
+          
+            Swal.fire({
+            title: "Producto Borrado",
+            text: "Producto se elimino correctamente",
+            icon: "success",
+            
+          });
+        }
+      });
+   
+  }
+
+
+
 }
 
 // logica extra
@@ -131,5 +199,6 @@ function cargaInicial() {
 botonAgregarProductoAdmin.addEventListener("click", mostrarModal);
 
 formularioAgregarProductoAdmin.addEventListener("submit", crearProducto);
+
 
 cargaInicial();
