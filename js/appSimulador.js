@@ -86,23 +86,7 @@ function cargaInicial() {
       crearFila(itemContacto, posicion + 1)
     );
 
-    // const tablaContactos = document.querySelector('tbody');
-    // for(let i=0; i < agenda.length; i++)
-    // {
-    //   tablaContactos.innerHTML += `<tr>
-    //   <th scope="row">${i++}</th>
-    //   <td>${agenda[i].nombre}</td>
-    //   <td>${agenda[i].apellido}</td>
-    //   <td>${agenda[i].email}</td>
-    //   <td>${agenda[i].celular}</td>
-    //   <td>
-    //     <button class="btn btn-warning">Editar</button
-    //     ><button class="btn btn-danger">Borrar</button>
-    //   </td>
-    // </tr>`
-    // }
   }
-  //agregar un cartel informativo para el usuario
 }
 window.borrarContacto = (idContacto) => {
   Swal.fire({
