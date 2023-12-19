@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Guadalupe Villareal, Eugenio Cruz Cornejo, Gabriel Peréz, Ivan Baldiviezo, Alani Camila, José Vera"
+    />
+    <meta name="description" content="CRUD de frutos secos" />
+    <meta
+      name="keywords"
+      content="frutos secos, almendras, avellanas, nueces, castañas"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/nosotros.css" />
+    <link rel="stylesheet" href="../css/boostrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>De Raíz</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg tx-titulo bg-body-secondary navbar-sticky"
+    >
+      <div class="container-fluid">
+        <!-- Logo de Inicio -->
+        <a
+          class="d-flex align-items-center navbar-brand logoNav fs-3 ps-3"
+          href="../index.html"
+        >
+          <i class="fa-solid fa-seedling fs-3"></i>
+          <h2 class="d-md-inline fs-3 ms-3">De Raíz</h2>
+        </a>
+        <a href="./nosotros.html" class="mx-3 d-none d-lg-block linksNav active"
+          >Quiénes Somos</a
+        >
+        <a class="mx-3 d-none d-lg-block linksNav" href="./detalleProducto.html"
+          >Nuestros Productos</a
+        >
+
+        <!-- Boton Hamburguesa -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Opciones del navbar -->
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <!-- Etiquetas en el botón hamburguesa (pantallas pequeñas) -->
+            <li class="nav-item d-lg-none">
+              <a
+                class="nav-link px-3 textosNav text-center"
+                href="./nosotros.html"
+                >Quiénes Somos</a
+              >
+            </li>
+            <li class="nav-item d-lg-none">
+              <a
+                class="nav-link px-3 textosNav text-center"
+                href="./detalleProducto.html"
+                >Nuestros Productos</a
+              >
+            </li>
+          </ul>
+
+          <!-- Botones de opciones -->
+          <div
+            class="d-flex justify-content-between justify-content-md-evenly mx-3"
+          >
+            <a href="../index.html" class="IconosNav"
+              ><i class="bi bi-house-fill fs-2 pe-1"></i
+            ></a>
+            <a href="./administracion.html" class="IconosNav"
+              ><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i
+            ></a>
+            <a href="./carrito.html" class="IconosNav" data-bs-toggle="modal" data-bs-target="#carritoModal" ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
+              ></a>
+              <div class="contadorCarrito">
+                <span id="contadorProductosCarrito">0</span>
+              </div>
+            <a href="./login.html" class="IconosNav"
+              ><i class="bi bi-people-fill me-3 fs-2 ms-3"></i
+            ></a>
+          </div>
+          <!-- Buscador -->
+          <form class="d-flex ms-1">
+            <div class="input-group my-2 m-lg-0 me-lg-3">
+              <input
+                class="form-control formBorde"
+                type="search"
+                placeholder="¿Qué buscas?"
+                aria-label="search"
+              />
+              <button type="button" class="btn BotonBusqueda">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Opciones del navbar -->
+      </div>
+    </nav>
+    
+    <main>
+      <section class="texto2">
+        <img class="imagenPortada" src="../img/granos.webp" alt="Portada" />
+        <div class="titulo p-3">
+          <h1 id="titulo2">Sobre Nosotros</h1>
+          <p>
+            En De Raíz, nos enorgullece ser defensores apasionados de la salud y
+            el bienestar. Más allá de ofrecer simplemente un snack delicioso,
+            consideramos que nuestros frutos secos son auténticos tesoros de
+            nutrientes que nutren el cuerpo y promueven un estilo de vida
+            saludable. Nos esforzamos por ser más que una marca; somos una
+            filosofía arraigada en principios sólidos. Nuestro compromiso con la
+            sostenibilidad va más allá de las palabras. Estamos dedicados a
+            marcar la diferencia en la forma en que operamos y en cómo afectamos
+            al planeta. Nuestros esfuerzos incluyen programas de reforestación,
+            trabajando arduamente para devolver a la naturaleza lo que tomamos
+            de ella. Además, hemos adoptado embalajes ecológicos para minimizar
+            nuestro impacto ambiental y promover prácticas más responsables. Es
+            por eso que no solo vendemos frutos secos; ofrecemos una experiencia
+            que se nutre de valores arraigados en la salud, la honestidad, la
+            integridad y la sostenibilidad. Nos esforzamos por ser una fuerza
+            positiva en el mundo, y cada paso que damos refleja nuestro
+            compromiso inquebrantable con un futuro más saludable y sostenible
+            para todos.
+          </p>
+        </div>
+      </section>
+
+      <h2 class="titulo py-3">Propietarios</h2>
+
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <img
+              src="../img/Eugenio.jpg"
+              alt="Eugenio Cruz"
+              class="fotoPerfil"
+            />
+            <h3 class="nombre">Eugenio Cruz</h3>
+            <p class="texto1">Nobel laureado en economia (Atiende la caja)</p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <img
+              src="../img/Camila-fotor-20231207182749.png"
+              alt="Camila Alani"
+              class="fotoPerfil"
+            />
+            <h3 class="nombre">Camila Alani</h3>
+            <p class="texto1">
+              Esp. en Amarres y Tarot (Hace amarres a los clientes para q
+              vuelvan)
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <img
+              src="../img/guada.png"
+              alt="Guadalupe Villareal"
+              class="fotoPerfil"
+            />
+            <h3 class="nombre">Guadalupe Villareal</h3>
+            <p class="texto1">
+              Magister en Community Manager (Sube fotos al face)
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <img
+              src="../img/Ivan.jpg"
+              alt="Ivan Baldiviezo"
+              class="fotoPerfil"
+            />
+            <h3 class="nombre">Ivan Baldiviezo</h3>
+            <p class="texto1">
+              Especialista en relaciones humanas (Atiende el telefono)
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <img
+              src="../img/Gabriel.jpeg"
+              alt="Gabriel Perez"
+              class="fotoPerfil"
+            />
+            <h3 class="nombre">Gabriel Perez</h3>
+            <p class="texto1">Dr. en Contabilidad (De nueces)</p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <img
+              src="../img/Jose.jpg"
+              alt="Jose Manuel Vera"
+              class="fotoPerfil"
+            />
+            <h3 class="nombre">Jose Manuel Vera</h3>
+            <p class="texto1">
+              Magister en comercio exterior (Compra la mercaderia)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ventana modal carrito -->
+      <section>
+        <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <img src="../img/logoSinFondo-removebg-preview.png" alt="logo" class="img-fluid w-25">                         
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title">Carrito de Compras</h5>
+        
+                    <ul id="carritoLista" class="list-group"></ul>
+                            
+                        <!-- Agregar productos con js-->
+        
+                    </ul>
+        
+                    <b class="mt-3 display-6">Total: $<span id="totalPrecio">0.00</span></b>
+                </div>
+                <div class="modal-footer">                                                       
+                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <a href="../pages/error404.html" type="button" class="btn btn-warning m-2 botonesCompra">Finalizar Compra</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container-fluid bg-body-secondary">
+        <section class="row rowfooter">
+          <div class="col-md-12 col-lg-3 mt-3 text-center text-lg-start">
+            <img
+              src="../img/logoSinFondo-removebg-preview.png"
+              alt="logo de raices"
+              class="img-fluid logo-footer"
+            />
+            <p class="texto-footer justificadoDeTexto">
+              <b
+                >De Raíz es una tienda en línea que ofrece una amplia gama de
+                frutos secos de excelente calidad. Se distingue por su
+                dedicación a la frescura y calidad, ofreciendo productos
+                orgánicos y libres de aditivos. Su plataforma es intuitiva y
+                garantiza entregas rápidas y confiables.</b
+              >
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 mt-3">
+            <h5 class="text-uppercase text-center">Productos</h5>
+            <hr class="mb-4" />
+            <ul class="list-unstyled text-center">
+              <li class="my-3">
+                <a
+                  href="../index.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Nueces</a
+                >
+              </li>
+              <li class="my-3">
+                <a
+                  href="../index.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Almendras</a
+                >
+              </li>
+              <li class="my-3">
+                <a
+                  href="../index.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Pasas</a
+                >
+              </li>
+              <li class="my-3">
+                <a
+                  href="../index.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Avellanas</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-lg-3 mt-3">
+            <h5 class="text-uppercase text-center">Legal</h5>
+            <hr class="mb-4" />
+            <ul class="list-unstyled text-center">
+              <li class="my-3">
+                <a
+                  href="./error404.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Políticas de Privacidad</a
+                >
+              </li>
+              <li class="my-3">
+                <a
+                  href="./error404.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Términos y Condiciones</a
+                >
+              </li>
+              <li class="my-3">
+                <a
+                  href="./error404.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Acuerdo de Licencia</a
+                >
+              </li>
+              <li class="my-3">
+                <a
+                  href="./error404.html"
+                  class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
+                  >Derechos de Autor</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-lg-3 mt-3">
+            <h5 class="text-uppercase text-center">Seguinos</h5>
+            <hr class="mb-4" />
+            <div class="contenedorIconosFooter">
+              <ul
+                class="list-unstyled d-flex justify-content-between justify-content-lg-start iconos-footer"
+              >
+                <li class="me-3">
+                  <a href="./error404.html">
+                    <i class="fa-brands fa-instagram fs-2 color-icon"></i>
+                  </a>
+                </li>
+                <li class="me-3">
+                  <a href="./error404.html">
+                    <i class="fa-brands fa-x-twitter fs-2 color-icon"></i>
+                  </a>
+                </li>
+                <li class="me-3">
+                  <a href="./error404.html">
+                    <i class="fa-brands fa-facebook fs-2 color-icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr class="my-4" />
+          <div class="container">
+            <article class="row rowfooter">
+              <div class="col-md-6 col-lg-6 text-center">
+                <h5 class="mb-4">Formas de Pago</h5>
+                <img
+                  src="../img/formasdepago01-footer.png"
+                  alt="formas de pago"
+                  class="img-fluid mb-3"
+                />
+              </div>
+              <div
+                class="col-md-6 col-lg-6 d-flex align-items-center justify-content-center mt-3"
+              >
+                <p class="texto-responsive">
+                  &copy; Todos los derechos reservados.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/5fdb8b7a26.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

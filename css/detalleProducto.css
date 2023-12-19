@@ -1,0 +1,72 @@
+/*Detalle del producto*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.imgProductos {
+  height: 400px;
+  object-fit: contain;
+}
+.imgUser {
+  height: 60px;
+  object-fit: contain;
+}
+
+.logoMP,
+.logoAndreani {
+  height: 60px;
+  object-fit: contain;
+}
+
+.logoSinLetra {
+  height: 60px;
+  object-fit: contain;
+}
+
+.detalles {
+  color: rgb(217, 158, 48);
+}
+
+.botonesCompra,
+.listaCarrito {
+  color: white;
+  background-color: #d99e30;
+}
+.cantidad {
+  color: white;
+  background-color: #d99e30;
+  width: 60px;
+}
+
+.imagenPortada {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  filter: brightness(70%);
+  transition: all 400ms ease;
+}
+.seccionPortada {
+  position: relative;
+  overflow: hidden;
+}
+.tituloPortada {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: #f1f1f0;
+}
+
+.cardProducto{
+  transition: all 400ms ease;
+  max-height: 550px;
+}
+
+.cardProducto:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  z-index: 1;
+}
