@@ -1,5 +1,5 @@
-let carrito = [];
-let total = 0;
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let total = parseFloat(localStorage.getItem("total")) || 0;
 
 function agregarAlCarrito(nombre, precio, imagen) {
     const indice = carrito.findIndex(item => item.nombre === nombre);
@@ -12,7 +12,12 @@ function agregarAlCarrito(nombre, precio, imagen) {
 
     total += precio;
 
+    // Guardar el carrito en el localStorage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("total", total.toString());
+
     actualizarCarrito();
+    
 }
 
 function actualizarCantidad(index, nuevaCantidad) {
@@ -21,13 +26,12 @@ function actualizarCantidad(index, nuevaCantidad) {
     if (!isNaN(parseFloat(nuevaCantidad)) && isFinite(nuevaCantidad) && nuevaCantidad >= 0) {
         carrito[index].cantidad = parseInt(nuevaCantidad, 10);
         total += (carrito[index].cantidad - cantidadAnterior) * carrito[index].precio;
-        actualizarCarrito();
 
-        // Cerrar la ventana modal manualmente
-        const carritoModal = new bootstrap.Modal(document.getElementById("carritoModal"));
-        carritoModal.hide();
-    } else {
-        alert("Por favor, ingrese una cantidad válida.");
+        // Guardar el carrito en el localStorage
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        localStorage.setItem("total", total.toString());
+
+        actualizarCarrito();
     }
 }
 
@@ -37,6 +41,11 @@ function borrarProducto(index) {
     if (confirmacion) {
         total -= carrito[index].precio * carrito[index].cantidad;
         carrito.splice(index, 1);
+
+        // Guardar el carrito en el localStorage
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        localStorage.setItem("total", total.toString());
+
         actualizarCarrito();
     }
 }
