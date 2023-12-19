@@ -1,0 +1,93 @@
+/* Inicio de Estilos José */
+.TextosSubNav {
+    position: relative;
+    text-decoration: none; 
+    color: black;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  /* Pseudo-elemento ::before para el subrayado */
+  .TextosSubNav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  /*subrayado al pasar el mouse por encima */
+  .TextosSubNav:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+ 
+   .botonFiltroPrincipal {
+    max-width: fit-content;
+   }
+  .dropdown-menu {
+    border: none;
+    box-shadow: none;
+  }
+  
+  
+  .fondoOferta {
+    background-image: url(../img/FondoFrutosSecosOfertas.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    filter: brightness(50%);
+  }
+  .fondoGrillaProductos {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1033%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M948.5723912308897 159.89392753819595L916.9431225327612 56.43925119618406 813.4884461907493 88.06851989431253 845.1177148888778 191.52319623632442z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-155.12 2.65 a157.92 157.92 0 1 0 315.84 0 a157.92 157.92 0 1 0 -315.84 0z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1423.5307634628773 358.69388163942676L1394.050536269082 219.3474462095475 1300.084016966257 301.03129523824555z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M735.1548364422899 35.47481739372207L639.1425138784206 54.137722334717346 657.8054188194159 150.1500448985867 753.8177413832852 131.48713995759144z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M558.086729380136 220.59690778860502L564.0652482807433 108.56297651676579 475.91636353030646 151.5560602552901z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M480.19 334.77 a174.91 174.91 0 1 0 349.82 0 a174.91 174.91 0 1 0 -349.82 0z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1469.8150789982512 24.215475245648737L1348.7891923429745 21.987583190536032 1398.4656606733831 115.41543188447463z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1494.27074592521 253.94254846663966L1494.27074592521 129.4329911948717 1369.7611886534419 129.4329911948717 1369.7611886534419 253.9425484666397z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1142.75 328.65 a118.45 118.45 0 1 0 236.9 0 a118.45 118.45 0 1 0 -236.9 0z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-2.6609006802281883 167.59381814493597L-52.48523264675796 284.6622652940883 58.12457072659278 273.03670649764547z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M-139.08 235.25 a170.86 170.86 0 1 0 341.72 0 a170.86 170.86 0 1 0 -341.72 0z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M170.07939950850044 201.89524418531968L232.59604088530654 254.35293490703992 280.02425627948384 134.3491274809707z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M483.8338177952719 418.85467336697656L464.21563722952516 492.07071999040363 583.8487974475391 484.8899675273102z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1170.8865309041246 548.1181496121816L1199.7381039060504 464.327097461931 1115.9470517557997 435.4755244600053 1087.095478753874 519.2665766102559z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M540.5020463022137 24.95263580831913L648.2416250831044 179.13322704117863 720.3203689012321 31.349901694661412z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1199.424821080182 318.7657924979345L1115.3951306000356 311.41414718132944 1108.0434852834305 395.44383766147575 1192.073175763577 402.7954829780808z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1067.3631453013945 179.19337230849732L994.661325369884 67.24238699040758 882.7103400517943 139.94420692191807 955.4121599833048 251.8951922400078z' fill='rgba(252%2c 182%2c 49%2c 0.73)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1033'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+background-size: cover;
+border-radius: 20px;
+
+min-height: 300px;
+  }
+  .fondoModalMAin{
+background-color: #00000077;}
+
+.texto-negrita {
+  font-weight: bold;
+}
+
+
+.cardBodyMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.botonesCompra{
+  color: white;
+  background-color: #d99e30;
+}
+
+    .barra-filtros {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .cardProducto{
+    transition: all 400ms ease;
+  }
+  
+  .cardProducto:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+
+  .parrafosVenta {
+    color: #d99e30;
+  }
+  .hidden-card {
+    display: none;
+  }

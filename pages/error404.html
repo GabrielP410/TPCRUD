@@ -27,77 +27,80 @@
     <title>De Raíz</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary fixed-top">
-      <div class="container">
-        <a class="navbar-brand me-auto" href="../index.html"
-          ><i class="fa-solid fa-seedling me-1"></i>DE RAÍZ</a
-        >
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <i class="fa-solid fa-seedling me-1"></i>DE RAÍZ
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a
-                  class="nav-link active mx-lg-2"
-                  aria-current="page"
-                  href="./index.html"
-                  >INICIO</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="./pages/nosotros.html"
-                  >¿QUIÉNES SOMOS?</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="./index.html"
-                  >NUESTROS PRODUCTOS</a
-                >
-              </li>
-              <div class="iconos px-5">
-                <i class="bi bi-search fa-2x" aria-hidden="true"></i>
-                <i class="bi bi-cart-fill fa-2x px-3" aria-hidden="true"></i>
-                <i class="bi bi-person-fill fa-2x" aria-hidden="true"></i>
-              </div>
-              <div class="buscador">
-                <form class="d-flex" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Buscar..."
-                    aria-label="Search"
-                  />
-                </form>
-              </div>
-            </ul>
-          </div>
-        </div>
+    <nav class="navbar navbar-expand-lg tx-titulo bg-body-secondary navbar-sticky">
+      <div class="container-fluid">
+        <!-- Logo de Inicio -->
+        <a
+  class="d-flex align-items-center navbar-brand logoNav fs-3 ps-3"
+  href="../index.html"
+>
+  <i class="fa-solid fa-seedling fs-3"></i>
+  <h2 class="d-md-inline fs-3 ms-3">De Raíz</h2>
+</a>
+    <a href="./nosotros.html" class="mx-3 d-none d-lg-block linksNav" >Quiénes Somos</a>
+    <a class="mx-3 d-none d-lg-block linksNav" href="./detalleProducto.html">Nuestros Productos</a>
+
+        <!-- Boton Hamburguesa -->
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Opciones del navbar -->
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+                <!-- Etiquetas en el botón hamburguesa (pantallas pequeñas) -->
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link px-3 textosNav text-center" href="./nosotros.html">Quiénes Somos</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link px-3 textosNav text-center" href="./detalleProducto.html">Nuestros Productos</a>
+                </li>
+              </ul> 
+         
+
+          <!-- Botones de opciones -->
+          <div
+            class="d-flex justify-content-between justify-content-md-evenly mx-3"
+          >
+         
+            <a href="../index.html" class="IconosNav"
+              ><i class="bi bi-house-fill fs-2 pe-1"></i
+            ></a>
+            <a href="./administracion.html" class="IconosNav"
+              ><i class="bi bi-person-circle fs-2 ms-3 pe-1"></i
+            ></a>
+            <a href="./carrito.html" class="IconosNav" data-bs-toggle="modal" data-bs-target="#carritoModal" ><i class="bi bi-cart fs-2 ms-3 pe-1"></i
+              ></a>
+            <a href="./login.html" class="IconosNav"
+              ><i class="bi bi-people-fill me-3 fs-2 ms-3"></i
+            ></a>
+           
+          </div> <!-- Buscador -->
+          <form class="d-flex ms-1">
+            <div class="input-group  my-2 m-lg-0 me-lg-3">
+              <input
+                class="form-control formBorde"
+                type="search"
+                placeholder="¿Qué buscas?"
+                aria-label="search"
+              />
+              <button type="button" class="btn BotonBusqueda">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Opciones del navbar -->
       </div>
+      
     </nav>
 
     <main>
@@ -116,24 +119,55 @@
       <div id="botonInicio">
         <a href="../index.html">Inicio</a>
       </div>
+
+        
+            <!-- Ventana modal del carrito -->
+      <section>
+        <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <img src="../img/logoSinFondo-removebg-preview.png" alt="logo" class="img-fluid w-25">                         
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title">Carrito de Compras</h5>
+        
+                    <ul id="carritoLista" class="list-group"></ul>
+                            
+                        <!-- Agregar productos con js-->
+        
+                    </ul>
+        
+                    <b class="mt-3 display-6">Total: $<span id="totalPrecio">0.00</span></b>
+                </div>
+                <div class="modal-footer">                                                       
+                    <button type="button" class="btn btn-warning m-2 botonesCompra" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <a href="./error404.html" type="button" class="btn btn-warning m-2 botonesCompra">Finalizar Compra</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
     </main>
 
     <footer>
       <div class="container-fluid bg-body-secondary">
-        <section class="rowfooter">
+        <section class="row rowfooter">
           <div class="col-md-12 col-lg-3 mt-3 text-center text-lg-start">
             <img
               src="../img/logoSinFondo-removebg-preview.png"
               alt="logo de raices"
               class="img-fluid logo-footer"
             />
-            <p class="texto-footer">
+            <p class="texto-footer justificadoDeTexto">
               <b
-                >De Raíz es una tienda en línea que ofrece una variedad de
-                frutos secos de alta calidad. Se destaca por su compromiso con
-                la frescura y la calidad, proporcionando productos orgánicos y
-                sin aditivos. Su plataforma es fácil de usar y ofrece entrega
-                rápida y confiable.</b
+                >De Raíz es una tienda en línea que ofrece una amplia gama de
+                frutos secos de excelente calidad. Se distingue por su
+                dedicación a la frescura y calidad, ofreciendo productos
+                orgánicos y libres de aditivos. Su plataforma es intuitiva y
+                garantiza entregas rápidas y confiables.</b
               >
             </p>
           </div>
@@ -143,28 +177,28 @@
             <ul class="list-unstyled text-center">
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="../index.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Nueces</a
                 >
               </li>
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="../index.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Almendras</a
                 >
               </li>
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="../index.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Pasas</a
                 >
               </li>
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="../index.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Avellanas</a
                 >
@@ -177,28 +211,28 @@
             <ul class="list-unstyled text-center">
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="./error404.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Políticas de Privacidad</a
                 >
               </li>
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="./error404.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Términos y Condiciones</a
                 >
               </li>
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="./error404.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Acuerdo de Licencia</a
                 >
               </li>
               <li class="my-3">
                 <a
-                  href="./index.html"
+                  href="./error404.html"
                   class="link-dark link-offset-2 link-underline link-underline-opacity-0 hvr-underline-from-left links-footer"
                   >Derechos de Autor</a
                 >
@@ -208,29 +242,31 @@
           <div class="col-md-4 col-lg-3 mt-3">
             <h5 class="text-uppercase text-center">Seguinos</h5>
             <hr class="mb-4" />
-            <ul
-              class="list-unstyled d-flex justify-content-between justify-content-lg-start iconos-footer"
-            >
-              <li class="me-3">
-                <a href="./pages/error404.html">
-                  <i class="fa-brands fa-instagram fs-2 color-icon"></i>
-                </a>
-              </li>
-              <li class="me-3">
-                <a href="./pages/error404.html">
-                  <i class="fa-brands fa-x-twitter fs-2 color-icon"></i>
-                </a>
-              </li>
-              <li class="me-3">
-                <a href="./pages/error404.html">
-                  <i class="fa-brands fa-facebook fs-2 color-icon"></i>
-                </a>
-              </li>
-            </ul>
+            <div class="contenedorIconosFooter">
+              <ul
+                class="list-unstyled d-flex justify-content-between justify-content-lg-start iconos-footer"
+              >
+                <li class="me-3">
+                  <a href="./error404.html">
+                    <i class="fa-brands fa-instagram fs-2 color-icon"></i>
+                  </a>
+                </li>
+                <li class="me-3">
+                  <a href="./error404.html">
+                    <i class="fa-brands fa-x-twitter fs-2 color-icon"></i>
+                  </a>
+                </li>
+                <li class="me-3">
+                  <a href="./error404.html">
+                    <i class="fa-brands fa-facebook fs-2 color-icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <hr class="my-4" />
           <div class="container">
-            <article class="rowfooter">
+            <article class="row rowfooter">
               <div class="col-md-6 col-lg-6 text-center">
                 <h5 class="mb-4">Formas de Pago</h5>
                 <img

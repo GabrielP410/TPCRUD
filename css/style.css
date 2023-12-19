@@ -4,26 +4,26 @@
   top: 0;
   z-index: 1000;
 }
+
 .BotonBusqueda {
   background-color: white;
   border: 1px solid black;
   color: black;
   transition: background-color 0.5s, color 0.01s;
 }
+
 .formBorde {
-  border: 1px solid #000000; /* Borde negro de 1px */
+  border: 1px solid #000000;
+  /* Borde negro de 1px */
 }
 
-.BotonBusqueda:hover {
-  background-color: #fcb631;
-  border: 1px solid black;
-  color: black;
+.texto_negrita_chico_admin{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0%;   
 }
-.botonFiltro {
-  background-color: white;
-  border: 1px solid black;
-  color: black;
-}
+
 .botonFiltro:hover {
   background-color: white;
   border: 1px solid black;
@@ -31,14 +31,17 @@
 }
 
 .logoNav {
-  color: #666777;
+  color: #fcb631;
   font-family: Playfair Display;
   transition: color 0.5s;
   text-decoration: none;
 }
+
 .logoNav:hover {
-  color: #fcb631;
+  color: #666777;
+
 }
+
 .linksNav {
   font-size: 1.1rem;
   position: relative;
@@ -68,10 +71,12 @@
 
 .linksNav:hover {
   font-size: 1.12rem;
-  transition: font-size 0.3s ease, color 0.3s ease; /* Transición para el tamaño del texto y el color */
+  transition: font-size 0.3s ease, color 0.3s ease;
+  /* Transición para el tamaño del texto y el color */
   color: black;
   font-weight: bold;
 }
+
 .linksNav.active {
   font-size: 1.12rem;
   color: black;
@@ -91,11 +96,22 @@
 }
 
 .IconosNav:hover {
-  color: #fcb631;
+  color: rgb(252, 182, 49);
   transform: scale(1.2);
 }
+
 .IconosNav.active {
   color: #fcb631;
+}
+
+#contadorProductosCarrito{
+  background-color: #acaba9;
+  border-radius: 100%;
+  display: inline-block;
+  width: 20px;
+  aspect-ratio: 1;
+  text-align: center;
+  line-height: 20px;
 }
 
 .navbar-toggler {
@@ -103,9 +119,11 @@
   background-color: secondary;
   border: 1px solid black;
 }
+
 /* clases del footer */
 
 body {
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -137,85 +155,63 @@ main {
 .fs-2 {
   font-size: calc(1.325rem + 0.9vw) !important;
 }
-
-.fa-brands,
-.fab {
-  font-weight: 400;
-}
-
-.fa-brands,
-.fab {
-  font-family: "Font Awesome 6 Brands";
-}
-
-.fa,
-.fa-brands,
-.fa-classic,
-.fa-regular,
-.fa-sharp,
-.fa-solid,
-.fab,
-.far,
-.fas {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: var(--fa-display, inline-block);
-  font-style: normal;
-  font-variant: normal;
-  font-variant-ligatures: normal;
-  font-variant-caps: normal;
-  font-variant-numeric: normal;
-  font-variant-east-asian: normal;
-  font-variant-alternates: normal;
-  font-variant-position: normal;
-  line-height: 1;
-  text-rendering: auto;
-}
-
-.color-icon {
-  color: #000;
-}
-
-@media (min-width: 768px) {
-  .col-md-6 {
-    flex: 0 0 auto;
-    width: 50%;
-  }
-}
-
-.links-footer {
-  color: #666777;
+.cuadro_busqueda_admin::placeholder{
+  font-size: small;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   position: relative;
 }
+
 .links-footer:hover,
 .links-footer.active {
   color: #000;
 }
 
-@media (min-width: 991px) {
-  .links-footer::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #fcb631;
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
-  }
+.lista_de_productos_admin{
+list-style: none;
+display: flex;
 
-  .links-footer:hover::before,
-  .links-footer.active::before {
-    width: 100%;
-    visibility: visible;
-  }
+}
+.lista_de_busqueda_admin{
+  list-style-type: none;
+  padding-left: 0%;
+}
+.lista_imagenes_de_productos_admin{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+
+ }
+ .card_producto_admin{
+   width: 40%;
+   height: auto;
+   margin: 3%;
+   border:0px ;
+ }
+ 
+ .btn_editar_admin{
+   background-color: #FDB632;
+   
+ }
+ .texto_blanco_btn_amdin{
+   color: whitesmoke;
+   font-family: 'Roboto', 'sans-serif';
+   font-weight: 300;
+ }
+ .body_admin{
+background-color: #f7ecdd35;
 }
 
-.texto-responsive {
-  text-align: center;
+.numero_paginacion_admin{
+ text-decoration: none;
+ color: #FDB632;
+ margin-left: 10px;
+
+ font-family: 'Roboto', sans-serif;
+ 
+ font-size: large;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -233,4 +229,5 @@ main {
 .justificadoDeTexto {
   text-align: justify;
 }
+
 /* Fin estilos para footer */
