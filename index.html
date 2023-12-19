@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../css/index.css" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <title>De Raíz</title>
 </head>
 
@@ -60,9 +60,10 @@
 
         </div> <!-- Buscador -->
         <form class="d-flex ms-1">
-          <div class="input-group  my-2 m-lg-0 me-lg-3">
-            <input class="form-control formBorde" type="search" placeholder="¿Qué buscas?" aria-label="search" />
-            <button type="button" class="btn BotonBusqueda">
+          <div class="input-group my-2 m-lg-0 me-lg-3">
+            <input class="form-control formBorde" type="search" placeholder="¿Qué buscas?" aria-label="search"
+              minlength="2" maxlength="25" />
+            <button class="btn BotonBusqueda">
               <i class="bi bi-search"></i>
             </button>
           </div>
@@ -131,39 +132,84 @@
         </button>
       </div>
       <!-- fin de carrousel grande -->
-      <section class="container card my-2 fondoOferta">
-        <div class="row"></div>
+      <section class="mx-3 my-2 fondoOferta">
 
       </section>
     </section>
     <div id="barraFiltros" class="conteiner bg-white barra-filtros">
-      <section class="container-fluid d-none  d-md-block" id="SeccionesSubNav">
-        <div class="row text-center">
-          <div class="col-3"><a href="./pages/error404.html" class="tx-Intermedio TextosSubNav">Frutos Secos</a></div>
-          <div class="col-3"><a href="./pages/error404.html" class="tx-Intermedio TextosSubNav">Frutos Frescos</a></div>
-          <div class="col-3"><a href="./pages/seccionMasVendidos.html" class="tx-Intermedio TextosSubNav">Combos
-              Imperdibles</a></div>
-          <div class="col-3"><a href="./pages/error404.html" class="tx-Intermedio TextosSubNav">Mix Variados</a></div>
+      <section class="container " id="SeccionesSubNav">
+        <div class="row text-center justify-content-between">
+          <button type="button"
+            class="btn TextosSubNav botonFiltroPrincipal col-6 col-md-3 filtFrutosSecos fBtnPrincipal">Frutos
+            Secos</button>
+          <button type="button"
+            class="btn TextosSubNav botonFiltroPrincipal col-6 col-md-3 filtFrutosFrescos fBtnPrincipal">Frutos
+            Frescos</button>
+          <button type="button"
+            class="btn TextosSubNav botonFiltroPrincipal col-6 col-md-3 filtMixVariados fBtnPrincipal">Mix
+            Variados</button>
+          <button type="button"
+            class="btn TextosSubNav botonFiltroPrincipal col-6 col-md-3 filtCombosImperdibles fBtnPrincipal">Combos
+            Imperdibles</button>
         </div>
     </div>
     </section>
     </div>
-    <div class="dropdown d-md-none conteiner px-2 col-12">
-      <button class="btn botonFiltro dropdown-toggle w-100" type="button" id="dropdownMenuButton"
+    <!-- <div class="dropdown d-md-none conteiner px-3 text-center col-12">
+      <button class="btn botonFiltro w-100 dropdown-toggle" type="button" id="menuDesplegableFiltrosPrincipal"
         data-bs-toggle="dropdown" aria-expanded="false">
         Filtrar por Categoría
-      </button>
+      </button> -->
 
-      <!-- Contenido desplegable -->
-      <ul class="dropdown-menu text-center  w-100" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Frutos Secos</a></li>
-        <li><a class="dropdown-item" href="#">Frutos Frescos</a></li>
-        <li><a class="dropdown-item" href="#">Combos Imperdibles</a></li>
-        <li><a class="dropdown-item" href="#">Mix Variados</a></li>
-      </ul>
+    <!-- Contenido desplegable -->
+    <!-- <ul class="dropdown-menu text-center px-3 w-100" aria-labelledby="menuDesplegableFiltrosPrincipal">
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal filtFrutosSecos col-3 fBtnPrincipal"
+            >Frutos Secos</button></li>
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal filtFrutosFrescos col-3 fBtnPrincipal"
+            >Frutos Frescos</button></li>
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal filtMixVariados col-3 fBtnPrincipal"
+            >Mix Variados</button></li>
+        <li><button type="button" class="btn TextosSubNav w-100 px-3 botonFiltroPrincipal filtCombosImperdibles col-3 fBtnPrincipal"
+            >Combos Imperdibles</button></li>
+      </ul> -->
     </div>
-    <section class="container card my-2 fondoOferta">
-      <div class="row"></div>
+    <button class="btn" id="botonSimulacion">Simular producto</button>
+
+    <section class="mx-3 p-3 fondoGrillaProductos">
+      <div class="row mx-2 g-4" id="grillaPrincipal">
+
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade fondoModalMAin " id="modalAllCardsMain" tabindex="-1" aria-labelledby="modalAllCardsMainLabel"
+        aria-hidden="true">
+        <div class="modal-dialog cuerpoModal ">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <img src="./img/logoSinFondo-removebg-preview.png" alt="logo de Raiz sin fondo" class="img-fluid w-50">
+              <h1 class="modal-title fs-5" id="modalAllCardsMainLabel"></h1>
+            </div>
+            <div class="modal-body bg-light">
+              <h5 class="pb-2" id="nombreProductoModalMain">Nombre del producto</h5>
+              <p class="justificadoDeTexto parrafosVenta texto-negrita"><i class="fa-solid fa-seedling"></i> ¡En nuestra tienda
+                encontrarás una gran variedad de frutos secos y similares, cuidadosamente seleccionados para garantizar
+                frescura y calidad! </p>
+              <p class="justificadoDeTexto parrafosVenta texto-negrita">Aquí en Raíz, promovemos la energía sana y te ofrecemos
+                jugosas ofertas en cada compra. ¡Descubre nuestros productos y benefíciate de lo mejor! <i
+                  class="fa-solid fa-seedling"></i></p>
+
+            </div>
+            <hr>
+            <div class="modal-foote ms-auto pb-3">
+
+              <button type="button" class="btn btn-warning m-2 botonesCompra texto-negrita" data-bs-dismiss="modal">Seguir
+                Viendo</button>
+              <a href="./pages/detalleProducto.html"><button type="button" class="btn btn-warning m-2 botonesCompra texto-negrita">Ver
+                  más y comprar</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </section>
 
@@ -300,19 +346,9 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/5fdb8b7a26.js" crossorigin="anonymous"></script>
-  <script>
-    window.addEventListener('scroll', function () {
-      const navbarHeight = document.querySelector('.navbar').offsetHeight;
-      const barraFiltros = document.querySelector('.barra-filtros');
-
-      if (window.pageYOffset >= navbarHeight) {
-        barraFiltros.style.top = `${navbarHeight}px`;
-      } else {
-        barraFiltros.style.top = '0';
-      }
-    });
-
-  </script>
+  <script src="/js/stickyFilters.js"></script>
+  <script src="./js/creaCardPrincipal.js" type="module"></script>
+  <script src="./js/buscadorPrincipal.js"></script>
 </body>
 
 </html>
