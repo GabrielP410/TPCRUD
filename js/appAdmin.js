@@ -145,15 +145,8 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
 function cargaInicial() {
   if (productosCargadosAdmin.length > 0) {
     productosCargadosAdmin.map((productoAdmin,posicion) => crearCardProducto(productoAdmin,posicion +1));
-
-
-
-
   }
-
-
-
-  window.borrarProducto = (idproductoborrar) =>{
+ window.borrarProducto = (idproductoborrar) =>{
 
     Swal.fire({
         title: `Estas seguro que quieres borrar este producto?`,
@@ -167,8 +160,7 @@ function cargaInicial() {
       }).then((result) => {
         if (result.isConfirmed) {
           
-            
-// buscar el producto
+    // buscar el producto
 const posicionProducto = productosCargadosAdmin.findIndex((itemProducto)=> itemProducto.id === idproductoborrar);
 
 // borrar el objeto
