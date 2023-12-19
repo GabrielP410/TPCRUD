@@ -65,9 +65,20 @@ const crearProducto = (e) => {
 
   guardarEnLocalStorageAdmin();
 
+  //agrega nueva card al display
   crearCardProducto(nuevoProducto, productosCargadosAdmin.length);
+
+// muestra el alert
+Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: `Producto ${nuevoProducto.nombre} Agregado`,
+    showConfirmButton: false,
+    timer: 1500
+  });
+
+
 };
-//agrega nueva card al display
 
 
 
@@ -120,7 +131,11 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
    <h5 class=" text-end" id="precio_del_prudcto_admin"> $${productoAdmin.precio}</h5>
  </div>
    </div>
-     <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
+   <div class="d-flex justify-content-between">
+   <a href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</a>
+   <a href="#" class="btn btn_borrar_admin texto_blanco_btn_amdin">Borrar</a>
+ </div>
+
    </div>
    </div>
 `;
