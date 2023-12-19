@@ -2,7 +2,7 @@ function crearProducto(categorias, precio, codigo, descp, rutaImagen1, nombre) {
     const cardProducto = document.createElement('div');
 
     cardProducto.classList.add('col-lg-3', 'col-md-4', 'col-6', 'mt-3', 'mb-5', 'cardProducto');
-    cardProducto.setAttribute('data-categorias', categorias); // Corregido: Utiliza la variable categorias
+    cardProducto.setAttribute('data-categorias', categorias);
     cardProducto.innerHTML = `
         <div class="card cardCreada h-100" data-bs-toggle="modal" data-bs-target="#modalAllCardsMain">
             <img src="${rutaImagen1}" class="card-img-top img-fluid imgProductos" alt="">
@@ -16,8 +16,6 @@ function crearProducto(categorias, precio, codigo, descp, rutaImagen1, nombre) {
             </div>
         </div>
     `;
-
-    // Agregar tanto la card como el modal al contenedor 'grillaPrincipal'
     const grillaPrincipal = document.getElementById('grillaPrincipal');
     grillaPrincipal.prepend(cardProducto);}
 
@@ -28,18 +26,11 @@ if (productosGuardadosString) {
 
     arraysDeProductos.forEach((objetoEncontrado, index) => {
         console.log(`Array de productos en la posición ${index}:`, objetoEncontrado);
-
-        // Llama a la función crearProducto y pasa las propiedades del objeto como parámetros
         crearProducto(objetoEncontrado.categoria, objetoEncontrado.precio, objetoEncontrado.cod, objetoEncontrado.descripcion, objetoEncontrado.image, objetoEncontrado.nombre);
-
-        // Aquí puedes trabajar con cada objeto de productos según sea necesario
     });
 } else {
     console.log('No se encontraron arrays de productos en localStorage');
 } 
-
-
-
 
 function obtenerCategorias() {
     const categoriasTexto = [];
@@ -63,16 +54,13 @@ function obtenerCategorias() {
     return categoriasTexto.join(', '); // Devuelve un string con las categorías separadas por coma
 }
 
-
-
 let catFiltros = [false, false, false, false];
-
 document.addEventListener("DOMContentLoaded", function () {
-    var botones = document.querySelectorAll(".botonFiltroPrincipal");
+    let botones = document.querySelectorAll(".botonFiltroPrincipal");
 
     botones.forEach(function (boton) {
         boton.addEventListener("click", function () {
-            var icono = boton.querySelector("i.bi-check-lg");
+            let icono = boton.querySelector("i.bi-check-lg");
             if (!icono) {
                 icono = document.createElement("i");
                 icono.classList.add("bi", "bi-check-lg");
@@ -80,12 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 boton.removeChild(icono);
             }
-
-            // Actualizar el estado de los filtros después de cada clic
             let nuevoEstado = obtenerEstadoFiltros();
             catFiltros = nuevoEstado;
-
-            // Llamar a la función para mostrar u ocultar las tarjetas según los filtros
             actualizarTarjetas();
         });
     });
@@ -96,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function actualizarTarjetas() {
     const tarjetas = document.querySelectorAll('.cardProducto');
-    const filtrosActivos = catFiltros.some(filtro => filtro); // Verificar si hay filtros activos
+    const filtrosActivos = catFiltros.some(filtro => filtro);
 
     tarjetas.forEach(function (tarjeta) {
         const categoriasTarjeta = tarjeta.getAttribute('data-categorias').split(', ');
@@ -106,7 +90,7 @@ function actualizarTarjetas() {
                    (categoria === 'Fresco' && catFiltros[1]) ||
                    (categoria === 'Mix' && catFiltros[2]) ||
                    (categoria === 'Combo' && catFiltros[3]) ||
-                   !filtrosActivos; // Si no hay filtros activos, mostrar todas las tarjetas
+                   !filtrosActivos;
         });
 
         if (mostrar) {
@@ -116,7 +100,6 @@ function actualizarTarjetas() {
         }
     });
 }
-
 function obtenerEstadoFiltros() {
     let estadoDeFiltros = [];
 
