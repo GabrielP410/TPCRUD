@@ -107,6 +107,16 @@
   color: #fcb631;
 }
 
+#contadorProductosCarrito{
+  background-color: #acaba9;
+  border-radius: 100%;
+  display: inline-block;
+  width: 20px;
+  aspect-ratio: 1;
+  text-align: center;
+  line-height: 20px;
+}
+
 .navbar-toggler {
   margin-right: 8px;
   background-color: secondary;
