@@ -156,6 +156,15 @@ function cargaInicial() {
   window.borrarProducto = (idproductoborrar) =>{
     console.log('desdelafuncionborrar');
     console.log(idproductoborrar);
+// buscar el producto
+const posicionProducto = productosCargadosAdmin.findIndex((itemProducto)=> itemProducto.id === idproductoborrar);
+console.log (posicionProducto);
+// borrar el objeto
+productosCargadosAdmin.splice(posicionProducto,1);
+// actualizar el local storage
+guardarEnLocalStorageAdmin();
+// borrar card
+
 
   }
 }
