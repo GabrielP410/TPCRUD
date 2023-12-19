@@ -1,11 +1,20 @@
-.card_foto_de_perfil_admin{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  width: 50%;
-  margin-top: 5%;
-  margin-left: 2%;
-  padding-bottom: 50px;
+/* Navbar */
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.BotonBusqueda {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  transition: background-color 0.5s, color 0.01s;
+}
+
+.formBorde {
+  border: 1px solid #000000;
+  /* Borde negro de 1px */
 }
 
 .texto_negrita_chico_admin{
@@ -14,6 +23,7 @@
   font-weight: 700;
   margin-bottom: 0%;   
 }
+
 .botonFiltro:hover {
   background-color: white;
   border: 1px solid black;
@@ -21,16 +31,18 @@
 }
 
 .logoNav {
-  color: #666777;
+  color: #fcb631;
   font-family: Playfair Display;
   transition: color 0.5s;
   text-decoration: none;
 
 }
+
 .logoNav:hover {
-  color: #fcb631;
-  
+  color: #666777;
+
 }
+
 .linksNav {
   font-size: 1.1rem;
   position: relative;
@@ -56,15 +68,17 @@
   visibility: visible;
   transform: scaleX(1);
   transition: transform 0.3s ease, visibility 0s linear;
-  
+
 }
 
 .linksNav:hover {
   font-size: 1.12rem;
-  transition: font-size 0.3s ease, color 0.3s ease; /* Transición para el tamaño del texto y el color */
+  transition: font-size 0.3s ease, color 0.3s ease;
+  /* Transición para el tamaño del texto y el color */
   color: black;
   font-weight: bold;
 }
+
 .linksNav.active {
   font-size: 1.12rem;
   color: black;
@@ -85,9 +99,10 @@
 }
 
 .IconosNav:hover {
-  color: #fcb631;
+  color: rgb(252, 182, 49);
   transform: scale(1.2);
 }
+
 .IconosNav.active {
   color: #fcb631;
 }
@@ -97,9 +112,11 @@
   background-color: secondary;
   border: 1px solid black;
 }
+
 /* clases del footer */
 
 body {
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -135,10 +152,12 @@ main {
   font-size: small;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  color: rgba(148, 148, 148, 0.388);
-  padding-left: 1%;
-  
-  
+  position: relative;
+}
+
+.links-footer:hover,
+.links-footer.active {
+  color: #000;
 }
 
 .lista_de_productos_admin{
@@ -188,8 +207,20 @@ background-color: #f7ecdd35;
 
 }
 
- .pagination_admin{
-   list-style: none;
-   display: flex;
-   justify-content: space-between;
- }
+@media screen and (max-width: 600px) {
+  .texto-footer {
+    display: none;
+  }
+}
+
+.contenedorIconosFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justificadoDeTexto {
+  text-align: justify;
+}
+
+/* Fin estilos para footer */

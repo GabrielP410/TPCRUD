@@ -1,14 +1,20 @@
-class Producto {
+export default class Producto {
   #nombre;
+  #id;
   #cod;
+  #categoria;
+  #presentacion;
   #stock;
   #descripcion;
   #precio;
-  #image; // New property for the product image
+  #image; 
 
-  constructor(nombre, cod, stock, descripcion, precio, image) {
+  constructor(nombre,id= crypto.randomUUID(), cod=1,categoria,presentacion, stock, descripcion, precio, image) {
     this.#nombre = nombre;
+    this.#id = id;
     this.#cod = cod;
+    this.#categoria = categoria;
+    this.#presentacion = presentacion;
     this.#stock = stock;
     this.#descripcion = descripcion;
     this.#precio = precio;
@@ -16,84 +22,98 @@ class Producto {
   }
 
   // Getter methods
-  getNombre() {
+  get nombre() {
     return this.#nombre;
   }
+  get id() {
+    return this.#id;
+  }
 
-  getCod() {
+  get cod() {
     return this.#cod;
   }
 
-  getStock() {
+  get categoria (){
+    return this.#categoria;
+  }
+  get presentacion() {
+    return this.#presentacion;
+  }
+
+  get stock() {
     return this.#stock;
   }
 
-  getDescripcion() {
+  get descripcion() {
     return this.#descripcion;
   }
 
-  getPrecio() {
+  get precio() {
     return this.#precio;
   }
 
-  getImage() { // Getter for the product image
+  get image() { 
     return this.#image;
   }
 
-  // Setter methods
-  setNombre(newNombre) {
+  // Setter 
+  set nombre(newNombre) {
     this.#nombre = newNombre;
   }
+  set id(newid) {
+    this.#id = newid;
+  }
 
-  setCod(newCod) {
+  set cod(newCod) {
     this.#cod = newCod;
   }
 
-  setStock(newStock) {
+
+  set categoria(newcategoria) {
+    this.#categoria = newcategoria;
+  }
+
+
+
+  set presentacion(newpresentacion) {
+    this.#presentacion = newpresentacion;
+  }
+
+
+  set stock(newStock) {
     this.#stock = newStock;
   }
 
-  setDescripcion(newDescripcion) {
+  set descripcion(newDescripcion) {
     this.#descripcion = newDescripcion;
   }
 
-  setPrecio(newPrecio) {
-    this.#precio = newPrecio;
+  set precio(newprecio) {
+    this.#precio = newprecio;
   }
 
-  setImage(newImage) { // Setter for the product image
+  set image(newImage) { 
     this.#image = newImage;
+  }
+
+
+// metodo para el stringyfy
+toJSON(){
+
+  return{
+
+    nombre:  this.nombre,
+    id: this.id,
+    cod: this.cod,
+    categoria: this.categoria,
+    presentacion: this.presentacion,
+    stock: this.stock,
+    descripcion: this.descripcion,
+    precio: this.precio,
+    image: this.image,
+   
   }
 }
 
-// Example usage:
-const producto1 = new Producto(
-  "Product 1",
-  1,
-  10,
-  "Description of Product 1",
-  29.99,
-  "product1.jpg" // Example image file name
-);
 
-// Accessing private properties and image using getters
-console.log(producto1.getNombre()); // Output: Product 1
-console.log(producto1.getCod());     // Output: 1
-console.log(producto1.getStock());   // Output: 10
-console.log(producto1.getDescripcion());  // Output: Description of Product 1
-console.log(producto1.getPrecio());      // Output: 29.99
-console.log(producto1.getImage());        // Output: product1.jpg
-
-// Modifying private properties and image using setters
-producto1.setNombre("Updated Product 1");
-producto1.setCod(2);
-producto1.setStock(15);
-producto1.setDescripcion("Updated description");
-producto1.setPrecio(39.99);
-producto1.setImage("updated_product1.jpg");
-console.log(producto1.getNombre()); // Output: Updated Product 1
-console.log(producto1.getCod());     // Output: 2
-console.log(producto1.getStock());   // Output: 15
-console.log(producto1.getDescripcion());  // Output: Updated description
-console.log(producto1.getPrecio());      // Output: 39.99
-console.log(producto1.getImage());        // Output: updated_product1.jpg
+}

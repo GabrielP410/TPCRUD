@@ -225,16 +225,28 @@ flex-wrap: wrap;
  width: 25%;
  height: auto;
  margin: 3%;
- border:0px ;
+border:0px ;
+ padding: 3%;
+ border-radius: 5px;
+ background-color: #ededed;
 }
 
 .btn_editar_admin{
- background-color: #FDB632;
+ background-color: #fea500;
+ 
+}
+.btn_borrar_admin{
+ background-color: #ff0000;
  
 }
 .btn_editar_admin:hover{
-background-color: #ffa705;
+background-color: #d08907;
 }
+.btn_borrar_admin:hover{
+background-color: #c70101;
+}
+
+
 .texto_blanco_btn_amdin{
  color: whitesmoke;
  font-family: 'Roboto', 'sans-serif';
@@ -289,6 +301,9 @@ background-color: #ffa705;
     height: auto;
     margin: 0%;
     border:0px ;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #f5f2ed;
    }
    
    .contendor_busqueda_y_boton_agregar{
@@ -343,6 +358,9 @@ background-color: #ffa705;
     height: auto;
     margin: 3%;
     border:0px ;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #f5f2ed;
    }
    
    .contendor_busqueda_y_boton_agregar{
@@ -413,6 +431,10 @@ background-color: #ffa705;
     height: auto;
     margin: 3%;
     border:0px ;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #f5f2ed;
+    
    }
    
    .contendor_busqueda_y_boton_agregar{
