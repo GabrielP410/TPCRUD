@@ -75,13 +75,13 @@ function borrarProducto(index) {
 function actualizarCarrito() {
     const carritoLista = document.getElementById("carritoLista");
     const totalPrecio = document.getElementById("totalPrecio");
-    //const contadorProductosElement = document.getElementById("contadorProductosCarrito");
+    const contadorProductosElement = document.getElementById("contadorProductosCarrito");
 
-    //if (!contadorProductosElement) {
-        // Manejar la situación donde el elemento no se encuentra
-        //console.error("El elemento contadorProductosCarrito no se encontró.");
-        //return;
-    //}
+    if (!contadorProductosElement) {
+         //Manejar la situación donde el elemento no se encuentra
+        console.error("El elemento contadorProductosCarrito no se encontró.");
+        return;
+    }
 
     carritoLista.innerHTML = "";
     carrito.forEach((item, index) => {
@@ -108,10 +108,10 @@ function actualizarCarrito() {
     });
 
     totalPrecio.textContent = total.toFixed(3);
-   // contadorProductosElement.textContent = contadorProductos;
+    contadorProductosElement.textContent = contadorProductos;
 
-    // Actualizar el contador de productos en la interfaz
-    //document.getElementById("contadorProductosCarrito").textContent = contadorProductos;
+     //Actualizar el contador de productos en la interfaz
+     document.getElementById("contadorProductosCarrito").textContent = contadorProductos;
 
     mostrarCarritoModal();
 }
