@@ -6,6 +6,10 @@ const modalAdminProducto = new bootstrap.Modal(
   document.getElementById("adminProducto")
 );
 
+const modalAdminProductoeditar = new bootstrap.Modal(
+  document.getElementById("adminProducto")
+);
+
 const botonAgregarProductoAdmin = document.getElementById(
   "botonAgregarProductoAdmin"
 );
@@ -13,6 +17,10 @@ const botonAgregarProductoAdmin = document.getElementById(
 const formularioAgregarProductoAdmin = document.getElementById(
   "formAgregarProductoAdmin"
 );
+
+
+
+
 
 // datos productos
 const nombreProducto = document.getElementById("nombre_prod_cargado");
@@ -37,6 +45,10 @@ const productosCargadosAdmin =
 // funciones
 const mostrarModal = () => {
   modalAdminProducto.show();
+};
+
+const mostrarModaleditar = () => {
+  modalAdminProductoeditar.show();
 };
 
 // producto
@@ -66,6 +78,9 @@ const crearProducto = (e) => {
   guardarEnLocalStorageAdmin();
 
   //agrega nueva card al display
+
+  
+
   crearCardProducto(nuevoProducto, productosCargadosAdmin.length);
 
 // muestra el alert
@@ -97,7 +112,7 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
   const cardProductoAdmin = document.getElementById("cardProductoAdminCrear");
   cardProductoAdmin.innerHTML =
     cardProductoAdmin.innerHTML +
-    `<div class="card_producto_admin" >
+    `<div class="card_producto_admin" id="cardcompleta" >
    <img src="${productoAdmin.image}" class="card-img-top" id="card_producto_editar_admin" alt="...">
    <div class="card-body">
      <h4 class="card-title mb-1" id="nombre_del_producto_card_admin">${productoAdmin.nombre}</h4>
@@ -132,7 +147,8 @@ function crearCardProducto(productoAdmin,numerodeproducto) {
  </div>
    </div>
    <div class="d-flex justify-content-between">
-   <button href="#" class="btn btn_editar_admin texto_blanco_btn_amdin">Editar</button>
+   <button href="#" class="btn btn_editar_admin texto_blanco_btn_amdin" type="button" onclick="editarProducto('${productoAdmin.id}')">Editar</button>
+  
    <button href="#" class="btn btn_borrar_admin texto_blanco_btn_amdin" onclick="borrarProducto('${productoAdmin.id}')">Borrar</button>
  </div>
 
@@ -150,6 +166,47 @@ function cargaInicial() {
 
 
   }
+  
+  
+    
+    }
+
+    
+// llama funcion Editar
+window.editarProducto = (ideditarProducto) =>{
+
+  // buscar el producto
+  const posicionProductoeditar = productosCargadosAdmin.findIndex((itemProducto)=> itemProducto.id === ideditarProducto);
+
+  console.log(productosCargadosAdmin[posicionProductoeditar]);
+  
+ 
+ 
+
+ 
+
+  // // redneriza el producto en pantalla
+ 
+  mostrarModaleditar()
+   
+
+  // borrar el objeto
+
+
+// borra y carga de nuevo el producto
+
+// actualiza en local storage
+
+// crea la card de nuevo
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -192,13 +249,16 @@ cardProductoAdmin.removeChild(cardProductoAdmin.children[posicionProducto])
 
 
 
-}
+
+
+
 
 // logica extra
 
 botonAgregarProductoAdmin.addEventListener("click", mostrarModal);
 
 formularioAgregarProductoAdmin.addEventListener("submit", crearProducto);
+
 
 
 cargaInicial();

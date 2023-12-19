@@ -25,8 +25,9 @@ function toggle () {
 // cargar producto
 function agregarnuevoproducto (e) {
   e.preventDefault();
-  console.log('algo');
+ 
 }
 
 myModal.addEventListener('submit',agregarnuevoproducto());
 agregarnuevoproducto();
+
