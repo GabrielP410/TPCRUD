@@ -154,7 +154,20 @@ function cargaInicial() {
 
 
   window.borrarProducto = (idproductoborrar) =>{
-   
+
+    Swal.fire({
+        title: `Estas seguro que quieres borrar este producto?`,
+        text: "La informacion no podra ser recuperada",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#666777",
+        cancelButtonColor: "#FDB632",
+        cancelButtonText: "CANCELAR",
+        confirmButtonText: "Borrar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          
+            
 // buscar el producto
 const posicionProducto = productosCargadosAdmin.findIndex((itemProducto)=> itemProducto.id === idproductoborrar);
 
@@ -165,10 +178,20 @@ guardarEnLocalStorageAdmin();
 // borrar card
 const cardProductoAdmin = document.getElementById("cardProductoAdminCrear");
 cardProductoAdmin.removeChild(cardProductoAdmin.children[posicionProducto])
+          
+            Swal.fire({
+            title: "Producto Borrado",
+            text: "Producto se elimino correctamente",
+            icon: "success",
+            
+          });
+        }
+      });
+   
   }
 
 
-  
+
 }
 
 // logica extra
